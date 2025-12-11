@@ -8,6 +8,9 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
      
+<a href="{{ url('/') }}" class="logo d-flex align-items-center">
+    <img src="{{ asset('assets/img/logo.png') }}" alt="Petrokayaku">
+</a>
 
 
 
