@@ -282,6 +282,12 @@ h6 {
 @media (min-width: 1200px) {
   .navmenu {
     padding: 0;
+    /* center the navmenu horizontally within the header */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9998;
   }
 
   .navmenu ul {
@@ -290,22 +296,43 @@ h6 {
     display: flex;
     list-style: none;
     align-items: center;
+    justify-content: center;
+    gap: 28px;
+    width: 100%;
   }
 
   .navmenu li {
     position: relative;
   }
 
+  /* push search icon to the far right */
+  .navmenu li.nav-search {
+    margin-left: auto;
+    padding-right: 20px;
+  }
+
+  .navmenu .nav-search-link img {
+    height: 26px;
+    width: auto;
+    display: block;
+    transition: filter 0.22s ease;
+  }
+
+  .navmenu .nav-search-link:hover img,
+  .navmenu .nav-search-link:focus img {
+    filter: invert(36%) sepia(66%) saturate(490%) hue-rotate(75deg) brightness(95%) contrast(90%);
+  }
+
   .navmenu a,
   .navmenu a:focus {
     color: var(--nav-color);
-    padding: 18px 15px;
-    font-size: 16px;
+    padding: 18px 22px;
+    font-size: 18px;
     font-family: var(--nav-font);
-    font-weight: 400;
+    font-weight: 500;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     white-space: nowrap;
     transition: 0.3s;
   }
@@ -815,6 +842,8 @@ section,
 --------------------------------------------------------------*/
 .hero {
   padding: 0;
+  margin-top: 80px;
+  scroll-margin-top: 100px;
 }
 
 .hero .carousel {
@@ -871,6 +900,10 @@ section,
 }
 
 @media (max-width: 768px) {
+  .hero {
+    margin-top: 60px;
+  }
+
   .hero h2 {
     font-size: 30px;
   }
