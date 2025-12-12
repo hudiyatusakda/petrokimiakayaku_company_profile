@@ -1,19 +1,22 @@
-@include ('layouts.header');
+@include ('layouts.header')
+
+
 
 <body class="about-page">
 
-  <header id="header" class="header d-flex align-items-center position-relative">
+  <<header id="header" class="header d-flex align-items-center">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-  <a href="{{ url('/') }}" class="logo d-flex align-items-center">
+     
+<a href="{{ url('/') }}" class="logo d-flex align-items-center">
     <img src="{{ asset('assets/img/logo.png') }}" alt="Petrokayaku">
 </a>
 
 
-     <!-- navbar -->
+
+      <!-- navbar -->
       @include ('layouts.navbar')
       <!-- navbar -->
-
 
     </div>
   </header>
