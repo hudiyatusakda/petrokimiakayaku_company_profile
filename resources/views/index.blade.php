@@ -27,19 +27,19 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
 
-      <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+      <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
 
         <div class="carousel-item active">
-          <img src="assets/img/hero_1.jpg" alt="">
+          <img src="assets/img/kayaku-1.jpeg" alt="">
           <div class="carousel-container">
-            <h2>Farming is the best solution of worlds starvation</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua.</p>
+            <h2>Pestisida menjadi hak angket tanaman seluruh Indonesia</h2>
+            <p>Kami memastikan distribusi dan produksi pestisida indonesia terjaga dan
+              mampu menumbuhkan semnagat petani dan kesehatan tanaman Indonesia.</p>
           </div>
         </div><!-- End Carousel Item -->
 
         <div class="carousel-item">
-          <img src="assets/img/hero_2.jpg" alt="">
+          <img src="assets/img/maxresdefault.jpg" alt="">
           <div class="carousel-container">
             <h2>Organic vegetables is good for health</h2>
             <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime
@@ -48,7 +48,7 @@
         </div><!-- End Carousel Item -->
 
         <div class="carousel-item">
-          <img src="assets/img/hero_3.jpg" alt="">
+          <img src="assets/img/sdm.jpg" alt="">
           <div class="carousel-container">
             <h2>Providing Fresh Produce Every Single Day</h2>
             <p>Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
@@ -57,7 +57,7 @@
         </div><!-- End Carousel Item -->
 
         <div class="carousel-item">
-          <img src="assets/img/hero_4.jpg" alt="">
+          <img src="assets/img/gambar_pabrik3.jpg" alt="">
           <div class="carousel-container">
             <h2>Farming as a Passione</h2>
             <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia
@@ -66,7 +66,7 @@
         </div><!-- End Carousel Item -->
 
         <div class="carousel-item">
-          <img src="assets/img/hero_5.jpg" alt="">
+          <img src="assets/img/gambar_kebijakan3.jpg" alt="">
           <div class="carousel-container">
             <h2>Good Food For All</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
