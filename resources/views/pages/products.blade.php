@@ -1,17 +1,25 @@
-@include('layouts.header')
+@include ('layouts.header')
 
-<body class="products-page">
 
-    {{-- main --}}
-    <header id="header" class="header d-flex align-items-center position-relative">
-        <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-            <a href="{{ url('/') }}" class="logo d-flex align-items-center">
+
+<body class="index-page">
+
+  <<header id="header" class="header d-flex align-items-center">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+     
+<a href="{{ url('/') }}" class="logo d-flex align-items-center">
     <img src="{{ asset('assets/img/logo.png') }}" alt="Petrokayaku">
 </a>
 
-            @include('layouts.navbar')
-        </div>
-    </header>
+
+
+      <!-- navbar -->
+      @include ('layouts.navbar')
+      <!-- navbar -->
+
+    </div>
+  </header>
     {{-- main --}}
 
     {{-- main --}}
