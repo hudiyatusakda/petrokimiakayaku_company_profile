@@ -38,8 +38,9 @@ class FrontendController extends Controller
     public function login(){
         return view ('auth.index');
     }
-
-
-
+    public function search(Request $request){
+        $query = $request->input('q');
+        return view('pages.search', ['query' => $query]);
+    }
 
 }

@@ -2293,3 +2293,126 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
 }
+
+/*--------------------------------------------------------------
+# Search Overlay
+/*--------------------------------------------------------------*/
+.search-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(6, 6, 6, 0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  padding: 40px 20px;
+}
+
+.search-overlay[aria-hidden="false"] {
+  display: flex;
+}
+
+.search-overlay-inner {
+  width: 100%;
+  max-width: 1100px;
+  background: transparent;
+  position: relative;
+}
+
+.search-input-wrap {
+  display: flex;
+  gap: 0;
+}
+
+.search-overlay-form input[type="text"] {
+  flex: 1 1 auto;
+  padding: 22px 28px;
+  border-radius: 50px 0 0 50px;
+  border: none;
+  font-size: 20px;
+  outline: none;
+  background: #f1f5f6;
+  color: #222;
+}
+
+.search-overlay-btn {
+  padding: 18px 34px;
+  border-radius: 0 50px 50px 0;
+  border: none;
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-overlay-close {
+  position: absolute;
+  right: 24px;
+  top: 18px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 36px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .search-overlay-form input[type="text"] {
+    font-size: 16px;
+    padding: 16px 18px;
+  }
+
+  .search-overlay-btn {
+    padding: 12px 18px;
+    font-size: 14px;
+  }
+}
+
+/* Search page box styles */
+.search-page-box {
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-page-box .search-page-input {
+  flex: 1 1 auto;
+  max-width: 1000px;
+  padding: 20px 28px;
+  border-radius: 60px 0 0 60px;
+  border: none;
+  font-size: 20px;
+  outline: none;
+  background: #f2f6f7;
+  color: #222;
+}
+
+.search-page-box .search-page-btn {
+  padding: 18px 36px;
+  border-radius: 0 60px 60px 0;
+  border: none;
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .search-page-box {
+    padding: 0 10px;
+  }
+
+  .search-page-box .search-page-input {
+    font-size: 16px;
+    padding: 14px 16px;
+    border-radius: 40px 0 0 40px;
+  }
+
+  .search-page-box .search-page-btn {
+    padding: 12px 16px;
+    font-size: 14px;
+    border-radius: 0 40px 40px 0;
+  }
+}
