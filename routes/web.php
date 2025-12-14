@@ -11,4 +11,3 @@ Route::get('/testimonials', [FrontendController::class,'testimonials'])->name('t
 Route::get('/blog', [FrontendController::class,'blog'])->name('blog');
 Route::get('/contact', [FrontendController::class,'contact'])->name('contact');
 Route::get('/login', [FrontendController::class,'login'])->name('login');
-Route::get('/search', [FrontendController::class,'search'])->name('search');

@@ -6,7 +6,7 @@
 * License: https://bootstrapmade.com/license/
 */
 
-(function () {
+(function() {
   "use strict";
 
   /**
@@ -26,7 +26,7 @@
    * Scroll up sticky header to headers with .scroll-up-sticky class
    */
   let lastScrollTop = 0;
-  window.addEventListener('scroll', function () {
+  window.addEventListener('scroll', function() {
     const selectHeader = document.querySelector('#header');
     if (!selectHeader.classList.contains('scroll-up-sticky')) return;
 
@@ -73,7 +73,7 @@
    * Toggle mobile nav dropdowns
    */
   document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-    navmenu.addEventListener('click', function (e) {
+    navmenu.addEventListener('click', function(e) {
       e.preventDefault();
       this.parentNode.classList.toggle('active');
       this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
@@ -142,7 +142,7 @@
    * Init swiper sliders
    */
   function initSwiper() {
-    document.querySelectorAll(".init-swiper").forEach(function (swiperElement) {
+    document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
       let config = JSON.parse(
         swiperElement.querySelector(".swiper-config").innerHTML.trim()
       );
@@ -162,41 +162,6 @@
    */
   const glightbox = GLightbox({
     selector: '.glightbox'
-  });
-
-  /* Search overlay open/close */
-  const openSearchBtn = document.getElementById('open-search');
-  const closeSearchBtn = document.getElementById('close-search');
-  const searchOverlay = document.getElementById('search-overlay');
-  const searchInput = document.getElementById('search-overlay-input');
-
-  function openSearch(e) {
-    e && e.preventDefault();
-    if (!searchOverlay) return;
-    searchOverlay.setAttribute('aria-hidden', 'false');
-    document.body.classList.add('no-scroll');
-    setTimeout(() => { if (searchInput) searchInput.focus(); }, 100);
-  }
-
-  function closeSearch(e) {
-    e && e.preventDefault();
-    if (!searchOverlay) return;
-    searchOverlay.setAttribute('aria-hidden', 'true');
-    document.body.classList.remove('no-scroll');
-  }
-
-  if (openSearchBtn) openSearchBtn.addEventListener('click', openSearch);
-  if (closeSearchBtn) closeSearchBtn.addEventListener('click', closeSearch);
-  if (searchOverlay) {
-    searchOverlay.addEventListener('click', function (e) {
-      if (e.target === searchOverlay) closeSearch(e);
-    });
-  }
-
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') {
-      if (searchOverlay && searchOverlay.getAttribute('aria-hidden') === 'false') closeSearch();
-    }
   });
 
 })();
