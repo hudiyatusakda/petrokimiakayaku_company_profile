@@ -25,7 +25,7 @@
       </ul>
     </li> --}}
 
-    <li><a href="{{ route('contact') }}">icon cari</a></li>
+    <!-- <li><a href="{{ route('contact') }}">icon cari</a></li>
 
     <!-- <li class="nav-search"><a href="{{ route('contact') }}" class="nav-search-link">
       <img src="{{ asset('assets/img/search.png') }}" alt="Cari">
