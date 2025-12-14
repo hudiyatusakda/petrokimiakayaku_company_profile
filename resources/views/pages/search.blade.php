@@ -39,22 +39,43 @@
         <section id="search-results" class="search-results section">
             <div class="container">
                 <div class="row gy-4">
-                    @if(!empty($query))
-                        <div class="col-lg-12">
-                            <div class="alert alert-info">
-                                Menampilkan hasil pencarian untuk: <strong>"{{ $query }}"</strong>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <p class="text-muted">Fitur pencarian masih kosong. Anda dapat mengembangkan pencarian
-                                berdasarkan produk atau artikel.</p>
-                        </div>
-                    @else
+                    @if(empty($query))
                         <div class="col-lg-12">
                             <div class="alert alert-warning">
                                 Silakan masukkan kata kunci pencarian di kotak pencarian.
                             </div>
                         </div>
+                    @else
+                        <div class="col-lg-12">
+                            <div class="alert alert-info">
+                                Menampilkan hasil pencarian untuk: <strong>"{{ $query }}"</strong>
+                            </div>
+                        </div>
+
+                        @if(!empty($results) && count($results) > 0)
+                            @foreach($results as $item)
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="product-item position-relative h-100">
+                                        <div class="product-img position-relative overflow-hidden">
+                                            <img src="{{ asset($item['image']) }}" class="img-fluid" alt="{{ $item['title'] }}">
+                                        </div>
+                                        <div class="product-content p-3">
+                                            <h3 class="product-title">{{ $item['title'] }}</h3>
+                                            <div class="product-price">{{ $item['price'] }}</div>
+                                            <p class="product-description">{{ $item['description'] }}</p>
+                                            <a href="{{ $item['url'] }}" class="btn btn-outline-success btn-sm">Lihat Produk</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        @else
+                            <div class="col-lg-12">
+                                <div class="alert alert-danger">
+                                    Kata kunci "<strong>{{ $query }}</strong>" tidak ditemukan. Coba kata lain atau periksa
+                                    ejaan.
+                                </div>
+                            </div>
+                        @endif
                     @endif
                 </div>
             </div>
