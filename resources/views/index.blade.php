@@ -119,7 +119,7 @@
                       </g>
                     </svg>
                   </div>
-                  <h2 class="mt-3">Produksi</h2>
+                  <h2 class="mt-3">Pestisida</h2>
                 </div>
                 <div class="col-6 text-center">
                   <div class="service-item-icon">
@@ -139,7 +139,7 @@
                       </g>
                     </svg>
                   </div>
-                  <h2 class="mt-3">Distribusi</h2>
+                  <h2 class="mt-3">Petani</h2>
                 </div>
               </div>
               <p class="mt-4">Petrokimia Kayaku adalah perusahaan yang bergerak di bidang pestisida, 
