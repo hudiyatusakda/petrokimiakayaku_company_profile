@@ -385,8 +385,6 @@
 
     </section><!-- /Services 2 Section -->
 
-
-
     <!-- Services 2 Section -->
     <section id="services-2" class="services-2 section dark-background">
       <!-- Section Title -->
@@ -592,113 +590,212 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Recent Posts</h2>
-        <p>Necessitatibus eius consequatur</p>
+        <h2>Video</h2>
+        <p>Petrokimia Kayaku</p>
       </div><!-- End Section Title -->
 
       <div class="container">
 
-        <div class="row gy-5">
+        <div class="swiper recent-posts-swiper">
+          <script type="application/json" class="recent-posts-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 3000
+              },
+              "slidesPerView": 1,
+              "spaceBetween": 20,
+              "pagination": {
+                "el": ".recent-posts-pagination",
+                "clickable": true
+              },
+              "navigation": {
+                "nextEl": ".recent-posts-next",
+                "prevEl": ".recent-posts-prev"
+              },
+              "breakpoints": {
+                "768": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 20
+                },
+                "1200": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 30
+                }
+              }
+            }
+          </script>
+          <button class="recent-posts-prev navigation-prev">
+            <i class="bi bi-chevron-left"></i>
+          </button>
+          <button class="recent-posts-next navigation-next">
+            <i class="bi bi-chevron-right"></i>
+          </button>
+          <div class="swiper-wrapper">
 
-          <div class="col-xl-4 col-md-6">
-            <div class="post-item position-relative h-100" data-aos="fade-up" data-aos-delay="100">
+            <div class="swiper-slide">
+              <div class="post-item position-relative h-100" data-aos="fade-up" data-aos-delay="100">
 
-              <div class="post-img position-relative overflow-hidden">
-                <img src="assets/img/blog/blog-1.jpg" class="img-fluid" alt="">
-                <span class="post-date">December 12</span>
-              </div>
-
-              <div class="post-content d-flex flex-column">
-
-                <h3 class="post-title">Eum ad dolor et. Autem aut fugiat debitis</h3>
-
-                <div class="meta d-flex align-items-center">
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-person"></i> <span class="ps-2">Julia Parker</span>
-                  </div>
-                  <span class="px-3 text-black-50">/</span>
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-folder2"></i> <span class="ps-2">Politics</span>
-                  </div>
+                <div class="post-img position-relative overflow-hidden">
+                  <img src="https://img.youtube.com/vi/MJ18PSJNPRo/maxresdefault.jpg" class="img-fluid" alt="">
+                  <span class="post-date">December 12</span>
                 </div>
 
-                <hr>
+                <div class="post-content d-flex flex-column">
 
-                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i
-                    class="bi bi-arrow-right"></i></a>
+                  <h3 class="post-title">YouTube Video</h3>
 
-              </div>
-
-            </div>
-          </div><!-- End post item -->
-
-          <div class="col-xl-4 col-md-6">
-            <div class="post-item position-relative h-100" data-aos="fade-up" data-aos-delay="200">
-
-              <div class="post-img position-relative overflow-hidden">
-                <img src="assets/img/blog/blog-2.jpg" class="img-fluid" alt="">
-                <span class="post-date">July 17</span>
-              </div>
-
-              <div class="post-content d-flex flex-column">
-
-                <h3 class="post-title">Et repellendus molestiae qui est sed omnis</h3>
-
-                <div class="meta d-flex align-items-center">
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-person"></i> <span class="ps-2">Mario Douglas</span>
+                  <div class="meta d-flex align-items-center">
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-calendar"></i> <span class="ps-2">Uploaded on YouTube</span>
+                    </div>
                   </div>
-                  <span class="px-3 text-black-50">/</span>
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-folder2"></i> <span class="ps-2">Sports</span>
-                  </div>
+
+                  <hr>
+
+                  <a href="https://youtu.be/MJ18PSJNPRo" class="readmore stretched-link"><span>Watch on YouTube</span><i
+                      class="bi bi-arrow-right"></i></a>
+
                 </div>
 
-                <hr>
-
-                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i
-                    class="bi bi-arrow-right"></i></a>
-
               </div>
+            </div><!-- End swiper-slide -->
 
-            </div>
-          </div><!-- End post item -->
+            <div class="swiper-slide">
+              <div class="post-item position-relative h-100" data-aos="fade-up" data-aos-delay="200">
 
-          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="post-item position-relative h-100">
-
-              <div class="post-img position-relative overflow-hidden">
-                <img src="assets/img/blog/blog-3.jpg" class="img-fluid" alt="">
-                <span class="post-date">September 05</span>
-              </div>
-
-              <div class="post-content d-flex flex-column">
-
-                <h3 class="post-title">Quia assumenda est et veritati tirana ploder</h3>
-
-                <div class="meta d-flex align-items-center">
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-person"></i> <span class="ps-2">Lisa Hunter</span>
-                  </div>
-                  <span class="px-3 text-black-50">/</span>
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-folder2"></i> <span class="ps-2">Economics</span>
-                  </div>
+                <div class="post-img position-relative overflow-hidden">
+                  <img src="https://img.youtube.com/vi/NRDHjAwiM0A/maxresdefault.jpg" class="img-fluid" alt="">
+                  <span class="post-date">July 17</span>
                 </div>
 
-                <hr>
+                <div class="post-content d-flex flex-column">
 
-                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i
-                    class="bi bi-arrow-right"></i></a>
+                  <h3 class="post-title">YouTube Video</h3>
+
+                  <div class="meta d-flex align-items-center">
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-calendar"></i> <span class="ps-2">Uploaded on YouTube</span>
+                    </div>
+                  </div>
+
+                  <hr>
+
+                  <a href="https://youtu.be/NRDHjAwiM0A" class="readmore stretched-link"><span>Watch on YouTube</span><i
+                      class="bi bi-arrow-right"></i></a>
+
+                </div>
 
               </div>
+            </div><!-- End swiper-slide -->
 
-            </div>
-          </div><!-- End post item -->
+            <div class="swiper-slide">
+              <div class="post-item position-relative h-100" data-aos="fade-up" data-aos-delay="300">
 
+                <div class="post-img position-relative overflow-hidden">
+                  <img src="https://img.youtube.com/vi/6MCmY_KyL6w/maxresdefault.jpg" class="img-fluid" alt="">
+                  <span class="post-date">September 05</span>
+                </div>
+
+                <div class="post-content d-flex flex-column">
+
+                  <h3 class="post-title">YouTube Video</h3>
+
+                  <div class="meta d-flex align-items-center">
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-calendar"></i> <span class="ps-2">Uploaded on YouTube</span>
+                    </div>
+                  </div>
+
+                  <hr>
+
+                  <a href="https://youtu.be/6MCmY_KyL6w" class="readmore stretched-link"><span>Watch on YouTube</span><i
+                      class="bi bi-arrow-right"></i></a>
+
+                </div>
+
+              </div>
+            </div><!-- End swiper-slide -->
+
+            <div class="swiper-slide">
+              <div class="post-item position-relative h-100">
+
+                <div class="post-img position-relative overflow-hidden">
+                  <img src="https://img.youtube.com/vi/XTS7P8lKY6g/maxresdefault.jpg" class="img-fluid" alt="">
+                  <span class="post-date">October 15</span>
+                </div>
+
+                <div class="post-content d-flex flex-column">
+
+                  <h3 class="post-title">YouTube Video</h3>
+
+                  <div class="meta d-flex align-items-center">
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-calendar"></i> <span class="ps-2">Uploaded on YouTube</span>
+                    </div>
+                  </div>
+
+                  <hr>
+
+                  <a href="https://youtu.be/XTS7P8lKY6g" class="readmore stretched-link"><span>Watch on YouTube</span><i
+                      class="bi bi-arrow-right"></i></a>
+
+                </div>
+
+              </div>
+            </div><!-- End swiper-slide -->
+
+            <div class="swiper-slide">
+              <div class="post-item position-relative h-100">
+
+                <div class="post-img position-relative overflow-hidden">
+                  <img src="https://img.youtube.com/vi/-dvkU_P_WxY/maxresdefault.jpg" class="img-fluid" alt="">
+                  <span class="post-date">November 20</span>
+                </div>
+
+                <div class="post-content d-flex flex-column">
+
+                  <h3 class="post-title">YouTube Video</h3>
+
+                  <div class="meta d-flex align-items-center">
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-calendar"></i> <span class="ps-2">Uploaded on YouTube</span>
+                    </div>
+                  </div>
+
+                  <hr>
+
+                  <a href="https://youtu.be/-dvkU_P_WxY" class="readmore stretched-link"><span>Watch on YouTube</span><i
+                      class="bi bi-arrow-right"></i></a>
+
+                </div>
+
+              </div>
+            </div><!-- End swiper-slide -->
+
+          </div>
+          <div class="recent-posts-pagination swiper-pagination"></div>
         </div>
 
       </div>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          if (typeof Swiper === 'undefined') return;
+          try {
+            const cfgEl = document.querySelector('.recent-posts-config');
+            const cfg = cfgEl ? JSON.parse(cfgEl.textContent) : { loop: true, slidesPerView: 1 };
+            cfg.navigation = cfg.navigation || {};
+            cfg.navigation.nextEl = cfg.navigation.nextEl || '.recent-posts-next';
+            cfg.navigation.prevEl = cfg.navigation.prevEl || '.recent-posts-prev';
+            cfg.pagination = cfg.pagination || {};
+            cfg.pagination.el = cfg.pagination.el || '.recent-posts-pagination';
+            cfg.pagination.clickable = true;
+            new Swiper('.recent-posts-swiper', cfg);
+          } catch (e) { console.error('Swiper init error', e); }
+        });
+      </script>
 
     </section><!-- /Recent Posts Section -->
 
