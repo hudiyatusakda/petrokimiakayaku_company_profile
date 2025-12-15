@@ -23,7 +23,7 @@
   /* Background color for the entire website, including individual sections */
   --default-color: #212529;
   /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #2d465e;
+  --heading-color: #116530;
   /* Color for headings, subheadings and title throughout the website */
   --accent-color: #116530;
   /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
@@ -1124,7 +1124,10 @@ section,
 .services .content .service-item .service-item-icon {
   position: relative;
   margin-bottom: 20px;
-  color: var(--accent-color);
+  color: var(--contrast-color);
+  background-color: var(--accent-color);
+  padding: 15px;
+  border-radius: 10px;
 }
 
 .services .content .service-item .service-item-icon img {
@@ -2418,4 +2421,33 @@ section,
   padding-left: 5px;
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
+}
+
+.services-image {
+  height: 250px;
+  object-fit: cover;
+}
+
+@media (min-width: 576px) {
+  .services-image {
+    height: 300px;
+  }
+}
+
+@media (min-width: 768px) {
+  .services-image {
+    height: 350px;
+  }
+}
+
+@media (min-width: 992px) {
+  .services-image {
+    height: 400px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .services-image {
+    height: 450px;
+  }
 }
