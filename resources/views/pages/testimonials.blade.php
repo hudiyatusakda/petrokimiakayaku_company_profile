@@ -7,10 +7,10 @@
   <header id="header" class="header d-flex align-items-center">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-     
-<a href="{{ url('/') }}" class="logo d-flex align-items-center">
-    <img src="{{ asset('assets/img/logo.png') }}" alt="Petrokayaku">
-</a>
+
+      <a href="{{ url('/') }}" class="logo d-flex align-items-center">
+        <img src="{{ asset('assets/img/logo.png') }}" alt="Petrokayaku">
+      </a>
 
 
 
@@ -24,7 +24,8 @@
   <main class="main">
 
     <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/page-title-bg.webp);">
+    <div class="page-title dark-background" data-aos="fade"
+      style="background-image: url(assets/img/page-title-bg.webp);">
       <div class="container position-relative">
         <h1>Testimonials</h1>
         <p>

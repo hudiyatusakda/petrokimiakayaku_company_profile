@@ -5,21 +5,21 @@
 <body class="index-page">
 
     <header id="header" class="header d-flex align-items-center">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
-     
-<a href="{{ url('/') }}" class="logo d-flex align-items-center">
-    <img src="{{ asset('assets/img/logo.png') }}" alt="Petrokayaku">
-</a>
+        <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
 
+            <a href="{{ url('/') }}" class="logo d-flex align-items-center">
+                <img src="{{ asset('assets/img/logo.png') }}" alt="Petrokayaku">
+            </a>
 
-      <!-- navbar -->
-      @include ('layouts.navbar')
-      <!-- navbar -->
 
-    </div>
-  </header>
+
+            <!-- navbar -->
+            @include ('layouts.navbar')
+            <!-- navbar -->
+
+        </div>
+    </header>
     {{-- main --}}
 
     {{-- main --}}
@@ -47,7 +47,8 @@
 
                 <div class="row gy-4 text-center">
                     <div class="col-lg-3 col-md-6">
-                        <div class="category-item p-4" style="box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;">
+                        <div class="category-item p-4"
+                            style="box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;">
                             <div class="icon-box">
                                 <i class="fa-solid fa-leaf fa-2x text-success"></i>
                             </div>
@@ -57,7 +58,8 @@
                     </div>
 
                     <div class="col-lg-3 col-md-6">
-                        <div class="category-item p-4" style="box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;">
+                        <div class="category-item p-4"
+                            style="box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;">
                             <div class="icon-box">
                                 <i class="fa-solid fa-apple-whole fa-2x text-success"></i>
                             </div>
@@ -67,7 +69,8 @@
                     </div>
 
                     <div class="col-lg-3 col-md-6">
-                        <div class="category-item p-4" style="box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;">
+                        <div class="category-item p-4"
+                            style="box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;">
                             <div class="icon-box">
                                 <i class="fa-solid fa-cheese fa-2x text-success"></i>
                             </div>
@@ -77,7 +80,8 @@
                     </div>
 
                     <div class="col-lg-3 col-md-6">
-                        <div class="category-item p-4" style="box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;">
+                        <div class="category-item p-4"
+                            style="box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;">
                             <div class="icon-box">
                                 <i class="fa-solid fa-wheat-awn fa-2x text-success"></i>
                             </div>
@@ -107,7 +111,8 @@
                             <div class="swiper-slide">
                                 <div class="product-item position-relative h-100">
                                     <div class="product-img position-relative overflow-hidden">
-                                        <img src="{{ asset('assets/img/products/tomatoes.jpg') }}" class="img-fluid" alt="Organic Tomatoes">
+                                        <img src="{{ asset('assets/img/products/tomatoes.jpg') }}" class="img-fluid"
+                                            alt="Organic Tomatoes">
                                         <div class="product-badge bg-success">Organic</div>
                                     </div>
 
@@ -116,7 +121,8 @@
                                             <h3 class="product-title">Organic Tomatoes</h3>
                                             <div class="product-price">$3.99/lb</div>
                                         </div>
-                                        <p class="product-description">Freshly picked vine-ripened tomatoes, grown without pesticides.</p>
+                                        <p class="product-description">Freshly picked vine-ripened tomatoes, grown
+                                            without pesticides.</p>
                                         <div class="d-flex justify-content-between align-items-center mt-auto">
                                             <div class="product-rating">
                                                 <i class="bi bi-star-fill text-warning"></i>
@@ -136,7 +142,8 @@
                             <div class="swiper-slide">
                                 <div class="product-item position-relative h-100">
                                     <div class="product-img position-relative overflow-hidden">
-                                        <img src="{{ asset('assets/img/products/carrots.jpg') }}" class="img-fluid" alt="Fresh Carrots">
+                                        <img src="{{ asset('assets/img/products/carrots.jpg') }}" class="img-fluid"
+                                            alt="Fresh Carrots">
                                         <div class="product-badge bg-success">Organic</div>
                                     </div>
 
@@ -145,7 +152,8 @@
                                             <h3 class="product-title">Fresh Carrots</h3>
                                             <div class="product-price">$2.49/lb</div>
                                         </div>
-                                        <p class="product-description">Sweet and crunchy, perfect for snacks or cooking.</p>
+                                        <p class="product-description">Sweet and crunchy, perfect for snacks or cooking.
+                                        </p>
                                         <div class="d-flex justify-content-between align-items-center mt-auto">
                                             <div class="product-rating">
                                                 <i class="bi bi-star-fill text-warning"></i>
@@ -165,7 +173,8 @@
                             <div class="swiper-slide">
                                 <div class="product-item position-relative h-100">
                                     <div class="product-img position-relative overflow-hidden">
-                                        <img src="{{ asset('assets/img/products/apples.jpg') }}" class="img-fluid" alt="Organic Apples">
+                                        <img src="{{ asset('assets/img/products/apples.jpg') }}" class="img-fluid"
+                                            alt="Organic Apples">
                                         <div class="product-badge bg-info">Seasonal</div>
                                     </div>
 
@@ -174,7 +183,8 @@
                                             <h3 class="product-title">Organic Apples</h3>
                                             <div class="product-price">$1.99/lb</div>
                                         </div>
-                                        <p class="product-description">Crisp and juicy, available in several varieties.</p>
+                                        <p class="product-description">Crisp and juicy, available in several varieties.
+                                        </p>
                                         <div class="d-flex justify-content-between align-items-center mt-auto">
                                             <div class="product-rating">
                                                 <i class="bi bi-star-fill text-warning"></i>
@@ -194,7 +204,8 @@
                             <div class="swiper-slide">
                                 <div class="product-item position-relative h-100">
                                     <div class="product-img position-relative overflow-hidden">
-                                        <img src="{{ asset('assets/img/products/eggs.jpg') }}" class="img-fluid" alt="Farm Eggs">
+                                        <img src="{{ asset('assets/img/products/eggs.jpg') }}" class="img-fluid"
+                                            alt="Farm Eggs">
                                         <div class="product-badge bg-success">Free Range</div>
                                     </div>
 
@@ -203,7 +214,8 @@
                                             <h3 class="product-title">Farm Eggs</h3>
                                             <div class="product-price">$4.99/dozen</div>
                                         </div>
-                                        <p class="product-description">Free-range eggs from happy, pasture-raised chickens.</p>
+                                        <p class="product-description">Free-range eggs from happy, pasture-raised
+                                            chickens.</p>
                                         <div class="d-flex justify-content-between align-items-center mt-auto">
                                             <div class="product-rating">
                                                 <i class="bi bi-star-fill text-warning"></i>
@@ -223,7 +235,8 @@
                             <div class="swiper-slide">
                                 <div class="product-item position-relative h-100">
                                     <div class="product-img position-relative overflow-hidden">
-                                        <img src="{{ asset('assets/img/products/honey.jpg') }}" class="img-fluid" alt="Raw Honey">
+                                        <img src="{{ asset('assets/img/products/honey.jpg') }}" class="img-fluid"
+                                            alt="Raw Honey">
                                         <div class="product-badge bg-warning">Limited</div>
                                     </div>
 
@@ -232,7 +245,8 @@
                                             <h3 class="product-title">Raw Honey</h3>
                                             <div class="product-price">$8.99/jar</div>
                                         </div>
-                                        <p class="product-description">Pure, unfiltered honey from our local beehives.</p>
+                                        <p class="product-description">Pure, unfiltered honey from our local beehives.
+                                        </p>
                                         <div class="d-flex justify-content-between align-items-center mt-auto">
                                             <div class="product-rating">
                                                 <i class="bi bi-star-fill text-warning"></i>
@@ -252,7 +266,8 @@
                             <div class="swiper-slide">
                                 <div class="product-item position-relative h-100">
                                     <div class="product-img position-relative overflow-hidden">
-                                        <img src="{{ asset('assets/img/products/bread.jpg') }}" class="img-fluid" alt="Artisan Bread">
+                                        <img src="{{ asset('assets/img/products/bread.jpg') }}" class="img-fluid"
+                                            alt="Artisan Bread">
                                         <div class="product-badge bg-info">Fresh</div>
                                     </div>
 
@@ -261,7 +276,8 @@
                                             <h3 class="product-title">Artisan Bread</h3>
                                             <div class="product-price">$5.99/loaf</div>
                                         </div>
-                                        <p class="product-description">Freshly baked sourdough using traditional methods.</p>
+                                        <p class="product-description">Freshly baked sourdough using traditional
+                                            methods.</p>
                                         <div class="d-flex justify-content-between align-items-center mt-auto">
                                             <div class="product-rating">
                                                 <i class="bi bi-star-fill text-warning"></i>
@@ -278,51 +294,53 @@
                             </div>
                         </div>
                         <div class="products-swiper-controls d-flex justify-content-between align-items-center mt-3">
-                            <div class="products-swiper-prev products-swiper-nav btn btn-outline-secondary"><i class="bi bi-chevron-left"></i></div>
+                            <div class="products-swiper-prev products-swiper-nav btn btn-outline-secondary"><i
+                                    class="bi bi-chevron-left"></i></div>
                             <div class="products-swiper-pagination"></div>
-                            <div class="products-swiper-next products-swiper-nav btn btn-outline-secondary"><i class="bi bi-chevron-right"></i></div>
+                            <div class="products-swiper-next products-swiper-nav btn btn-outline-secondary"><i
+                                    class="bi bi-chevron-right"></i></div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Blog Pagination Section -->
-    <section id="blog-pagination" class="blog-pagination section">
+        <section id="blog-pagination" class="blog-pagination section">
 
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                if (typeof Swiper === 'undefined') return;
-                try {
-                    const cfgEl = document.querySelector('.products-swiper-config');
-                    const cfg = cfgEl ? JSON.parse(cfgEl.textContent) : {loop:true,slidesPerView:1};
-                    cfg.navigation = cfg.navigation || {};
-                    cfg.navigation.nextEl = cfg.navigation.nextEl || '.products-swiper-next';
-                    cfg.navigation.prevEl = cfg.navigation.prevEl || '.products-swiper-prev';
-                    cfg.pagination = cfg.pagination || {};
-                    cfg.pagination.el = cfg.pagination.el || '.products-swiper-pagination';
-                    cfg.pagination.clickable = true;
-                    new Swiper('.products-swiper', cfg);
-                } catch (e) { console.error('Swiper init error', e); }
-            });
-        </script>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    if (typeof Swiper === 'undefined') return;
+                    try {
+                        const cfgEl = document.querySelector('.products-swiper-config');
+                        const cfg = cfgEl ? JSON.parse(cfgEl.textContent) : { loop: true, slidesPerView: 1 };
+                        cfg.navigation = cfg.navigation || {};
+                        cfg.navigation.nextEl = cfg.navigation.nextEl || '.products-swiper-next';
+                        cfg.navigation.prevEl = cfg.navigation.prevEl || '.products-swiper-prev';
+                        cfg.pagination = cfg.pagination || {};
+                        cfg.pagination.el = cfg.pagination.el || '.products-swiper-pagination';
+                        cfg.pagination.clickable = true;
+                        new Swiper('.products-swiper', cfg);
+                    } catch (e) { console.error('Swiper init error', e); }
+                });
+            </script>
 
 
-      <div class="container">
-        <div class="d-flex justify-content-center">
-          <ul>
-            <li><a href="#"><i class="bi bi-chevron-left"></i></a></li>
-            <li><a href="#">1</a></li>
-            <li><a href="#" class="active">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li>...</li>
-            <li><a href="#">10</a></li>
-            <li><a href="#"><i class="bi bi-chevron-right"></i></a></li>
-          </ul>
-        </div>
-      </div>
+            <div class="container">
+                <div class="d-flex justify-content-center">
+                    <ul>
+                        <li><a href="#"><i class="bi bi-chevron-left"></i></a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#" class="active">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li>...</li>
+                        <li><a href="#">10</a></li>
+                        <li><a href="#"><i class="bi bi-chevron-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
 
-    </section><!-- /Blog Pagination Section -->
+        </section><!-- /Blog Pagination Section -->
         <!-- Farm Promise Section -->
         <section id="farm-promise" class="farm-promise section bg-light">
             <div class="container">

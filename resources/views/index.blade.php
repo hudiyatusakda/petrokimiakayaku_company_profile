@@ -17,8 +17,8 @@
   </header>
   <style>
     /* Services-2: section background + product card styling to match provided design */
-    #services-2 { 
-      background-color: #0b6b3a !important; 
+    #services-2 {
+      background-color: #0b6b3a !important;
       padding: 60px 0;
     }
 
@@ -481,9 +481,11 @@
             </div>
 
             <div class="d-flex justify-content-between align-items-center mt-3">
-              <div class="services-products-prev btn btn-outline-secondary services-products-nav"><i class="bi bi-chevron-left"></i></div>
+              <div class="services-products-prev btn btn-outline-secondary services-products-nav"><i
+                  class="bi bi-chevron-left"></i></div>
               <div class="services-products-pagination"></div>
-              <div class="services-products-next btn btn-outline-secondary services-products-nav"><i class="bi bi-chevron-right"></i></div>
+              <div class="services-products-next btn btn-outline-secondary services-products-nav"><i
+                  class="bi bi-chevron-right"></i></div>
             </div>
 
           </div>
@@ -495,7 +497,7 @@
           if (typeof Swiper === 'undefined') return;
           try {
             const cfgEl = document.querySelector('.services-products-config');
-            const cfg = cfgEl ? JSON.parse(cfgEl.textContent) : {loop:true,slidesPerView:1};
+            const cfg = cfgEl ? JSON.parse(cfgEl.textContent) : { loop: true, slidesPerView: 1 };
             cfg.navigation = cfg.navigation || {};
             cfg.navigation.nextEl = cfg.navigation.nextEl || '.services-products-next';
             cfg.navigation.prevEl = cfg.navigation.prevEl || '.services-products-prev';
@@ -507,7 +509,7 @@
         });
       </script>
 
-      
+
 
     </section><!-- /Services 2 Section -->
 
