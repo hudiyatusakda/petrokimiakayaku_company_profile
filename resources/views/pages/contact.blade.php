@@ -4,13 +4,13 @@
 
 <body class="index-page">
 
-  <<header id="header" class="header d-flex align-items-center">
+  <header id="header" class="header d-flex align-items-center">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-     
-<a href="{{ url('/') }}" class="logo d-flex align-items-center">
-    <img src="{{ asset('assets/img/logo.png') }}" alt="Petrokayaku">
-</a>
+
+      <a href="{{ url('/') }}" class="logo d-flex align-items-center">
+        <img src="{{ asset('assets/img/logo.png') }}" alt="Petrokayaku">
+      </a>
 
 
 
@@ -21,12 +21,13 @@
     </div>
   </header>
 
-    </div>
+  </div>
   </header>
   <main class="main">
 
     <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/page-title-bg.webp);">
+    <div class="page-title dark-background" data-aos="fade"
+      style="background-image: url(assets/img/page-title-bg.webp);">
       <div class="container position-relative">
         <h1>Contact</h1>
         <p>
@@ -47,7 +48,9 @@
     <section id="contact" class="contact section">
 
       <div class="mb-5">
-        <iframe style="width: 100%; height: 400px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen=""></iframe>
+        <iframe style="width: 100%; height: 400px;"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
+          frameborder="0" allowfullscreen=""></iframe>
       </div><!-- End Google Maps -->
 
       <div class="container" data-aos="fade">

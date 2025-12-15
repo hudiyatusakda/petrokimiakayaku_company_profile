@@ -23,7 +23,7 @@
   /* Background color for the entire website, including individual sections */
   --default-color: #212529;
   /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #2d465e;
+  --heading-color: #116530;
   /* Color for headings, subheadings and title throughout the website */
   --accent-color: #116530;
   /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
@@ -282,6 +282,12 @@ h6 {
 @media (min-width: 1200px) {
   .navmenu {
     padding: 0;
+    /* center the navmenu horizontally within the header */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9998;
   }
 
   .navmenu ul {
@@ -290,22 +296,43 @@ h6 {
     display: flex;
     list-style: none;
     align-items: center;
+    justify-content: center;
+    gap: 28px;
+    width: 100%;
   }
 
   .navmenu li {
     position: relative;
   }
 
+  /* push search icon to the far right */
+  .navmenu li.nav-search {
+    margin-left: auto;
+    padding-right: 20px;
+  }
+
+  .navmenu .nav-search-link img {
+    height: 26px;
+    width: auto;
+    display: block;
+    transition: filter 0.22s ease;
+  }
+
+  .navmenu .nav-search-link:hover img,
+  .navmenu .nav-search-link:focus img {
+    filter: invert(36%) sepia(66%) saturate(490%) hue-rotate(75deg) brightness(95%) contrast(90%);
+  }
+
   .navmenu a,
   .navmenu a:focus {
     color: var(--nav-color);
-    padding: 18px 15px;
-    font-size: 16px;
+    padding: 18px 22px;
+    font-size: 18px;
     font-family: var(--nav-font);
-    font-weight: 400;
+    font-weight: 500;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     white-space: nowrap;
     transition: 0.3s;
   }
@@ -369,6 +396,88 @@ h6 {
     opacity: 1;
     top: 100%;
     visibility: visible;
+  }
+
+  /* Navbar search icon sizing and spacing */
+  .navmenu li.nav-search a.nav-search-link i,
+  .navmenu li.nav-search a i.bi-search {
+    font-size: 20px;
+    /* larger icon */
+    line-height: 1;
+    display: inline-block;
+    padding: 8px 10px;
+    border-radius: 6px;
+    transition: background-color .2s, color .2s, transform .12s;
+  }
+
+  .navmenu li.nav-search a.nav-search-link i:hover,
+  .navmenu li.nav-search a.nav-search-link:focus i {
+    background-color: color-mix(in srgb, var(--accent-color), transparent 88%);
+    transform: translateY(-1px);
+  }
+
+  /* Search popup styles */
+  .search-popup {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 20000;
+  }
+
+  .search-popup[aria-hidden="false"] {
+    display: flex;
+  }
+
+  .search-popup-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+  }
+
+  .search-popup-panel {
+    position: relative;
+    width: min(760px, 94%);
+    background: var(--surface-color);
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+  }
+
+  .search-popup-close {
+    position: absolute;
+    right: 12px;
+    top: 10px;
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    line-height: 1;
+    color: var(--default-color);
+  }
+
+  .search-popup-form {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .search-popup-form input[type="search"] {
+    flex: 1 1 auto;
+    padding: 14px 16px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 86%);
+  }
+
+  .search-popup-submit {
+    padding: 12px 18px;
+    border-radius: 8px;
+    background: var(--accent-color);
+    color: var(--contrast-color);
+    border: none;
+    font-weight: 600;
   }
 
   .navmenu .dropdown .dropdown ul {
@@ -745,7 +854,7 @@ h6 {
   font-size: 42px;
   font-weight: 700;
   margin-bottom: 10px;
-}
+  }
 
 .page-title .breadcrumbs ol {
   display: flex;
@@ -815,6 +924,8 @@ section,
 --------------------------------------------------------------*/
 .hero {
   padding: 0;
+  margin-top: 80px;
+  scroll-margin-top: 100px;
 }
 
 .hero .carousel {
@@ -834,6 +945,7 @@ section,
   height: 100%;
   object-fit: cover;
   z-index: 1;
+  animation: zoomOut 8s ease-in-out infinite;
 }
 
 .hero .carousel-item {
@@ -871,6 +983,10 @@ section,
 }
 
 @media (max-width: 768px) {
+  .hero {
+    margin-top: 60px;
+  }
+
   .hero h2 {
     font-size: 30px;
   }
@@ -971,6 +1087,16 @@ section,
   }
 }
 
+@keyframes zoomOut {
+  from {
+    transform: scale(1.2);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
@@ -998,7 +1124,10 @@ section,
 .services .content .service-item .service-item-icon {
   position: relative;
   margin-bottom: 20px;
-  color: var(--accent-color);
+  color: var(--contrast-color);
+  background-color: var(--accent-color);
+  padding: 15px;
+  border-radius: 10px;
 }
 
 .services .content .service-item .service-item-icon img {
@@ -2292,4 +2421,33 @@ section,
   padding-left: 5px;
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
+}
+
+.services-image {
+  height: 250px;
+  object-fit: cover;
+}
+
+@media (min-width: 576px) {
+  .services-image {
+    height: 300px;
+  }
+}
+
+@media (min-width: 768px) {
+  .services-image {
+    height: 350px;
+  }
+}
+
+@media (min-width: 992px) {
+  .services-image {
+    height: 400px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .services-image {
+    height: 450px;
+  }
 }
