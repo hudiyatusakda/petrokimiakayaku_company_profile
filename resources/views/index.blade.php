@@ -92,6 +92,40 @@
       margin-top: 12px;
       width: 100%;
     }
+
+    /* Center pagination dots and style bullets */
+    #services-2 .d-flex.justify-content-between.align-items-center {
+      align-items: center;
+    }
+
+    #services-2 .services-products-prev,
+    #services-2 .services-products-next {
+      flex: 0 0 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #services-2 .services-products-pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1 1 auto;
+    }
+
+    /* Swiper bullets override to look like dots */
+    #services-2 .services-products-pagination .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      background: #cfcfcf;
+      opacity: 1;
+      margin: 0 6px;
+      border-radius: 50%;
+    }
+
+    #services-2 .services-products-pagination .swiper-pagination-bullet-active {
+      background: #0b6b3a;
+    }
   </style>
   <!-- main content -->
   <main class="main">
@@ -214,9 +248,11 @@
                   <h2 class="mt-3">Petani</h2>
                 </div>
               </div>
-              <p class="mt-4">Petrokimia Kayaku adalah perusahaan yang bergerak di bidang pestisida, 
-                berkomitmen untuk menyediakan produk berkualitas tinggi untuk pertanian Indonesia. Kami memastikan distribusi dan
-                 produksi pestisida yang terjaga dan mampu menumbuhkan semangat petani serta kesehatan tanaman Indonesia.</p>
+              <p class="mt-4">Petrokimia Kayaku adalah perusahaan yang bergerak di bidang pestisida,
+                berkomitmen untuk menyediakan produk berkualitas tinggi untuk pertanian Indonesia. Kami memastikan
+                distribusi dan
+                produksi pestisida yang terjaga dan mampu menumbuhkan semangat petani serta kesehatan tanaman Indonesia.
+              </p>
               <a href="#" class="btn btn-success mt-3">SELENGKAPNYA</a>
             </div>
           </div>
@@ -349,36 +385,7 @@
 
     </section><!-- /Services 2 Section -->
 
-    <!-- About 3 Section -->
-    <section id="about-3" class="about-3 section">
 
-      <div class="container">
-        <div class="row gy-4 justify-content-between align-items-center">
-          <div class="col-lg-6 order-lg-2 position-relative" data-aos="zoom-out">
-            <img src="assets/img/img_sq_1.jpg" alt="Image" class="img-fluid">
-            <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn">
-              <span class="play"><i class="bi bi-play-fill"></i></span>
-            </a>
-          </div>
-          <div class="col-lg-5 order-lg-1" data-aos="fade-up" data-aos-delay="100">
-            <h2 class="content-title mb-4">Plants Make Life Better</h2>
-            <p class="mb-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-              necessitatibus placeat, atque qui voluptatem velit explicabo vitae
-              repellendus architecto provident nisi ullam minus asperiores commodi!
-              Tenetur, repellat aliquam nihil illo.
-            </p>
-            <ul class="list-unstyled list-check">
-              <li>Lorem ipsum dolor sit amet</li>
-              <li>Velit explicabo vitae repellendu</li>
-              <li>Repellat aliquam nihil illo</li>
-            </ul>
-
-            <p><a href="#" class="btn-cta">Get in touch</a></p>
-          </div>
-        </div>
-      </div>
-    </section><!-- /About 3 Section -->
 
     <!-- Services 2 Section -->
     <section id="services-2" class="services-2 section dark-background">
