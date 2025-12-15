@@ -24,6 +24,10 @@
         <li><a href="#">Dropdown 4</a></li>
       </ul>
     </li> --}}
+    <!-- <li class="nav-search"><a href="{{ route('contact') }}" class="nav-search-link">
+      <img src="{{ asset('assets/img/search.png') }}" alt="Cari">
+    </a></li> -->
+
     <li class="nav-search"><a href="#" class="nav-search-link open-search-popup"><i class="bi bi-search"></i></a></li>
   </ul>
   <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
