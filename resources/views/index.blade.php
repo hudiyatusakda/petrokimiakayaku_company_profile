@@ -1,18 +1,13 @@
 @include ('layouts.header')
 
-
-
 <body class="index-page">
 
-  <<header id="header" class="header d-flex align-items-center">
+  <header id="header" class="header d-flex align-items-center">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-     
-<a href="{{ url('/') }}" class="logo d-flex align-items-center">
-    <img src="{{ asset('assets/img/logo.png') }}" alt="Petrokayaku">
-</a>
-
-
+      <a href="{{ url('/') }}" class="logo d-flex align-items-center">
+        <img src="{{ asset('assets/img/logo.png') }}" alt="Petrokayaku">
+      </a>
 
       <!-- navbar -->
       @include ('layouts.navbar')
@@ -20,7 +15,84 @@
 
     </div>
   </header>
+  <style>
+    /* Services-2: section background + product card styling to match provided design */
+    #services-2 { 
+      background-color: #0b6b3a !important; 
+      padding: 60px 0;
+    }
 
+    #services-2 .product-item {
+      background: #ffffff;
+      border-radius: 6px;
+      border: 1px solid #e9ecef;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    #services-2 .product-img {
+      height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #ffffff;
+    }
+
+    #services-2 .product-img img {
+      max-height: 110px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    #services-2 .product-content {
+      padding: 18px;
+      background: #ffffff;
+      color: #222;
+      flex: 1 0 auto;
+    }
+
+    #services-2 .product-category {
+      color: #6c757d;
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+    }
+
+    #services-2 .product-title {
+      color: #0b6b3a;
+      font-weight: 700;
+      font-size: 1.25rem;
+      margin-bottom: 8px;
+    }
+
+    #services-2 .product-price {
+      color: #0b6b3a;
+      font-weight: 700;
+      margin-top: 6px;
+    }
+
+    #services-2 .product-detail-btn {
+      background: #0b6b3a;
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 4px;
+      display: inline-block;
+      margin-top: 12px;
+      text-decoration: none;
+    }
+
+    /* green bottom stripe like the screenshot */
+    #services-2 .product-item::after {
+      content: "";
+      display: block;
+      height: 6px;
+      background: #0b6b3a;
+      margin-top: 12px;
+      width: 100%;
+    }
+  </style>
   <!-- main content -->
   <main class="main">
 
@@ -316,54 +388,128 @@
       </div>
     </section><!-- /Services Section -->
 
-    <!-- About Section -->
-    <section id="about" class="about section">
+    <!-- Services 2 Section (Products for dashboard) -->
+    <section id="services-2" class="services-2 section dark-background">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Products</h2>
+        <p>Featured items from our catalog</p>
+      </div>
 
-      <div class="content">
+      <div class="services-carousel-wrap">
         <div class="container">
-          <div class="row">
-            <div class="col-lg-6 mb-4 mb-lg-0">
-              <img src="assets/img/img_long_5.jpg" alt="Image " class="img-fluid img-overlap" data-aos="zoom-out">
-            </div>
-            <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
-              <h3 class="content-subtitle text-white opacity-50">Why Choose Us</h3>
-              <h2 class="content-title mb-4">
-                More than <strong>50 year experience</strong> in agriculture
-                industry
-              </h2>
-              <p class="opacity-50">
-                Reprehenderit, odio laboriosam? Blanditiis quae ullam quasi illum
-                minima nostrum perspiciatis error consequatur sit nulla.
-              </p>
+          <div class="swiper services-products-swiper">
+            <script type="application/json" class="services-products-config">
+              {"loop":true,"speed":600,"slidesPerView":1,"spaceBetween":20,"breakpoints":{"768":{"slidesPerView":2},"992":{"slidesPerView":3}},"navigation":{"nextEl":".services-products-next","prevEl":".services-products-prev"},"pagination":{"el":".services-products-pagination","clickable":true}}
+            </script>
 
-              <div class="row my-5">
-                <div class="col-lg-12 d-flex align-items-start mb-4">
-                  <i class="bi bi-cloud-rain me-4 display-6"></i>
-                  <div>
-                    <h4 class="m-0 h5 text-white">Plants needs rain</h4>
-                    <p class="text-white opacity-50">Lorem ipsum dolor sit amet.</p>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="product-item position-relative h-100">
+                  <div class="product-img position-relative overflow-hidden">
+                    <img src="{{ asset('assets/img/products/admil.png') }}" class="img-fluid" alt="admil">
+                    <div class="product-badge bg-success">Insecticide</div>
                   </div>
-                </div>
-                <div class="col-lg-12 d-flex align-items-start mb-4">
-                  <i class="bi bi-heart me-4 display-6"></i>
-                  <div>
-                    <h4 class="m-0 h5 text-white">Love organic foods</h4>
-                    <p class="text-white opacity-50">Lorem ipsum dolor sit amet.</p>
-                  </div>
-                </div>
-                <div class="col-lg-12 d-flex align-items-start">
-                  <i class="bi bi-shop me-4 display-6"></i>
-                  <div>
-                    <h4 class="m-0 h5 text-white">Sell vegies</h4>
-                    <p class="text-white opacity-50">Lorem ipsum dolor sit amet.</p>
+                  <div class="product-content p-3">
+                    <div class="product-category">Insecticide</div>
+                    <h3 class="product-title">Admil</h3>
+                    <div class="product-price"></div>
+                    <a href="#" class="product-detail-btn">Detail</a>
                   </div>
                 </div>
               </div>
+
+              <div class="swiper-slide">
+                <div class="product-item position-relative h-100">
+                  <div class="product-img position-relative overflow-hidden">
+                    <img src="{{ asset('assets/img/products/bassa.png') }}" class="img-fluid" alt="bassa">
+                    <div class="product-badge bg-success">Insecticide</div>
+                  </div>
+                  <div class="product-content p-3">
+                    <div class="product-category">Insecticide</div>
+                    <h3 class="product-title">Bassa 500 EC</h3>
+                    <div class="product-price"></div>
+                    <a href="#" class="product-detail-btn">Detail</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="product-item position-relative h-100">
+                  <div class="product-img position-relative overflow-hidden">
+                    <img src="{{ asset('assets/img/products/ceba.png') }}" class="img-fluid" alt="ceba">
+                    <div class="product-badge bg-success">Insecticide</div>
+                  </div>
+                  <div class="product-content p-3">
+                    <div class="product-category">Insecticide</div>
+                    <h3 class="product-title">Ceba 125 EC</h3>
+                    <div class="product-price"></div>
+                    <a href="#" class="product-detail-btn">Detail</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="product-item position-relative h-100">
+                  <div class="product-img position-relative overflow-hidden">
+                    <img src="{{ asset('assets/img/products/gempur.png') }}" class="img-fluid" alt="gempur">
+                    <div class="product-badge bg-success">Insecticide</div>
+                  </div>
+                  <div class="product-content p-3">
+                    <div class="product-category">Insecticide</div>
+                    <h3 class="product-title">Gempur</h3>
+                    <div class="product-price"></div>
+                    <a href="#" class="product-detail-btn">Detail</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="product-item position-relative h-100">
+                  <div class="product-img position-relative overflow-hidden">
+                    <img src="{{ asset('assets/img/products/ratkum.png') }}" class="img-fluid" alt="ratkum">
+                    <div class="product-badge bg-success">Insecticide</div>
+                  </div>
+                  <div class="product-content p-3">
+                    <div class="product-category">Insecticide</div>
+                    <h3 class="product-title">Ratkum</h3>
+                    <div class="product-price"></div>
+                    <a href="#" class="product-detail-btn">Detail</a>
+                  </div>
+                </div>
+              </div>
+
             </div>
+
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <div class="services-products-prev btn btn-outline-secondary services-products-nav"><i class="bi bi-chevron-left"></i></div>
+              <div class="services-products-pagination"></div>
+              <div class="services-products-next btn btn-outline-secondary services-products-nav"><i class="bi bi-chevron-right"></i></div>
+            </div>
+
           </div>
         </div>
       </div>
-    </section><!-- /About Section -->
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          if (typeof Swiper === 'undefined') return;
+          try {
+            const cfgEl = document.querySelector('.services-products-config');
+            const cfg = cfgEl ? JSON.parse(cfgEl.textContent) : {loop:true,slidesPerView:1};
+            cfg.navigation = cfg.navigation || {};
+            cfg.navigation.nextEl = cfg.navigation.nextEl || '.services-products-next';
+            cfg.navigation.prevEl = cfg.navigation.prevEl || '.services-products-prev';
+            cfg.pagination = cfg.pagination || {};
+            cfg.pagination.el = cfg.pagination.el || '.services-products-pagination';
+            cfg.pagination.clickable = true;
+            new Swiper('.services-products-swiper', cfg);
+          } catch (e) { console.error('Swiper init error', e); }
+        });
+      </script>
+
+      
+
+    </section><!-- /Services 2 Section -->
 
     <!-- About 3 Section -->
     <section id="about-3" class="about-3 section">

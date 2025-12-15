@@ -4,7 +4,7 @@
 
 <body class="index-page">
 
-  <<header id="header" class="header d-flex align-items-center">
+    <header id="header" class="header d-flex align-items-center">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
      
@@ -97,186 +97,215 @@
                     <p>Fresh from our farm to your table</p>
                 </div>
 
-                <div class="row gy-4">
-                    <!-- Product 1 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="product-item position-relative h-100">
-                            <div class="product-img position-relative overflow-hidden">
-                                <img src="{{ asset('assets/img/products/tomatoes.jpg') }}" class="img-fluid" alt="Organic Tomatoes">
-                                <div class="product-badge bg-success">Organic</div>
+                <div class="products-swiper-wrap">
+                    <div class="swiper products-swiper">
+                        <script type="application/json" class="products-swiper-config">
+                            {"loop":true,"speed":600,"slidesPerView":1,"spaceBetween":20,"breakpoints":{"768":{"slidesPerView":2},"992":{"slidesPerView":3}},"navigation":{"nextEl":".products-swiper-next","prevEl":".products-swiper-prev"},"pagination":{"el":".products-swiper-pagination","clickable":true}}
+                        </script>
+                        <div class="swiper-wrapper">
+                            <!-- Product 1 -->
+                            <div class="swiper-slide">
+                                <div class="product-item position-relative h-100">
+                                    <div class="product-img position-relative overflow-hidden">
+                                        <img src="{{ asset('assets/img/products/tomatoes.jpg') }}" class="img-fluid" alt="Organic Tomatoes">
+                                        <div class="product-badge bg-success">Organic</div>
+                                    </div>
+
+                                    <div class="product-content d-flex flex-column">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <h3 class="product-title">Organic Tomatoes</h3>
+                                            <div class="product-price">$3.99/lb</div>
+                                        </div>
+                                        <p class="product-description">Freshly picked vine-ripened tomatoes, grown without pesticides.</p>
+                                        <div class="d-flex justify-content-between align-items-center mt-auto">
+                                            <div class="product-rating">
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-half text-warning"></i>
+                                                <span class="ms-1">(24)</span>
+                                            </div>
+                                            <button class="btn btn-success btn-sm">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="product-content d-flex flex-column">
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <h3 class="product-title">Organic Tomatoes</h3>
-                                    <div class="product-price">$3.99/lb</div>
-                                </div>
-                                <p class="product-description">Freshly picked vine-ripened tomatoes, grown without
-                                    pesticides.</p>
-                                <div class="d-flex justify-content-between align-items-center mt-auto">
-                                    <div class="product-rating">
-                                        <i class="bi bi-star-fill text-warning"></i>
-                                        <i class="bi bi-star-fill text-warning"></i>
-                                        <i class="bi bi-star-fill text-warning"></i>
-                                        <i class="bi bi-star-fill text-warning"></i>
-                                        <i class="bi bi-star-half text-warning"></i>
-                                        <span class="ms-1">(24)</span>
+                            <!-- Product 2 -->
+                            <div class="swiper-slide">
+                                <div class="product-item position-relative h-100">
+                                    <div class="product-img position-relative overflow-hidden">
+                                        <img src="{{ asset('assets/img/products/carrots.jpg') }}" class="img-fluid" alt="Fresh Carrots">
+                                        <div class="product-badge bg-success">Organic</div>
                                     </div>
-                                    <button class="btn btn-success btn-sm">Add to Cart</button>
+
+                                    <div class="product-content d-flex flex-column">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <h3 class="product-title">Fresh Carrots</h3>
+                                            <div class="product-price">$2.49/lb</div>
+                                        </div>
+                                        <p class="product-description">Sweet and crunchy, perfect for snacks or cooking.</p>
+                                        <div class="d-flex justify-content-between align-items-center mt-auto">
+                                            <div class="product-rating">
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star text-warning"></i>
+                                                <span class="ms-1">(18)</span>
+                                            </div>
+                                            <button class="btn btn-success btn-sm">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product 3 -->
+                            <div class="swiper-slide">
+                                <div class="product-item position-relative h-100">
+                                    <div class="product-img position-relative overflow-hidden">
+                                        <img src="{{ asset('assets/img/products/apples.jpg') }}" class="img-fluid" alt="Organic Apples">
+                                        <div class="product-badge bg-info">Seasonal</div>
+                                    </div>
+
+                                    <div class="product-content d-flex flex-column">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <h3 class="product-title">Organic Apples</h3>
+                                            <div class="product-price">$1.99/lb</div>
+                                        </div>
+                                        <p class="product-description">Crisp and juicy, available in several varieties.</p>
+                                        <div class="d-flex justify-content-between align-items-center mt-auto">
+                                            <div class="product-rating">
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <span class="ms-1">(32)</span>
+                                            </div>
+                                            <button class="btn btn-success btn-sm">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product 4 -->
+                            <div class="swiper-slide">
+                                <div class="product-item position-relative h-100">
+                                    <div class="product-img position-relative overflow-hidden">
+                                        <img src="{{ asset('assets/img/products/eggs.jpg') }}" class="img-fluid" alt="Farm Eggs">
+                                        <div class="product-badge bg-success">Free Range</div>
+                                    </div>
+
+                                    <div class="product-content d-flex flex-column">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <h3 class="product-title">Farm Eggs</h3>
+                                            <div class="product-price">$4.99/dozen</div>
+                                        </div>
+                                        <p class="product-description">Free-range eggs from happy, pasture-raised chickens.</p>
+                                        <div class="d-flex justify-content-between align-items-center mt-auto">
+                                            <div class="product-rating">
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-half text-warning"></i>
+                                                <span class="ms-1">(27)</span>
+                                            </div>
+                                            <button class="btn btn-success btn-sm">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product 5 -->
+                            <div class="swiper-slide">
+                                <div class="product-item position-relative h-100">
+                                    <div class="product-img position-relative overflow-hidden">
+                                        <img src="{{ asset('assets/img/products/honey.jpg') }}" class="img-fluid" alt="Raw Honey">
+                                        <div class="product-badge bg-warning">Limited</div>
+                                    </div>
+
+                                    <div class="product-content d-flex flex-column">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <h3 class="product-title">Raw Honey</h3>
+                                            <div class="product-price">$8.99/jar</div>
+                                        </div>
+                                        <p class="product-description">Pure, unfiltered honey from our local beehives.</p>
+                                        <div class="d-flex justify-content-between align-items-center mt-auto">
+                                            <div class="product-rating">
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <span class="ms-1">(41)</span>
+                                            </div>
+                                            <button class="btn btn-success btn-sm">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product 6 -->
+                            <div class="swiper-slide">
+                                <div class="product-item position-relative h-100">
+                                    <div class="product-img position-relative overflow-hidden">
+                                        <img src="{{ asset('assets/img/products/bread.jpg') }}" class="img-fluid" alt="Artisan Bread">
+                                        <div class="product-badge bg-info">Fresh</div>
+                                    </div>
+
+                                    <div class="product-content d-flex flex-column">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <h3 class="product-title">Artisan Bread</h3>
+                                            <div class="product-price">$5.99/loaf</div>
+                                        </div>
+                                        <p class="product-description">Freshly baked sourdough using traditional methods.</p>
+                                        <div class="d-flex justify-content-between align-items-center mt-auto">
+                                            <div class="product-rating">
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star text-warning"></i>
+                                                <span class="ms-1">(15)</span>
+                                            </div>
+                                            <button class="btn btn-success btn-sm">Add to Cart</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div><!-- End product item -->
-
-                    <!-- Product 2 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="product-item position-relative h-100">
-                            <div class="product-img position-relative overflow-hidden">
-                                <img src="{{ asset('assets/img/products/carrots.jpg') }}" class="img-fluid" alt="Fresh Carrots">
-                                <div class="product-badge bg-success">Organic</div>
-                            </div>
-
-                            <div class="product-content d-flex flex-column">
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <h3 class="product-title">Fresh Carrots</h3>
-                                    <div class="product-price">$2.49/lb</div>
-                                </div>
-                                <p class="product-description">Sweet and crunchy, perfect for snacks or cooking.</p>
-                                <div class="d-flex justify-content-between align-items-center mt-auto">
-                                    <div class="product-rating">
-                                        <i class="bi bi-star-fill text-warning"></i>
-                                        <i class="bi bi-star-fill text-warning"></i>
-                                        <i class="bi bi-star-fill text-warning"></i>
-                                        <i class="bi bi-star-fill text-warning"></i>
-                                        <i class="bi bi-star text-warning"></i>
-                                        <span class="ms-1">(18)</span>
-                                    </div>
-                                    <button class="btn btn-success btn-sm">Add to Cart</button>
-                                </div>
-                            </div>
+                        <div class="products-swiper-controls d-flex justify-content-between align-items-center mt-3">
+                            <div class="products-swiper-prev products-swiper-nav btn btn-outline-secondary"><i class="bi bi-chevron-left"></i></div>
+                            <div class="products-swiper-pagination"></div>
+                            <div class="products-swiper-next products-swiper-nav btn btn-outline-secondary"><i class="bi bi-chevron-right"></i></div>
                         </div>
-                    </div><!-- End product item -->
-
-                    <!-- Product 3 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="product-item position-relative h-100">
-                            <div class="product-img position-relative overflow-hidden">
-                                <img src="{{ asset('assets/img/products/apples.jpg') }}" class="img-fluid" alt="Organic Apples">
-                                <div class="product-badge bg-info">Seasonal</div>
-                            </div>
-
-                            <div class="product-content d-flex flex-column">
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <h3 class="product-title">Organic Apples</h3>
-                                    <div class="product-price">$1.99/lb</div>
-                                </div>
-                                <p class="product-description">Crisp and juicy, available in several varieties.</p>
-                                <div class="d-flex justify-content-between align-items-center mt-auto">
-                                    <div class="product-rating">
-                                        <i class="bi bi-star-fill text-warning"></i>
-                                        <i class="bi bi-star-fill text-warning"></i>
-                                        <i class="bi bi-star-fill text-warning"></i>
-                                        <i class="bi bi-star-fill text-warning"></i>
-                                        <i class="bi bi-star-fill text-warning"></i>
-                                        <span class="ms-1">(32)</span>
-                                    </div>
-                                    <button class="btn btn-success btn-sm">Add to Cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- End product item -->
-
-                    <!-- Product 4 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="product-item position-relative h-100">
-                            <div class="product-img position-relative overflow-hidden">
-                                <img src="{{ asset('assets/img/products/eggs.jpg') }}" class="img-fluid" alt="Farm Eggs">
-                                <div class="product-badge bg-success">Free Range</div>
-                            </div>
-
-                            <div class="product-content d-flex flex-column">
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <h3 class="product-title">Farm Eggs</h3>
-                                    <div class="product-price">$4.99/dozen</div>
-                                </div>
-                                <p class="product-description">Free-range eggs from happy, pasture-raised chickens.</p>
-                                <div class="d-flex justify-content-between align-items-center mt-auto">
-                                    <div class="product-rating">
-                                        <i class="bi bi-star-fill text-warning"></i>
-                                        <i class="bi bi-star-fill text-warning"></i>
-                                        <i class="bi bi-star-fill text-warning"></i>
-                                        <i class="bi bi-star-fill text-warning"></i>
-                                        <i class="bi bi-star-half text-warning"></i>
-                                        <span class="ms-1">(27)</span>
-                                    </div>
-                                    <button class="btn btn-success btn-sm">Add to Cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- End product item -->
-
-                    <!-- Product 5 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="product-item position-relative h-100">
-                            <div class="product-img position-relative overflow-hidden">
-                                <img src="{{ asset('assets/img/products/honey.jpg') }}" class="img-fluid" alt="Raw Honey">
-                                <div class="product-badge bg-warning">Limited</div>
-                            </div>
-
-                            <div class="product-content d-flex flex-column">
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <h3 class="product-title">Raw Honey</h3>
-                                    <div class="product-price">$8.99/jar</div>
-                                </div>
-                                <p class="product-description">Pure, unfiltered honey from our local beehives.</p>
-                                <div class="d-flex justify-content-between align-items-center mt-auto">
-                                    <div class="product-rating">
-                                        <i class="bi bi-star-fill text-warning"></i>
-                                        <i class="bi bi-star-fill text-warning"></i>
-                                        <i class="bi bi-star-fill text-warning"></i>
-                                        <i class="bi bi-star-fill text-warning"></i>
-                                        <i class="bi bi-star-fill text-warning"></i>
-                                        <span class="ms-1">(41)</span>
-                                    </div>
-                                    <button class="btn btn-success btn-sm">Add to Cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- End product item -->
-
-                    <!-- Product 6 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="product-item position-relative h-100">
-                            <div class="product-img position-relative overflow-hidden">
-                                <img src="{{ asset('assets/img/products/bread.jpg') }}" class="img-fluid" alt="Artisan Bread">
-                                <div class="product-badge bg-info">Fresh</div>
-                            </div>
-
-                            <div class="product-content d-flex flex-column">
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <h3 class="product-title">Artisan Bread</h3>
-                                    <div class="product-price">$5.99/loaf</div>
-                                </div>
-                                <p class="product-description">Freshly baked sourdough using traditional methods.</p>
-                                <div class="d-flex justify-content-between align-items-center mt-auto">
-                                    <div class="product-rating">
-                                        <i class="bi bi-star-fill text-warning"></i>
-                                        <i class="bi bi-star-fill text-warning"></i>
-                                        <i class="bi bi-star-fill text-warning"></i>
-                                        <i class="bi bi-star-fill text-warning"></i>
-                                        <i class="bi bi-star text-warning"></i>
-                                        <span class="ms-1">(15)</span>
-                                    </div>
-                                    <button class="btn btn-success btn-sm">Add to Cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- End product item -->
+                    </div>
                 </div>
             </div>
         </section>
         <!-- Blog Pagination Section -->
     <section id="blog-pagination" class="blog-pagination section">
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                if (typeof Swiper === 'undefined') return;
+                try {
+                    const cfgEl = document.querySelector('.products-swiper-config');
+                    const cfg = cfgEl ? JSON.parse(cfgEl.textContent) : {loop:true,slidesPerView:1};
+                    cfg.navigation = cfg.navigation || {};
+                    cfg.navigation.nextEl = cfg.navigation.nextEl || '.products-swiper-next';
+                    cfg.navigation.prevEl = cfg.navigation.prevEl || '.products-swiper-prev';
+                    cfg.pagination = cfg.pagination || {};
+                    cfg.pagination.el = cfg.pagination.el || '.products-swiper-pagination';
+                    cfg.pagination.clickable = true;
+                    new Swiper('.products-swiper', cfg);
+                } catch (e) { console.error('Swiper init error', e); }
+            });
+        </script>
+
 
       <div class="container">
         <div class="d-flex justify-content-center">

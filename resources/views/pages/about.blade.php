@@ -4,7 +4,7 @@
 
 <body class="about-page">
 
-  <<header id="header" class="header d-flex align-items-center">
+  <header id="header" class="header d-flex align-items-center">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
      
