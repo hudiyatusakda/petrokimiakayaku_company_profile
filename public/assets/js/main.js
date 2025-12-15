@@ -6,7 +6,7 @@
 * License: https://bootstrapmade.com/license/
 */
 
-(function() {
+(function () {
   "use strict";
 
   /**
@@ -26,7 +26,7 @@
    * Scroll up sticky header to headers with .scroll-up-sticky class
    */
   let lastScrollTop = 0;
-  window.addEventListener('scroll', function() {
+  window.addEventListener('scroll', function () {
     const selectHeader = document.querySelector('#header');
     if (!selectHeader.classList.contains('scroll-up-sticky')) return;
 
@@ -73,7 +73,7 @@
    * Toggle mobile nav dropdowns
    */
   document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-    navmenu.addEventListener('click', function(e) {
+    navmenu.addEventListener('click', function (e) {
       e.preventDefault();
       this.parentNode.classList.toggle('active');
       this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
@@ -142,7 +142,7 @@
    * Init swiper sliders
    */
   function initSwiper() {
-    document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
+    document.querySelectorAll(".init-swiper").forEach(function (swiperElement) {
       let config = JSON.parse(
         swiperElement.querySelector(".swiper-config").innerHTML.trim()
       );
@@ -156,6 +156,46 @@
   }
 
   window.addEventListener("load", initSwiper);
+
+  /* Search popup behavior */
+  function openSearchPopup() {
+    const popup = document.getElementById('search-popup');
+    if (!popup) return;
+    popup.setAttribute('aria-hidden', 'false');
+    const input = document.getElementById('search-popup-input');
+    if (input) setTimeout(() => input.focus(), 80);
+  }
+
+  function closeSearchPopup() {
+    const popup = document.getElementById('search-popup');
+    if (!popup) return;
+    popup.setAttribute('aria-hidden', 'true');
+  }
+
+  document.addEventListener('click', function (e) {
+    if (e.target.closest && e.target.closest('.open-search-popup')) {
+      e.preventDefault();
+      openSearchPopup();
+    }
+    if (e.target && e.target.matches && e.target.matches('.search-popup-close, .search-popup-backdrop')) {
+      closeSearchPopup();
+    }
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeSearchPopup();
+  });
+
+  const searchForm = document.getElementById('search-popup-form');
+  if (searchForm) {
+    searchForm.addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      const q = document.getElementById('search-popup-input').value || '';
+      const url = '/search?q=' + encodeURIComponent(q);
+      // redirect to search results page
+      window.location.href = url;
+    });
+  }
 
   /**
    * Initiate glightbox
