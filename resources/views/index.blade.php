@@ -270,143 +270,129 @@
         });
       </script>
 
-
-
     </section><!-- /Services 2 Section -->
 
+    <!-- News Section -->
+    <section id="news" class="news section green-background">
+      <div class="container section-title text-start" data-aos="fade-up">
+        <h2 style="color: #ffffff;">BERITA PETROKAYAKU</h2>
+        <p>Berita Terbaru & Pengumuman</p>
+      </div>
 
+      <div class="news-carousel-wrap">
 
-    <!-- Services 2 Section -->
-    <section id="services-2" class="services-2 section dark-background">
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Services</h2>
-        <p>Necessitatibus eius consequatur</p>
-      </div><!-- End Section Title -->
-
-      <div class="services-carousel-wrap">
         <div class="container">
-          <div class="swiper init-swiper">
-            <script type="application/json" class="swiper-config">
-              {
-                "loop": true,
-                "speed": 600,
-                "autoplay": {
-                  "delay": 5000
-                },
-                "slidesPerView": "auto",
-                "pagination": {
-                  "el": ".swiper-pagination",
-                  "type": "bullets",
-                  "clickable": true
-                },
-                "navigation": {
-                  "nextEl": ".js-custom-next",
-                  "prevEl": ".js-custom-prev"
-                },
-                "breakpoints": {
-                  "320": {
-                    "slidesPerView": 1,
-                    "spaceBetween": 40
-                  },
-                  "1200": {
-                    "slidesPerView": 3,
-                    "spaceBetween": 40
-                  }
-                }
-              }
+          <div class="swiper news-swiper">
+            <script type="application/json" class="news-config">
+              {"loop":true,"speed":600,"slidesPerView":1,"spaceBetween":20,"breakpoints":{"768":{"slidesPerView":2},"992":{"slidesPerView":3}},"navigation":{"nextEl":".news-next","prevEl":".news-prev"},"pagination":{"el":".news-pagination","clickable":true}}
             </script>
-            <button class="navigation-prev js-custom-prev">
-              <i class="bi bi-arrow-left-short"></i>
-            </button>
-            <button class="navigation-next js-custom-next">
-              <i class="bi bi-arrow-right-short"></i>
-            </button>
+
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <div class="service-item">
-                  <div class="service-item-contents">
-                    <a href="#">
-                      <span class="service-item-category">We do</span>
-                      <h2 class="service-item-title">Planting</h2>
-                    </a>
+                <div class="news-item position-relative h-100">
+                  <div class="news-img position-relative overflow-hidden">
+                    <img src="{{ asset('assets/img/blog/news1.png') }}" class="img-fluid" alt="news1">
                   </div>
-                  <img src="assets/img/img_sq_1.jpg" alt="Image" class="img-fluid">
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="service-item">
-                  <div class="service-item-contents">
-                    <a href="#">
-                      <span class="service-item-category">We do</span>
-                      <h2 class="service-item-title">Mulching</h2>
-                    </a>
+                  <div class="news-content p-3">
+                    <h3 class="news-title">Gelar Teknologi Pertanian Petrokimia Gresik Group</h3>
+                    <a href="#" class="news-detail-btn">Baca selengkapnya</a>
                   </div>
-                  <img src="assets/img/img_sq_3.jpg" alt="Image" class="img-fluid">
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="service-item">
-                  <div class="service-item-contents">
-                    <a href="#">
-                      <span class="service-item-category">We do</span>
-                      <h2 class="service-item-title">Watering</h2>
-                    </a>
-                  </div>
-                  <img src="assets/img/img_sq_8.jpg" alt="Image" class="img-fluid">
                 </div>
               </div>
 
               <div class="swiper-slide">
-                <div class="service-item">
-                  <div class="service-item-contents">
-                    <a href="#">
-                      <span class="service-item-category">We do</span>
-                      <h2 class="service-item-title">Fertilizing</h2>
-                    </a>
+                <div class="news-item position-relative h-100">
+                  <div class="news-img position-relative overflow-hidden">
+                    <img src="{{ asset('assets/img/blog/news2.jpg') }}" class="img-fluid" alt="news2">
                   </div>
-                  <img src="assets/img/img_sq_4.jpg" alt="Image" class="img-fluid">
+                  <div class="news-content p-3">
+                    <h3 class="news-title">Prestasi Nominasi Inovasi Tertinggi</h3>
+                    <a href="#" class="news-detail-btn">Baca selengkapnya</a>
+                  </div>
                 </div>
               </div>
+
               <div class="swiper-slide">
-                <div class="service-item">
-                  <div class="service-item-contents">
-                    <a href="#">
-                      <span class="service-item-category">We do</span>
-                      <h2 class="service-item-title">Harvesting</h2>
-                    </a>
+                <div class="news-item position-relative h-100">
+                  <div class="news-img position-relative overflow-hidden">
+                    <img src="{{ asset('assets/img/blog/award.jpg') }}" class="img-fluid" alt="award">
                   </div>
-                  <img src="assets/img/img_sq_5.jpg" alt="Image" class="img-fluid">
+                  <div class="news-content p-3">
+                    <h3 class="news-title">PT PETROKIMIA KAYAKU Meraih Penghargaan DIGITECH AWARD 2023</h3>
+                    <a href="#" class="news-detail-btn">Baca selengkapnya</a>
+                  </div>
                 </div>
               </div>
+
               <div class="swiper-slide">
-                <div class="service-item">
-                  <div class="service-item-contents">
-                    <a href="#">
-                      <span class="service-item-category">We do</span>
-                      <h2 class="service-item-title">Mowing</h2>
-                    </a>
+                <div class="news-item position-relative h-100">
+                  <div class="news-img position-relative overflow-hidden">
+                    <img src="{{ asset('assets/img/blog/gelar.jpg') }}" class="img-fluid" alt="gelar">
                   </div>
-                  <img src="assets/img/img_sq_6.jpg" alt="Image" class="img-fluid">
+                  <div class="news-content p-3">
+                    <h3 class="news-title">Penganugerahan Gelar DOKTOR HONORIS CAUSA Menteri Perindustrian </h3>
+                    <a href="#" class="news-detail-btn">Baca selengkapnya</a>
+                  </div>
                 </div>
               </div>
+
               <div class="swiper-slide">
-                <div class="service-item">
-                  <div class="service-item-contents">
-                    <a href="#">
-                      <span class="service-item-category">We do</span>
-                      <h2 class="service-item-title">Seeding Plants</h2>
-                    </a>
+                <div class="news-item position-relative h-100">
+                  <div class="news-img position-relative overflow-hidden">
+                    <img src="{{ asset('assets/img/blog/hari_raya.jpg') }}" class="img-fluid" alt="hari_raya">
                   </div>
-                  <img src="assets/img/img_sq_8.jpg" alt="Image" class="img-fluid">
+                  <div class="news-content p-3">
+                    <h3 class="news-title">Selamat Hari Raya Idul Fitri 1446 H</h3>
+                    <a href="#" class="news-detail-btn">Baca selengkapnya</a>
+                  </div>
                 </div>
               </div>
+
+              <div class="swiper-slide">
+                <div class="news-item position-relative h-100">
+                  <div class="news-img position-relative overflow-hidden">
+                    <img src="{{ asset('assets/img/blog/puasa.jpg') }}" class="img-fluid" alt="puasa">
+                  </div>
+                  <div class="news-content p-3">
+                    <h3 class="news-title">Selamat Menunaikan Ibadah Puasa Ramadhan 1446 H</h3>
+                    <a href="#" class="news-detail-btn">Detail</a>
+                  </div>
+                </div>
+              </div>
+
             </div>
-            <div class="swiper-pagination"></div>
+            <center>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div class="news-prev btn btn-outline-secondary news-nav"><i class="bi bi-chevron-left"></i></div>
+                <div class="news-pagination"></div>
+                <div class="news-next btn btn-outline-secondary news-nav"><i class="bi bi-chevron-right"></i></div>
+              </div>
+            </center>
           </div>
         </div>
       </div>
-    </section><!-- /Services 2 Section -->
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          if (typeof Swiper === 'undefined') return;
+          try {
+            const cfgEl = document.querySelector('.news-config');
+            const cfg = cfgEl ? JSON.parse(cfgEl.textContent) : { loop: true, slidesPerView: 1 };
+            cfg.navigation = cfg.navigation || {};
+            cfg.navigation.nextEl = cfg.navigation.nextEl || '.news-next';
+            cfg.navigation.prevEl = cfg.navigation.prevEl || '.news-prev';
+            cfg.pagination = cfg.pagination || {};
+            cfg.pagination.el = cfg.pagination.el || '.news-pagination';
+            cfg.pagination.clickable = true;
+            new Swiper('.news-swiper', cfg);
+          } catch (e) { console.error('Swiper init error', e); }
+        });
+      </script>
+    </section><!-- /News Section -->
+
+
+
+
 
     <!-- Testimonials Section -->
     <section class="testimonials-12 testimonials section" id="testimonials">
