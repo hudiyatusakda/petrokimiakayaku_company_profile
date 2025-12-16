@@ -467,146 +467,370 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Recent Posts</h2>
-        <p>Necessitatibus eius consequatur</p>
+        <h2>Video</h2>
+        <p>Petrokimia Kayaku</p>
       </div><!-- End Section Title -->
 
       <div class="container">
 
-        <div class="row gy-5">
+        <div class="swiper recent-posts-swiper">
+          <script type="application/json" class="recent-posts-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 3000
+              },
+              "slidesPerView": 1,
+              "spaceBetween": 20,
+              "pagination": {
+                "el": ".recent-posts-pagination",
+                "clickable": true
+              },
+              "navigation": {
+                "nextEl": ".recent-posts-next",
+                "prevEl": ".recent-posts-prev"
+              },
+              "breakpoints": {
+                "768": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 20
+                },
+                "1200": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 30
+                }
+              }
+            }
+          </script>
+          <button class="recent-posts-prev navigation-prev">
+            <i class="bi bi-chevron-left"></i>
+          </button>
+          <button class="recent-posts-next navigation-next">
+            <i class="bi bi-chevron-right"></i>
+          </button>
+          <div class="swiper-wrapper">
 
-          <div class="col-xl-4 col-md-6">
-            <div class="post-item position-relative h-100" data-aos="fade-up" data-aos-delay="100">
+            <div class="swiper-slide">
+              <div class="post-item position-relative h-100" data-aos="fade-up" data-aos-delay="100">
 
-              <div class="post-img position-relative overflow-hidden">
-                <img src="assets/img/blog/blog-1.jpg" class="img-fluid" alt="">
-                <span class="post-date">December 12</span>
-              </div>
-
-              <div class="post-content d-flex flex-column">
-
-                <h3 class="post-title">Eum ad dolor et. Autem aut fugiat debitis</h3>
-
-                <div class="meta d-flex align-items-center">
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-person"></i> <span class="ps-2">Julia Parker</span>
-                  </div>
-                  <span class="px-3 text-black-50">/</span>
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-folder2"></i> <span class="ps-2">Politics</span>
-                  </div>
+                <div class="post-img position-relative overflow-hidden">
+                  <img src="https://img.youtube.com/vi/MJ18PSJNPRo/maxresdefault.jpg" class="img-fluid" alt="">
+                  <span class="post-date">December 12</span>
                 </div>
 
-                <hr>
+                <div class="post-content d-flex flex-column">
 
-                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i
-                    class="bi bi-arrow-right"></i></a>
+                  <h3 class="post-title">YouTube Video</h3>
 
-              </div>
-
-            </div>
-          </div><!-- End post item -->
-
-          <div class="col-xl-4 col-md-6">
-            <div class="post-item position-relative h-100" data-aos="fade-up" data-aos-delay="200">
-
-              <div class="post-img position-relative overflow-hidden">
-                <img src="assets/img/blog/blog-2.jpg" class="img-fluid" alt="">
-                <span class="post-date">July 17</span>
-              </div>
-
-              <div class="post-content d-flex flex-column">
-
-                <h3 class="post-title">Et repellendus molestiae qui est sed omnis</h3>
-
-                <div class="meta d-flex align-items-center">
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-person"></i> <span class="ps-2">Mario Douglas</span>
+                  <div class="meta d-flex align-items-center">
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-calendar"></i> <span class="ps-2">Uploaded on YouTube</span>
+                    </div>
                   </div>
-                  <span class="px-3 text-black-50">/</span>
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-folder2"></i> <span class="ps-2">Sports</span>
-                  </div>
+
+                  <hr>
+
+                  <a href="https://youtu.be/MJ18PSJNPRo" class="readmore stretched-link"><span>Watch on YouTube</span><i
+                      class="bi bi-arrow-right"></i></a>
+
                 </div>
 
-                <hr>
-
-                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i
-                    class="bi bi-arrow-right"></i></a>
-
               </div>
+            </div><!-- End swiper-slide -->
 
-            </div>
-          </div><!-- End post item -->
+            <div class="swiper-slide">
+              <div class="post-item position-relative h-100" data-aos="fade-up" data-aos-delay="200">
 
-          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="post-item position-relative h-100">
-
-              <div class="post-img position-relative overflow-hidden">
-                <img src="assets/img/blog/blog-3.jpg" class="img-fluid" alt="">
-                <span class="post-date">September 05</span>
-              </div>
-
-              <div class="post-content d-flex flex-column">
-
-                <h3 class="post-title">Quia assumenda est et veritati tirana ploder</h3>
-
-                <div class="meta d-flex align-items-center">
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-person"></i> <span class="ps-2">Lisa Hunter</span>
-                  </div>
-                  <span class="px-3 text-black-50">/</span>
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-folder2"></i> <span class="ps-2">Economics</span>
-                  </div>
+                <div class="post-img position-relative overflow-hidden">
+                  <img src="https://img.youtube.com/vi/NRDHjAwiM0A/maxresdefault.jpg" class="img-fluid" alt="">
+                  <span class="post-date">July 17</span>
                 </div>
 
-                <hr>
+                <div class="post-content d-flex flex-column">
 
-                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i
-                    class="bi bi-arrow-right"></i></a>
+                  <h3 class="post-title">YouTube Video</h3>
+
+                  <div class="meta d-flex align-items-center">
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-calendar"></i> <span class="ps-2">Uploaded on YouTube</span>
+                    </div>
+                  </div>
+
+                  <hr>
+
+                  <a href="https://youtu.be/NRDHjAwiM0A" class="readmore stretched-link"><span>Watch on YouTube</span><i
+                      class="bi bi-arrow-right"></i></a>
+
+                </div>
 
               </div>
+            </div><!-- End swiper-slide -->
 
-            </div>
-          </div><!-- End post item -->
+            <div class="swiper-slide">
+              <div class="post-item position-relative h-100" data-aos="fade-up" data-aos-delay="300">
 
+                <div class="post-img position-relative overflow-hidden">
+                  <img src="https://img.youtube.com/vi/6MCmY_KyL6w/maxresdefault.jpg" class="img-fluid" alt="">
+                  <span class="post-date">September 05</span>
+                </div>
+
+                <div class="post-content d-flex flex-column">
+
+                  <h3 class="post-title">YouTube Video</h3>
+
+                  <div class="meta d-flex align-items-center">
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-calendar"></i> <span class="ps-2">Uploaded on YouTube</span>
+                    </div>
+                  </div>
+
+                  <hr>
+
+                  <a href="https://youtu.be/6MCmY_KyL6w" class="readmore stretched-link"><span>Watch on YouTube</span><i
+                      class="bi bi-arrow-right"></i></a>
+
+                </div>
+
+              </div>
+            </div><!-- End swiper-slide -->
+
+            <div class="swiper-slide">
+              <div class="post-item position-relative h-100">
+
+                <div class="post-img position-relative overflow-hidden">
+                  <img src="https://img.youtube.com/vi/XTS7P8lKY6g/maxresdefault.jpg" class="img-fluid" alt="">
+                  <span class="post-date">October 15</span>
+                </div>
+
+                <div class="post-content d-flex flex-column">
+
+                  <h3 class="post-title">YouTube Video</h3>
+
+                  <div class="meta d-flex align-items-center">
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-calendar"></i> <span class="ps-2">Uploaded on YouTube</span>
+                    </div>
+                  </div>
+
+                  <hr>
+
+                  <a href="https://youtu.be/XTS7P8lKY6g" class="readmore stretched-link"><span>Watch on YouTube</span><i
+                      class="bi bi-arrow-right"></i></a>
+
+                </div>
+
+              </div>
+            </div><!-- End swiper-slide -->
+
+            <div class="swiper-slide">
+              <div class="post-item position-relative h-100">
+
+                <div class="post-img position-relative overflow-hidden">
+                  <img src="https://img.youtube.com/vi/-dvkU_P_WxY/maxresdefault.jpg" class="img-fluid" alt="">
+                  <span class="post-date">November 20</span>
+                </div>
+
+                <div class="post-content d-flex flex-column">
+
+                  <h3 class="post-title">YouTube Video</h3>
+
+                  <div class="meta d-flex align-items-center">
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-calendar"></i> <span class="ps-2">Uploaded on YouTube</span>
+                    </div>
+                  </div>
+
+                  <hr>
+
+                  <a href="https://youtu.be/-dvkU_P_WxY" class="readmore stretched-link"><span>Watch on YouTube</span><i
+                      class="bi bi-arrow-right"></i></a>
+
+                </div>
+
+              </div>
+            </div><!-- End swiper-slide -->
+
+          </div>
+          <div class="recent-posts-pagination swiper-pagination"></div>
         </div>
 
       </div>
 
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          if (typeof Swiper === 'undefined') return;
+          try {
+            const cfgEl = document.querySelector('.recent-posts-config');
+            const cfg = cfgEl ? JSON.parse(cfgEl.textContent) : { loop: true, slidesPerView: 1 };
+            cfg.navigation = cfg.navigation || {};
+            cfg.navigation.nextEl = cfg.navigation.nextEl || '.recent-posts-next';
+            cfg.navigation.prevEl = cfg.navigation.prevEl || '.recent-posts-prev';
+            cfg.pagination = cfg.pagination || {};
+            cfg.pagination.el = cfg.pagination.el || '.recent-posts-pagination';
+            cfg.pagination.clickable = true;
+            new Swiper('.recent-posts-swiper', cfg);
+          } catch (e) { console.error('Swiper init error', e); }
+        });
+      </script>
+
     </section><!-- /Recent Posts Section -->
 
-    <!-- Call To Action Section -->
-    <section id="call-to-action" class="call-to-action section light-background">
-
-      <div class="content">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-lg-6">
-              <h3>Subscribe To Our Newsletter</h3>
-              <p class="opacity-50">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Nesciunt, reprehenderit!
-              </p>
-            </div>
-            <div class="col-lg-6">
-              <form action="forms/newsletter.php" class="form-subscribe php-email-form">
-                <div class="form-group d-flex align-items-stretch">
-                  <input type="email" name="email" class="form-control h-100" placeholder="Enter your e-mail">
-                  <input type="submit" class="btn btn-secondary px-4" value="Subcribe">
+    <!-- Contact Now Section -->
+    <section id="contact-now" class="contact-now section light-background py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <div class="contact-info">
+              <h2 class="mb-4">Yuk Kontak Kami</h2>
+              <!-- <p class="mb-4 opacity-75">
+                Lorem ipsum dolor sit amet, adipiscing elit. In hac habitasse platea dictumst. Duis porta, quam ut finibus ultrices.
+              </p> -->
+              
+              <div class="contact-details">
+                <div class="contact-item d-flex mb-4">
+                  <div class="contact-icon d-flex align-items-center justify-content-center me-4" style="background-color: #059652; color: white; width: 50px; height: 50px; border-radius: 0px;">
+                    <i class="fas fa-phone-alt"></i>
+                  </div>
+                  <div>
+                    <h5 class="mb-1">Punya Pertanyaan?</h5>
+                    <p class="mb-0" style="color: #059652; font-weight: 500;"> +62 822 4442 2255</p>
+                  </div>
                 </div>
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">
-                  Your subscription request has been sent. Thank you!
+                
+                <div class="contact-item d-flex mb-4">
+                  <div class="contact-icon d-flex align-items-center justify-content-center me-4" style="background-color: #059652; color: white; width: 50px; height: 50px; border-radius: 0px;">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div>
+                    <h5 class="mb-1">Email</h5>
+                    <p class="mb-0" style="color: #059652; font-weight: 500;">info@petrokayaku.com</p>
+                  </div>
+                </div>
+                
+                <div class="contact-item d-flex">
+                  <div class="contact-icon d-flex align-items-center justify-content-center me-4" style="background-color: #059652; color: white; width: 50px; height: 50px; border-radius: 0px;">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div>
+                    <h5 class="mb-1">Kantor Pusat</h5>
+                    <p class="mb-0" style="color: #059652; font-weight: 500;">Jl. Jendral Ahmad Yani 107 Gresik, Jawa Timur</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-6">
+            <div class="contact-form">
+              <h3 class="mb-4">Send a Message</h3>
+              <form action="#" method="post" class="php-email-form">
+                <div class="form-group mb-4">
+                  <input type="text" name="name" class="form-control p-3" placeholder="Your Name" style="border-radius: 0px; border: 1px solid #ddd;" required>
+                </div>
+                <div class="form-group mb-4">
+                  <input type="email" name="email" class="form-control p-3" placeholder="Email Address" style="border-radius: 0px; border: 1px solid #ddd;" required>
+                </div>
+                <div class="form-group mb-4">
+                  <textarea name="message" class="form-control p-3" rows="5" placeholder="Write a Message" style="border-radius: 0px; border: 1px solid #ddd;" required></textarea>
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-lg px-5 py-3" style="background-color: #059652; color: white; border-radius: 0px; border: none;">Send a Message</button>
                 </div>
               </form>
             </div>
           </div>
         </div>
       </div>
-    </section><!-- /Call To Action Section -->
+    </section><!-- /Contact Now Section -->
+
+    <!-- Peka SMART App Section -->
+    <section id="peka-smart-app" class="peka-smart-app section py-5" style="background-color: #ffffff;">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Logo App dan Nama -->
+          <div class="col-lg-3 text-center mb-4 mb-lg-0">
+            <div class="app-logo-container mb-3">
+              <!-- Logo Aplikasi - Ganti dengan path gambar yang sesuai -->
+              <img src="assets/img/unnamed.png" alt="PEKA SMART Logo" class="img-fluid" style="max-width: 150px;">
+            </div>
+            <div class="app-name">
+              <h1 class="mb-0" style="font-weight: bold; font-size: 1.8rem;">
+                <span style="color: #333;">PETANI</span><br>
+                <span style="color: #059652;">KAYAKU</span>
+              </h1>
+            </div>
+          </div>
+          
+          <!-- Deskripsi Aplikasi -->
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <h2 class="mb-3" style="color: #333;">Peka SMART</h2>
+            <p class="mb-4" style="color: #666; line-height: 1.6;">
+              Peka SMART, adalah aplikasi mobile berbasiskan Android persembahan dari PT Petrokimia Kayaku untuk kalangan masyarakat petani dan umum. Fitur yang terdapat di PEKA SMART diantaranya Katalog Produk, Solusi Pestisida, Konsultasi, Berita dan Profil Perusahaan.
+            </p>
+            
+            <!-- Tombol Download -->
+            <div class="download-section mb-4">
+              <a href="https://play.google.com/store/apps/details?id=com.petrokimiakayaku.pekasmart" 
+                target="_blank" 
+                class="btn btn-lg px-4 py-3 d-inline-flex align-items-center" 
+                style="background-color: #059652; color: white; border-radius: 0px; border: none; text-decoration: none;">
+                <i class="fas fa-download me-2"></i>
+                Download Aplikasi ( v2.0 )
+              </a>
+            </div>
+            
+            <!-- Total Download -->
+            <div class="total-download">
+              <p class="mb-0" style="color: #666; font-size: 0.9rem;">
+                <strong>Total Download :</strong> 19,623
+              </p>
+            </div>
+          </div>
+          
+          <!-- Cara Instalasi -->
+          <div class="col-lg-3">
+            <div class="installation-guide">
+              <h4 class="mb-3" style="color: #333; font-size: 1.2rem;">Cara Instalasi Aplikasi Peka Smart</h4>
+              <div class="installation-steps">
+                <div class="step d-flex mb-3">
+                  <div class="step-number d-flex align-items-center justify-content-center me-3" 
+                      style="background-color: #059652; color: white; width: 30px; height: 30px; border-radius: 0px; font-weight: bold;">
+                    1
+                  </div>
+                  <div class="step-text">
+                    <p class="mb-0" style="color: #666; font-size: 0.9rem;">Buka Google Play Store di perangkat Android</p>
+                  </div>
+                </div>
+                
+                <div class="step d-flex mb-3">
+                  <div class="step-number d-flex align-items-center justify-content-center me-3" 
+                      style="background-color: #059652; color: white; width: 30px; height: 30px; border-radius: 0px; font-weight: bold;">
+                    2
+                  </div>
+                  <div class="step-text">
+                    <p class="mb-0" style="color: #666; font-size: 0.9rem;">Cari "Peka SMART" atau "Petani Kayaku"</p>
+                  </div>
+                </div>
+                
+                <div class="step d-flex">
+                  <div class="step-number d-flex align-items-center justify-content-center me-3" 
+                      style="background-color: #059652; color: white; width: 30px; height: 30px; border-radius: 0px; font-weight: bold;">
+                    3
+                  </div>
+                  <div class="step-text">
+                    <p class="mb-0" style="color: #666; font-size: 0.9rem;">Klik Install dan tunggu proses selesai</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Peka SMART App Section -->
+
+  </main>
+  <!-- main content -->
 
   </main>
   <!-- main content -->

@@ -2736,3 +2736,48 @@ section,
   color: #ffffff;
 
 }
+
+
+/* green bottom stripe like the screenshot */
+#services-2 .product-item::after {
+  content: "";
+  display: block;
+  height: 6px;
+  background: #0b6b3a;
+  margin-top: 12px;
+  width: 100%;
+}
+
+/* Center pagination dots and style bullets */
+#services-2 .d-flex.justify-content-between.align-items-center {
+  align-items: center;
+}
+
+#services-2 .services-products-prev,
+#services-2 .services-products-next {
+  flex: 0 0 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#services-2 .services-products-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 auto;
+}
+
+/* Swiper bullets override to look like dots */
+#services-2 .services-products-pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #cfcfcf;
+  opacity: 1;
+  margin: 0 6px;
+  border-radius: 50%;
+}
+
+#services-2 .services-products-pagination .swiper-pagination-bullet-active {
+  background: #0b6b3a;
+}
