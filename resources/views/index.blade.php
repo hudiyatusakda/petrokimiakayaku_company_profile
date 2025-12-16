@@ -214,9 +214,11 @@
                   <h2 class="mt-3">Petani</h2>
                 </div>
               </div>
-              <p class="mt-4">Petrokimia Kayaku adalah perusahaan yang bergerak di bidang pestisida, 
-                berkomitmen untuk menyediakan produk berkualitas tinggi untuk pertanian Indonesia. Kami memastikan distribusi dan
-                 produksi pestisida yang terjaga dan mampu menumbuhkan semangat petani serta kesehatan tanaman Indonesia.</p>
+              <p class="mt-4">Petrokimia Kayaku adalah perusahaan yang bergerak di bidang pestisida,
+                berkomitmen untuk menyediakan produk berkualitas tinggi untuk pertanian Indonesia. Kami memastikan
+                distribusi dan
+                produksi pestisida yang terjaga dan mampu menumbuhkan semangat petani serta kesehatan tanaman Indonesia.
+              </p>
               <a href="#" class="btn btn-success mt-3">SELENGKAPNYA</a>
             </div>
           </div>
@@ -346,47 +348,7 @@
       </script>
     </section><!-- /Services 2 Section -->
 
-<<<<<<< Updated upstream
-    <!-- About 3 Section -->
-    <section id="about-3" class="about-3 section">
 
-      <div class="container">
-        <div class="row gy-4 justify-content-between align-items-center">
-          <div class="col-lg-6 order-lg-2 position-relative" data-aos="zoom-out">
-            <img src="assets/img/img_sq_1.jpg" alt="Image" class="img-fluid">
-            <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn">
-              <span class="play"><i class="bi bi-play-fill"></i></span>
-            </a>
-          </div>
-          <div class="col-lg-5 order-lg-1" data-aos="fade-up" data-aos-delay="100">
-            <h2 class="content-title mb-4">Plants Make Life Better</h2>
-            <p class="mb-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-              necessitatibus placeat, atque qui voluptatem velit explicabo vitae
-              repellendus architecto provident nisi ullam minus asperiores commodi!
-              Tenetur, repellat aliquam nihil illo.
-            </p>
-            <ul class="list-unstyled list-check">
-              <li>Lorem ipsum dolor sit amet</li>
-              <li>Velit explicabo vitae repellendu</li>
-              <li>Repellat aliquam nihil illo</li>
-            </ul>
-
-            <p><a href="#" class="btn-cta">Get in touch</a></p>
-          </div>
-        </div>
-      </div>
-    </section><!-- /About 3 Section -->
-
-    <!-- Services 2 Section -->
-    <section id="services-2" class="services-2 section dark-background">
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Services</h2>
-        <p>Necessitatibus eius consequatur</p>
-      </div><!-- End Section Title -->
-
-      <div class="services-carousel-wrap">
 
     <!-- News Section -->
     <section id="news" class="news section green-background">
@@ -396,7 +358,7 @@
       </div>
 
       <div class="news-carousel-wrap">
->>>>>>> Stashed changes
+
         <div class="container">
           <div class="swiper news-swiper">
             <script type="application/json" class="news-config">
@@ -478,11 +440,11 @@
 
             </div>
             <center>
-            <div class="d-flex justify-content-between align-items-center mt-3">
-              <div class="news-prev btn btn-outline-secondary news-nav"><i class="bi bi-chevron-left"></i></div>
-              <div class="news-pagination"></div>
-              <div class="news-next btn btn-outline-secondary news-nav"><i class="bi bi-chevron-right"></i></div>
-            </div>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div class="news-prev btn btn-outline-secondary news-nav"><i class="bi bi-chevron-left"></i></div>
+                <div class="news-pagination"></div>
+                <div class="news-next btn btn-outline-secondary news-nav"><i class="bi bi-chevron-right"></i></div>
+              </div>
             </center>
           </div>
         </div>
