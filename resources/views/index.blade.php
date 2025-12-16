@@ -272,6 +272,7 @@
 
     </section><!-- /Services 2 Section -->
 
+<<<<<<< HEAD
     <!-- News Section -->
     <section id="news" class="news section green-background">
       <div class="container section-title text-start" data-aos="fade-up">
@@ -281,6 +282,17 @@
 
       <div class="news-carousel-wrap">
 
+=======
+    <!-- Services 2 Section -->
+    <section id="services-2" class="services-2 section dark-background">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Services</h2>
+        <p>Necessitatibus eius consequatur</p>
+      </div><!-- End Section Title -->
+
+      <div class="services-carousel-wrap">
+>>>>>>> 2af2507eaf9ec2c14c7eacace83e0509164375d9
         <div class="container">
           <div class="swiper news-swiper">
             <script type="application/json" class="news-config">
@@ -504,10 +516,17 @@
             }
           </script>
           <button class="recent-posts-prev navigation-prev">
+<<<<<<< HEAD
             <span class="carousel-control-prev-icon"></span>
           </button>
           <button class="recent-posts-next navigation-next">
             <span class="carousel-control-next-icon"></span>
+=======
+            <i class="bi bi-chevron-left"></i>
+          </button>
+          <button class="recent-posts-next navigation-next">
+            <i class="bi bi-chevron-right"></i>
+>>>>>>> 2af2507eaf9ec2c14c7eacace83e0509164375d9
           </button>
           <div class="swiper-wrapper">
 
@@ -828,9 +847,12 @@
         </div>
       </div>
     </section><!-- /Peka SMART App Section -->
+<<<<<<< HEAD
 
   </main>
   <!-- main content -->
+=======
+>>>>>>> 2af2507eaf9ec2c14c7eacace83e0509164375d9
 
   </main>
   <!-- main content -->

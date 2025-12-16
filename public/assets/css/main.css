@@ -1484,6 +1484,54 @@ section,
 }
 
 /*--------------------------------------------------------------
+# Recent Posts Section
+--------------------------------------------------------------*/
+.recent-posts .navigation-prev,
+.recent-posts .navigation-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--heading-color);
+  transition: all 0.3s;
+}
+
+.recent-posts .navigation-prev {
+  left: -25px;
+}
+
+.recent-posts .navigation-next {
+  right: -25px;
+}
+
+.recent-posts .navigation-prev:hover,
+.recent-posts .navigation-next:hover {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+}
+
+.recent-posts .swiper-pagination {
+  bottom: -40px;
+}
+
+.recent-posts .swiper-pagination .swiper-pagination-bullet {
+  background-color: #059652;
+}
+
+.recent-posts .swiper {
+  position: relative;
+  overflow: visible;
+}
+
+/*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
 .testimonials .testimonial img {
