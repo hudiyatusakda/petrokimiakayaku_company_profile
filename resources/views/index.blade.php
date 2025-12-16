@@ -504,10 +504,10 @@
             }
           </script>
           <button class="recent-posts-prev navigation-prev">
-            <i class="bi bi-chevron-left"></i>
+            <span class="carousel-control-prev-icon"></span>
           </button>
           <button class="recent-posts-next navigation-next">
-            <i class="bi bi-chevron-right"></i>
+            <span class="carousel-control-next-icon"></span>
           </button>
           <div class="swiper-wrapper">
 
