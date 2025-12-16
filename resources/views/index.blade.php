@@ -799,36 +799,158 @@
 
     </section><!-- /Recent Posts Section -->
 
-    <!-- Call To Action Section -->
-    <section id="call-to-action" class="call-to-action section light-background">
-
-      <div class="content">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-lg-6">
-              <h3>Subscribe To Our Newsletter</h3>
-              <p class="opacity-50">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Nesciunt, reprehenderit!
-              </p>
-            </div>
-            <div class="col-lg-6">
-              <form action="forms/newsletter.php" class="form-subscribe php-email-form">
-                <div class="form-group d-flex align-items-stretch">
-                  <input type="email" name="email" class="form-control h-100" placeholder="Enter your e-mail">
-                  <input type="submit" class="btn btn-secondary px-4" value="Subcribe">
+    <!-- Contact Now Section -->
+    <section id="contact-now" class="contact-now section light-background py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <div class="contact-info">
+              <h2 class="mb-4">Yuk Kontak Kami</h2>
+              <!-- <p class="mb-4 opacity-75">
+                Lorem ipsum dolor sit amet, adipiscing elit. In hac habitasse platea dictumst. Duis porta, quam ut finibus ultrices.
+              </p> -->
+              
+              <div class="contact-details">
+                <div class="contact-item d-flex mb-4">
+                  <div class="contact-icon d-flex align-items-center justify-content-center me-4" style="background-color: #059652; color: white; width: 50px; height: 50px; border-radius: 0px;">
+                    <i class="fas fa-phone-alt"></i>
+                  </div>
+                  <div>
+                    <h5 class="mb-1">Punya Pertanyaan?</h5>
+                    <p class="mb-0" style="color: #059652; font-weight: 500;"> +62 822 4442 2255</p>
+                  </div>
                 </div>
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">
-                  Your subscription request has been sent. Thank you!
+                
+                <div class="contact-item d-flex mb-4">
+                  <div class="contact-icon d-flex align-items-center justify-content-center me-4" style="background-color: #059652; color: white; width: 50px; height: 50px; border-radius: 0px;">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div>
+                    <h5 class="mb-1">Email</h5>
+                    <p class="mb-0" style="color: #059652; font-weight: 500;">info@petrokayaku.com</p>
+                  </div>
+                </div>
+                
+                <div class="contact-item d-flex">
+                  <div class="contact-icon d-flex align-items-center justify-content-center me-4" style="background-color: #059652; color: white; width: 50px; height: 50px; border-radius: 0px;">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div>
+                    <h5 class="mb-1">Kantor Pusat</h5>
+                    <p class="mb-0" style="color: #059652; font-weight: 500;">Jl. Jendral Ahmad Yani 107 Gresik, Jawa Timur</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-6">
+            <div class="contact-form">
+              <h3 class="mb-4">Send a Message</h3>
+              <form action="#" method="post" class="php-email-form">
+                <div class="form-group mb-4">
+                  <input type="text" name="name" class="form-control p-3" placeholder="Your Name" style="border-radius: 0px; border: 1px solid #ddd;" required>
+                </div>
+                <div class="form-group mb-4">
+                  <input type="email" name="email" class="form-control p-3" placeholder="Email Address" style="border-radius: 0px; border: 1px solid #ddd;" required>
+                </div>
+                <div class="form-group mb-4">
+                  <textarea name="message" class="form-control p-3" rows="5" placeholder="Write a Message" style="border-radius: 0px; border: 1px solid #ddd;" required></textarea>
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-lg px-5 py-3" style="background-color: #059652; color: white; border-radius: 0px; border: none;">Send a Message</button>
                 </div>
               </form>
             </div>
           </div>
         </div>
       </div>
-    </section><!-- /Call To Action Section -->
+    </section><!-- /Contact Now Section -->
+
+    <!-- Peka SMART App Section -->
+    <section id="peka-smart-app" class="peka-smart-app section py-5" style="background-color: #ffffff;">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Logo App dan Nama -->
+          <div class="col-lg-3 text-center mb-4 mb-lg-0">
+            <div class="app-logo-container mb-3">
+              <!-- Logo Aplikasi - Ganti dengan path gambar yang sesuai -->
+              <img src="assets/img/unnamed.png" alt="PEKA SMART Logo" class="img-fluid" style="max-width: 150px;">
+            </div>
+            <div class="app-name">
+              <h1 class="mb-0" style="font-weight: bold; font-size: 1.8rem;">
+                <span style="color: #333;">PETANI</span><br>
+                <span style="color: #059652;">KAYAKU</span>
+              </h1>
+            </div>
+          </div>
+          
+          <!-- Deskripsi Aplikasi -->
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <h2 class="mb-3" style="color: #333;">Peka SMART</h2>
+            <p class="mb-4" style="color: #666; line-height: 1.6;">
+              Peka SMART, adalah aplikasi mobile berbasiskan Android persembahan dari PT Petrokimia Kayaku untuk kalangan masyarakat petani dan umum. Fitur yang terdapat di PEKA SMART diantaranya Katalog Produk, Solusi Pestisida, Konsultasi, Berita dan Profil Perusahaan.
+            </p>
+            
+            <!-- Tombol Download -->
+            <div class="download-section mb-4">
+              <a href="https://play.google.com/store/apps/details?id=com.petrokimiakayaku.pekasmart" 
+                target="_blank" 
+                class="btn btn-lg px-4 py-3 d-inline-flex align-items-center" 
+                style="background-color: #059652; color: white; border-radius: 0px; border: none; text-decoration: none;">
+                <i class="fas fa-download me-2"></i>
+                Download Aplikasi ( v2.0 )
+              </a>
+            </div>
+            
+            <!-- Total Download -->
+            <div class="total-download">
+              <p class="mb-0" style="color: #666; font-size: 0.9rem;">
+                <strong>Total Download :</strong> 19,623
+              </p>
+            </div>
+          </div>
+          
+          <!-- Cara Instalasi -->
+          <div class="col-lg-3">
+            <div class="installation-guide">
+              <h4 class="mb-3" style="color: #333; font-size: 1.2rem;">Cara Instalasi Aplikasi Peka Smart</h4>
+              <div class="installation-steps">
+                <div class="step d-flex mb-3">
+                  <div class="step-number d-flex align-items-center justify-content-center me-3" 
+                      style="background-color: #059652; color: white; width: 30px; height: 30px; border-radius: 0px; font-weight: bold;">
+                    1
+                  </div>
+                  <div class="step-text">
+                    <p class="mb-0" style="color: #666; font-size: 0.9rem;">Buka Google Play Store di perangkat Android</p>
+                  </div>
+                </div>
+                
+                <div class="step d-flex mb-3">
+                  <div class="step-number d-flex align-items-center justify-content-center me-3" 
+                      style="background-color: #059652; color: white; width: 30px; height: 30px; border-radius: 0px; font-weight: bold;">
+                    2
+                  </div>
+                  <div class="step-text">
+                    <p class="mb-0" style="color: #666; font-size: 0.9rem;">Cari "Peka SMART" atau "Petani Kayaku"</p>
+                  </div>
+                </div>
+                
+                <div class="step d-flex">
+                  <div class="step-number d-flex align-items-center justify-content-center me-3" 
+                      style="background-color: #059652; color: white; width: 30px; height: 30px; border-radius: 0px; font-weight: bold;">
+                    3
+                  </div>
+                  <div class="step-text">
+                    <p class="mb-0" style="color: #666; font-size: 0.9rem;">Klik Install dan tunggu proses selesai</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Peka SMART App Section -->
 
   </main>
   <!-- main content -->
