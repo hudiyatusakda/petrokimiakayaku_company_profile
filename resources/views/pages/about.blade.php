@@ -88,85 +88,58 @@
     </section><!-- /Hero Section -->
 
     <!-- Company Profile Menu -->
-<section id="company-menu" class="section">
-  <div class="container">
+    <section id="company-menu" class="section">
+      <div class="container">
 
-    <div class="row gy-4">
+        <div class="row gy-4">
 
-      <!-- Tentang Perusahaan -->
-      <div class="col-lg-4 col-md-6">
-        <a href="{{ route('tentang') }}" class="company-link">
-          <div class="company-card">
-            <div class="company-image">
-              <img src="{{ asset('assets/img/sdm.jpg') }}" alt="Tentang Perusahaan">
-            </div>
-            <div class="company-body">
-              <h5>Tentang Perusahaan</h5>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <!-- Manajemen Perusahaan -->
-      <div class="col-lg-4 col-md-6">
-        <a href="{{ route('manajemen') }}" class="company-link">
-          <div class="company-card">
-            <div class="company-image">
-              <img src="{{ asset('assets/img/gambar_kebijakan3.jpg') }}" alt="Manajemen Perusahaan">
-            </div>
-            <div class="company-body">
-              <h5>Manajemen Perusahaan</h5>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <!-- Fasilitas Perusahaan -->
-      <div class="col-lg-4 col-md-6">
-        <a href="{{ route('fasilitas') }}" class="company-link">
-          <div class="company-card">
-            <div class="company-image">
-              <img src="{{ asset('assets/img/gambar_pabrik3.jpg') }}" alt="Fasilitas Perusahaan">
-            </div>
-            <div class="company-body">
-              <h5>Fasilitas Perusahaan</h5>
-            </div>
-          </div>
-        </a>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- Call To Action Section -->
-    <section id="call-to-action" class="call-to-action section light-background">
-
-      <div class="content">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-lg-6">
-              <h3>Jika ada pertanyaan</h3>
-              <p> Jangan ragu untuk menghubungi kami  </p>
-            </div>
-            <div class="col-lg-6">
-              <form action="forms/newsletter.php" class="form-subscribe php-email-form">
-                <div class="form-group d-flex align-items-stretch">
-                  <input type="email" name="email" class="form-control h-100" placeholder="Enter your e-mail">
-                  <input type="submit" class="btn btn-secondary px-4" value="Kirim">
+          <!-- Tentang Perusahaan -->
+          <div class="col-lg-4 col-md-6">
+            <a href="{{ route('tentang') }}" class="company-link">
+              <div class="company-card">
+                <div class="company-image">
+                  <img src="{{ asset('assets/img/sdm.jpg') }}" alt="Tentang Perusahaan">
                 </div>
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">
-                  Thank you!
+                <div class="company-body">
+                  <h5>Tentang Perusahaan</h5>
                 </div>
-              </form>
-            </div>
+              </div>
+            </a>
           </div>
+
+          <!-- Manajemen Perusahaan -->
+          <div class="col-lg-4 col-md-6">
+            <a href="{{ route('manajemen') }}" class="company-link">
+              <div class="company-card">
+                <div class="company-image">
+                  <img src="{{ asset('assets/img/gambar_kebijakan3.jpg') }}" alt="Manajemen Perusahaan">
+                </div>
+                <div class="company-body">
+                  <h5>Manajemen Perusahaan</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Fasilitas Perusahaan -->
+          <div class="col-lg-4 col-md-6">
+            <a href="{{ route('fasilitas') }}" class="company-link">
+              <div class="company-card">
+                <div class="company-image">
+                  <img src="{{ asset('assets/img/gambar_pabrik3.jpg') }}" alt="Fasilitas Perusahaan">
+                </div>
+                <div class="company-body">
+                  <h5>Fasilitas Perusahaan</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+
         </div>
+
       </div>
-    </section><!-- /Call To Action Section -->
+    </section>
+    <!-- End Company Profile Menu -->
   
   </main>
 
