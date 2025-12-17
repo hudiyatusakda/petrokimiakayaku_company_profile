@@ -12,3 +12,14 @@ Route::get('/blog', [FrontendController::class,'blog'])->name('blog');
 Route::get('/contact', [FrontendController::class,'contact'])->name('contact');
 Route::get('/login', [FrontendController::class,'login'])->name('login');
 Route::get('/search', [FrontendController::class,'search'])->name('search');
+Route::get('/tentang-perusahaan', function () {
+    return view('profile.tentang');
+})->name('tentang');
+
+Route::get('/manajemen-perusahaan', function () {
+    return view('profile.manajemen');
+})->name('manajemen');
+
+Route::get('/fasilitas-perusahaan', function () {
+    return view('profile.fasilitas');
+})->name('fasilitas');

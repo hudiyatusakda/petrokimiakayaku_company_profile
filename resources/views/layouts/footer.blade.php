@@ -15,7 +15,7 @@
 
         <!-- KANTOR PUSAT -->
         <div class="col-lg-3 col-md-6 footer-contact">
-          <h4>KANTOR PUSAT:</h4>
+          <h4>KANTOR PUSAT</h4>
           <p>
             Jl. Jendral Ahmad Yani<br>
             PO Box 107 Gresik, 61119<br>
@@ -27,7 +27,7 @@
 
         <!-- KANTOR CABANG -->
         <div class="col-lg-3 col-md-6 footer-contact">
-          <h4>KANTOR CABANG:</h4>
+          <h4>KANTOR CABANG</h4>
           <p>
             Jl. Cisanggiri I/16 Blok Q-IV<br>
             Kebayoran Baru<br>
@@ -39,13 +39,13 @@
 
         <!-- SOSMED -->
         <div class="col-lg-3 col-md-6 footer-social">
-          <h4>FACEBOOK:</h4>
+          <h4>FACEBOOK</h4>
           <p>Petani Kayaku</p>
 
-          <h4>INSTAGRAM:</h4>
+          <h4>INSTAGRAM</h4>
           <p>@infopetrokayaku</p>
 
-          <h4>YOUTUBE:</h4>
+          <h4>YOUTUBE</h4>
           <p>infomedia_kayaku</p>
         </div>
 
