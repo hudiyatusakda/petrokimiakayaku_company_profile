@@ -280,7 +280,6 @@
       </div>
 
       <div class="news-carousel-wrap">
-
         <div class="container">
           <div class="swiper news-swiper">
             <script type="application/json" class="news-config">
@@ -433,10 +432,10 @@
             }
           </script>
           <button class="recent-posts-prev navigation-prev">
-            <i class="bi bi-chevron-left"></i>
+            <span class="carousel-control-prev-icon"></span>
           </button>
           <button class="recent-posts-next navigation-next">
-            <i class="bi bi-chevron-right"></i>
+            <span class="carousel-control-next-icon"></span>
           </button>
           <div class="swiper-wrapper">
 
@@ -757,10 +756,6 @@
         </div>
       </div>
     </section><!-- /Peka SMART App Section -->
-
-  </main>
-  <!-- main content -->
-
   </main>
   <!-- main content -->
 
