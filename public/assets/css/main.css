@@ -1001,6 +1001,7 @@ h6 {
   padding: 80px 0;
   text-align: center;
   position: relative;
+  margin-top: 120px;
 }
 
 .page-title:before {
@@ -3002,4 +3003,276 @@ section,
   margin: 0;
   font-weight: 600;
   color: #000;
+}
+
+.about-3 .image-stack {
+  padding: 30px;
+}
+
+/* Badge Hijau di Kiri Atas */
+.about-3 .experience-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #157347;
+  color: white;
+  padding: 20px;
+  z-index: 2;
+  border-radius: 4px;
+}
+
+/* Video Mini di Kanan Bawah */
+.about-3 .video-box-mini {
+  width: 250px;
+  bottom: 0;
+  right: 0;
+  z-index: 3;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  border: 5px solid white;
+}
+
+.about-3 .play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffc107;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: black;
+  text-decoration: none;
+}
+
+/* Bingkai Oranye di Belakang */
+.about-3 .frame-decoration {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 80%;
+  height: 80%;
+  border: 8px solid #ffc107;
+  z-index: -1;
+}
+
+.about-3 .main-img {
+  position: relative;
+  z-index: 1;
+}
+
+.about-3 .btn-success {
+  background-color: #157347;
+  border: none;
+}
+
+.about-3 .icon-circle {
+  width: 60px;        /* Lebar tetap */
+  height: 60px;       /* Tinggi tetap (sama dengan lebar) */
+  display: flex;      /* Gunakan flexbox untuk menengahkan ikon */
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;     /* Mencegah lingkaran tergencet jika teks panjang */
+}
+
+/* --- CSS Layout Collage Gambar --- */
+.company-values .collage-stack {
+  min-height: 500px; /* Tinggi minimum agar gambar tidak terpotong */
+  padding: 20px;
+}
+
+/* Gambar Utama */
+.company-values .img-main {
+  width: 80%;
+  position: relative;
+  z-index: 1;
+}
+
+/* Gambar Overlay Kanan Bawah */
+.company-values .img-overlay-1 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 55%;
+  z-index: 2;
+}
+
+/* Gambar Overlay Kiri Atas */
+.company-values .img-overlay-2 {
+  position: absolute;
+  top: 0;
+  left: 65%; /* Menggeser ke kanan atas */
+  width: 35%;
+  z-index: 3;
+}
+
+/* Bingkai Dekorasi di belakang */
+.company-values .frame-decoration-back {
+  position: absolute;
+  top: 40px;
+  left: -20px;
+  width: 60%;
+  height: 70%;
+  border: 10px solid #ffc107; /* Warna Kuning */
+  z-index: 0;
+  opacity: 0.5;
+}
+
+/* --- CSS Ikon Bulat (Versi Kecil untuk List) --- */
+.company-values .icon-circle-small {
+  width: 45px;        /* Lebar fix */
+  height: 45px;       /* Tinggi fix sama dengan lebar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;     /* Mencegah penyusutan */
+  font-size: 1.2rem;
+}
+
+/* Section Background */
+.shareholders-section {
+  /* Ganti URL gambar di sini sesuai keinginan Anda */
+  background-image: url('assets/img/blog/puasa.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Efek Parallax (opsional) */
+  min-height: 600px;
+}
+
+/* Overlay Hijau Gelap (Agar teks putih terbaca jelas) */
+.shareholders-section .bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(21, 71, 35, 0.95) 0%, rgba(21, 71, 35, 0.8) 100%);
+  z-index: 1;
+}
+
+/* Glassmorphism Effect untuk List Pemegang Saham */
+.shareholder-legend .backdrop-blur {
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.shareholder-legend .backdrop-blur:hover {
+  transform: translateX(10px);
+  background: rgba(255, 255, 255, 0.15) !important;
+  cursor: default;
+}
+
+/* Chart Container styling */
+.chart-container {
+  position: relative;
+  height: 400px; /* Tinggi Chart */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Teks di tengah Donat Chart */
+.center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none; /* Agar tidak mengganggu hover chart */
+}
+
+/* Badge Kuning Melayang */
+.floating-badge {
+  position: absolute;
+  top: -20px;
+  right: 20px;
+  z-index: 10;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* --- Konfigurasi Kartu --- */
+.policy-section .policy-card {
+  min-height: 500px; /* Tinggi minimal kartu */
+  /* Border radius diatur via class bootstrap 'rounded-4', 
+     tapi transform fix ini untuk safari/browser lama agar sudut tumpul tetap clip */
+  transform: translateZ(0); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efek Card Terangkat sedikit saat hover (opsional, biar makin interaktif) */
+.policy-section .policy-card:hover {
+  transform: translateY(-10px); /* Naik sedikit */
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3) !important; /* Bayangan makin tebal */
+}
+
+/* --- Background Image Setting --- */
+.policy-section .bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Zoom smooth */
+  z-index: 0;
+}
+
+/* --- Overlay Hijau Transparan --- */
+.policy-section .bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Hijau Petrokimia dengan opacity sekitar 75% agar teks putih jelas */
+  background: linear-gradient(135deg, rgba(21, 71, 35, 0.75), rgba(11, 46, 19, 0.9));
+  z-index: 1;
+  transition: background 0.3s ease;
+}
+
+/* --- Animasi INTERNAL KARTU saat Hover --- */
+/* 1. Gambar Background Zoom In */
+.policy-section .policy-card:hover .bg-image {
+  transform: scale(1.15); /* Zoom lebih terasa */
+}
+
+/* 2. Overlay sedikit menggelap */
+.policy-section .policy-card:hover .bg-overlay {
+  background: linear-gradient(135deg, rgba(21, 71, 35, 0.85), rgba(0, 0, 0, 0.95));
+}
+
+/* 3. Ikon bergoyang */
+.policy-section .policy-card:hover .icon-wrapper {
+  animation: shake 0.5s ease-in-out;
+}
+
+/* --- Text & Badge Styling --- */
+.policy-section p {
+  line-height: 1.7;
+  font-size: 0.95rem;
+  text-align: justify;
+}
+
+.policy-section .iso-badge {
+  display: inline-block;
+  padding: 5px 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  border-radius: 50px; /* Badge bentuk pil/capsule */
+}
+
+/* Keyframes untuk animasi ikon */
+@keyframes shake {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-10deg); }
+  75% { transform: rotate(10deg); }
 }
