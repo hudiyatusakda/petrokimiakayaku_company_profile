@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontendController;
-use App\Http\Controllers\ProductCategoryController;
+
 
 Route::get('/', [FrontendController::class,'index'])->name('home');
 Route::get('/about-us', [FrontendController::class,'about'])->name('about');
