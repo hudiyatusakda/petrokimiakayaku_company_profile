@@ -14,7 +14,6 @@ Route::get('/contact', [FrontendController::class,'contact'])->name('contact');
 Route::get('/login', [FrontendController::class,'login'])->name('login');
 Route::get('/search', [FrontendController::class,'search'])->name('search');
 Route::get('/tentang-perusahaan', function () {
-
     return view('profile.tentang');
 })->name('tentang');
 
@@ -26,6 +25,13 @@ Route::get('/fasilitas-perusahaan', function () {
     return view('profile.fasilitas');
 })->name('fasilitas');
 
+Route::get('/komisaris', function () {
+    return view('profile.komisaris');
+})->name('komisaris');
+
+Route::get('/direksi', function () {
+    return view('profile.direksi');
+})->name('direksi');
 
 Route::prefix('produk')->group(function () {
 

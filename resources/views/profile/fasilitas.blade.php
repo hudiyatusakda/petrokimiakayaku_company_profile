@@ -23,21 +23,154 @@
 
   <main class="main">
 
-    <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade"
-      style="background-image: url(assets/img/page-title-bg.webp);">
-      <div class="container position-relative">
-        <h1>About</h1>
-        <p>Esse dolorum voluptatum ullam est sint nemo et est ipsa porro placeat quibusdam quia assumenda numquam
-          molestias.</p>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">About</li>
-          </ol>
-        </nav>
+    <section id="hero" class="hero section dark-background">
+
+      <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
+
+        <div class="carousel-item active">
+          <img src="assets/img/kayaku-1.jpeg" alt="">
+          <div class="carousel-container">
+            <h2>Pestisida menjadi hak angket tanaman seluruh Indonesia</h2>
+            <p>Kami memastikan distribusi dan produksi pestisida indonesia terjaga dan
+              mampu menumbuhkan semnagat petani dan kesehatan tanaman Indonesia.</p>
+          </div>
+        </div><!-- End Carousel Item -->
+
+        <div class="carousel-item">
+          <img src="assets/img/maxresdefault.jpg" alt="">
+          <div class="carousel-container">
+            <h2>Organic vegetables is good for health</h2>
+            <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime
+              placeat facere possimus.</p>
+          </div>
+        </div><!-- End Carousel Item -->
+
+        <div class="carousel-item">
+          <img src="assets/img/sdm.jpg" alt="">
+          <div class="carousel-container">
+            <h2>Providing Fresh Produce Every Single Day</h2>
+            <p>Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+              fugit.</p>
+          </div>
+        </div><!-- End Carousel Item -->
+
+        <div class="carousel-item">
+          <img src="assets/img/gambar_pabrik3.jpg" alt="">
+          <div class="carousel-container">
+            <h2>Farming as a Passione</h2>
+            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia
+              non numquam eius.</p>
+          </div>
+        </div><!-- End Carousel Item -->
+
+        <div class="carousel-item">
+          <img src="assets/img/gambar_kebijakan3.jpg" alt="">
+          <div class="carousel-container">
+            <h2>Good Food For All</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua.</p>
+          </div>
+        </div><!-- End Carousel Item -->
+
+        <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
+
+        <ol class="carousel-indicators"></ol>
+
       </div>
-    </div><!-- End Page Title -->
+
+    </section><!-- /Hero Section -->
+
+    <section class="facilities-section" id="fasilitas">
+        <div class="container-fluid p-0"> <div class="container mb-5 text-center" data-aos="fade-up">
+                <h6 class="text-success fw-bold text-uppercase">Fasilitas Kami</h6>
+                <h2 class="display-5 fw-bold">Infrastruktur & Teknologi</h2>
+            </div>
+
+            <div class="container">
+
+                <div class="row g-0 facility-row" data-aos="fade-up">
+                    
+                    <div class="col-lg-6 facility-img-col left-img">
+                        <img src="assets/img/sdm.jpg" alt="Laboratorium Riset" class="facility-img">
+                        
+                        <div class="yellow-badge">
+                            <i class="bi bi-gear-wide-connected"></i>
+                            Teknologi Terkini untuk hasil maksimal.
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 facility-text-col">
+                        <h3>Laboratorium Riset & Pengembangan</h3>
+                        <p>
+                            Fasilitas laboratorium modern yang dilengkapi dengan peralatan analisis canggih untuk memastikan kualitas produk agrokimia yang presisi. Kami melakukan pengujian ketat mulai dari bahan baku hingga produk jadi demi keamanan lingkungan.
+                        </p>
+                        
+                        <ul class="facility-features">
+                            <li><i class="bi bi-check-lg"></i> Standar ISO 17025</li>
+                            <li><i class="bi bi-check-lg"></i> Analisis Presisi</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="row g-0 facility-row" data-aos="fade-up">
+                    
+                    <div class="col-lg-6 facility-text-col order-2 order-lg-1">
+                        <h3>Pabrik Produksi Modern</h3>
+                        <p>
+                            Unit produksi kami dirancang dengan sistem otomatisasi tinggi untuk menjaga konsistensi kualitas. Kapasitas produksi yang besar memungkinkan kami memenuhi kebutuhan pasar domestik maupun ekspor dengan tepat waktu.
+                        </p>
+
+                        <ul class="facility-features">
+                            <li><i class="bi bi-check-lg"></i> Zero Waste System</li>
+                            <li><i class="bi bi-check-lg"></i> High Capacity</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-6 facility-img-col right-img order-1 order-lg-2">
+                        <img src="assets/img/gambar_pabrik3.jpg" alt="Pabrik Produksi" class="facility-img">
+                        
+                        <div class="yellow-badge">
+                            <i class="bi bi-boxes"></i>
+                            Distribusi efisien ke seluruh negeri.
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row g-0 facility-row" data-aos="fade-up">
+                    
+                    <div class="col-lg-6 facility-img-col left-img">
+                        <img src="assets/img/kayaku-1.jpeg" alt="Greenhouse Percobaan" class="facility-img">
+                        
+                        <div class="yellow-badge">
+                            <i class="bi bi-flower1"></i>
+                            Inovasi ramah lingkungan.
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 facility-text-col">
+                        <h3>Area Uji Coba Lapangan (Greenhouse)</h3>
+                        <p>
+                            Sebelum dipasarkan, setiap produk diuji coba secara langsung di area greenhouse kami. Hal ini dilakukan untuk mensimulasikan efektivitas produk terhadap tanaman dalam berbagai kondisi cuaca dan tanah.
+                        </p>
+
+                        <ul class="facility-features">
+                            <li><i class="bi bi-check-lg"></i> Simulasi Alami</li>
+                            <li><i class="bi bi-check-lg"></i> Riset Biologi</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
     <!-- About 3 Section -->
     <section id="about-3" class="about-3 section">

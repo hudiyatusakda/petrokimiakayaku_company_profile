@@ -867,6 +867,31 @@ h6 {
   text-decoration: none;
 }
 
+/* Social Links for Commissioner Section */
+.commissioner-section .social-links {
+  display: flex;
+  gap: 10px;
+}
+
+.commissioner-section .social-links a {
+  display: inline-block;
+  background: color-mix(in srgb, var(--default-color), transparent 90%);
+  color: var(--heading-color);
+  line-height: 1;
+  padding: 8px;
+  border-radius: 4px;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.commissioner-section .social-links a:hover {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+}
+
 .footer-language-bar {
   border-top: 1px solid rgba(255,255,255,0.2);
   padding: 15px 0;
@@ -3275,4 +3300,646 @@ section,
   0%, 100% { transform: rotate(0deg); }
   25% { transform: rotate(-10deg); }
   75% { transform: rotate(10deg); }
+}
+
+/* --- Section Container --- */
+.meaning-section {
+    background-color: #f9fbf9; /* Latar hijau sangat muda */
+    overflow: hidden; /* Mencegah scrollbar jika ada animasi keluar */
+}
+
+/* --- LIST ITEM (Bagian Kiri) --- */
+.meaning-list .meaning-item {
+    position: relative;
+    background: #fff;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border-left: 5px solid #e0e0e0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+/* Hover State pada List */
+.meaning-list .meaning-item:hover,
+.meaning-list .meaning-item.active {
+    border-left-color: #ffc107; /* Kuning saat aktif */
+    background: #fff;
+    transform: translateX(10px); /* Geser kanan sedikit */
+    box-shadow: 0 10px 15px rgba(25, 135, 84, 0.1);
+}
+
+/* Judul List */
+.meaning-list .item-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #2c3e50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Ikon Panah Kecil di Judul */
+.meaning-list .item-title i {
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+    color: #ffc107;
+}
+
+.meaning-list .meaning-item:hover .item-title i,
+.meaning-list .meaning-item.active .item-title i {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Deskripsi (Hidden by default) */
+.meaning-list .item-desc {
+    font-size: 0.9rem;
+    color: #6c757d;
+    line-height: 1.6;
+    margin-top: 10px;
+    display: none; /* Sembunyi dulu */
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+/* Munculkan deskripsi saat hover */
+.meaning-list .meaning-item:hover .item-desc,
+.meaning-list .meaning-item.active .item-desc {
+    display: block;
+    animation: slideDown 0.3s ease forwards;
+}
+
+/* --- LOGO AREA (Bagian Kanan) --- */
+.logo-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 450px; /* Batas lebar logo agar tidak terlalu besar */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.logo-wrapper img.main-logo {
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+    /* Sedikit efek drop shadow pada logo asli */
+    filter: drop-shadow(0 15px 20px rgba(21, 71, 35, 0.15));
+}
+
+/* --- HOTSPOTS (AREA PENUNJUK) --- */
+.hotspot {
+    position: absolute;
+    z-index: 10;
+    opacity: 0; /* Sembunyi default */
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none; /* Agar mouse tembus ke gambar */
+    
+    /* Styling Border Penunjuk */
+    border: 3px solid #ffc107; /* Garis Kuning */
+    background-color: rgba(255, 193, 7, 0.15); /* Isi Kuning Transparan */
+    box-shadow: 0 0 20px rgba(255, 193, 7, 0.6);
+}
+
+/* Saat hotspot aktif */
+.hotspot.active {
+    opacity: 1;
+    transform: scale(1.05); /* Sedikit membesar */
+}
+
+/* --- BENTUK KHUSUS HOTSPOT (Berdasarkan Logo Anda) --- */
+
+/* 1. Erlenmeyer (Bentuk Trapesium di tengah) */
+.hotspot-erlenmeyer {
+    top: 25%;
+    left: 32%;
+    width: 36%;
+    height: 38%;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 100%, 0% 100%); /* Membentuk trapesium */
+    border: none; /* Pakai background saja karena clip-path memotong border */
+    background-color: rgba(255, 193, 7, 0.5); 
+}
+
+/* 2. Hexagon (Segi Enam Luar) */
+.hotspot-hexagon {
+    top: 5%;
+    left: 2%;
+    width: 96%;
+    height: 65%;
+    /* Membentuk Segi Enam */
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    background-color: rgba(25, 135, 84, 0.3); /* Hijau transparan */
+    border: none;
+}
+
+/* 3. Daun (Bagian Bawah) */
+.hotspot-leaf {
+    top: 72%;
+    left: 10%;
+    width: 80%;
+    height: 25%;
+    border-radius: 0 0 100px 100px; /* Melengkung bawah */
+    border-color: #198754; /* Border Hijau */
+    background-color: rgba(25, 135, 84, 0.2);
+}
+
+/* 4. Hijau (Full Circle Background) */
+.hotspot-green {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba(25, 135, 84, 0.1);
+    border: 2px dashed #198754;
+}
+
+/* 5. Simetris (Garis Tengah) */
+.hotspot-symmetrical {
+    top: -10%;
+    left: 50%;
+    width: 2px;
+    height: 120%;
+    background-color: #ffc107;
+    border: none;
+    box-shadow: 0 0 10px #ffc107;
+}
+
+/* 6. All (Kotak Full) */
+.hotspot-all {
+    top: -5%;
+    left: -5%;
+    width: 110%;
+    height: 110%;
+    border-radius: 20px;
+    border: 2px solid #198754;
+    background: transparent;
+}
+
+/* Animasi sederhana untuk deskripsi */
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Team Section Styling --- */
+.team-15 .section-header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Styling untuk Link Judul (Komisaris & Direksi) */
+.team-15 .section-link {
+    text-decoration: none;
+    color: #333; /* Warna default teks */
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.team-15 .section-link:hover {
+    color: #198754; /* Ubah ke warna Hijau (atau warna tema Anda) saat hover */
+}
+
+/* Garis bawah animasi pada judul saat hover */
+.team-15 .section-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    background-color: #198754;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.team-15 .section-link:hover::after {
+    width: 100%;
+}
+
+/* --- Card Person Styling --- */
+.team-15 .person {
+    margin-bottom: 30px;
+}
+
+.team-15 .person figure {
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 8px; /* Sedikit melengkung */
+}
+
+.team-15 .person figure img {
+    transition: transform 0.4s ease;
+    width: 100%;
+    display: block;
+}
+
+/* Efek Zoom in gambar saat hover */
+.team-15 .person:hover figure img {
+    transform: scale(1.05);
+}
+
+/* --- Social Icons (Hidden by default) --- */
+.team-15 .person figure .social {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    
+    /* Animasi Hide/Show */
+    opacity: 0;
+    transform: translateY(20px); /* Turun sedikit ke bawah */
+    transition: all 0.4s ease;
+    z-index: 2;
+}
+
+/* Munculkan Social saat gambar di-hover */
+.team-15 .person:hover figure .social {
+    opacity: 1;
+    transform: translateY(0); /* Kembali ke posisi asal */
+}
+
+/* Styling Icon */
+.team-15 .social a {
+    color: #fff;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.team-15 .social a:hover {
+    color: #ffc107; /* Warna kuning saat icon di hover */
+}
+
+.team-15 .person-contents {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.team-15 .person-contents h3 {
+    font-size: 1.25rem;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.team-15 .person-contents .position {
+    color: #6c757d;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Social Icons Hover Effect */
+.social a span {
+    color: green !important;
+    transition: color 0.3s;
+}
+.social a:hover span {
+    color: white !important;
+}
+
+/* --- Section Profil Komisaris --- */
+.commissioner-section {
+    background-color: #fff;
+    padding: 80px 0;
+    overflow-x: hidden;
+}
+
+/* Container per Item (Row) */
+.commissioner-item {
+    margin-bottom: 80px; /* Jarak antar komisaris */
+}
+
+.commissioner-item:last-child {
+    margin-bottom: 0;
+}
+
+/* --- Area Gambar Lingkaran --- */
+.profile-img-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 450px; /* Ukuran maksimal lingkaran */
+    margin: 0 auto; /* Tengah secara horizontal */
+    aspect-ratio: 1 / 1; /* Memaksa rasio 1:1 (Lingkaran Sempurna) */
+    border-radius: 50%;
+    overflow: hidden;
+    border: 10px solid #f8f9fa; /* Frame border tipis */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: all 0.5s ease;
+}
+
+/* Mengatur gambar di dalam lingkaran */
+.profile-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* KUNCI: Agar gambar tidak gepeng */
+    object-position: center top; /* Fokus ke bagian atas (wajah) */
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Efek Hover pada Gambar */
+.commissioner-item:hover .profile-img-wrapper {
+    border-color: #e9ecef;
+    box-shadow: 0 20px 40px rgba(25, 135, 84, 0.2); /* Bayangan hijau halus */
+    transform: translateY(-10px);
+}
+
+.commissioner-item:hover .profile-img-wrapper img {
+    transform: scale(1.1); /* Zoom in gambar sedikit */
+}
+
+/* --- Area Deskripsi (Teks) --- */
+.profile-content {
+    padding: 20px;
+}
+
+.profile-content h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #212529;
+    margin-bottom: 5px;
+}
+
+.profile-content .position {
+    display: inline-block;
+    color: #198754; /* Warna Hijau Utama */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.profile-content .description {
+    color: #6c757d;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    font-size: 1.05rem;
+}
+
+/* Garis Pembatas Halus */
+.profile-divider {
+    height: 1px;
+    background-color: #e9ecef;
+    margin: 25px 0;
+    width: 100%;
+}
+
+/* Informasi Kontak */
+.contact-info p {
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 500;
+}
+
+.contact-info span {
+    font-weight: 700;
+    color: #212529;
+}
+
+/* Tombol Kontak */
+.btn-contact {
+    background-color: #194537; /* Hijau Tua Elegan */
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    border: 2px solid #194537;
+}
+
+.btn-contact:hover {
+    background-color: transparent;
+    color: #194537;
+}
+
+/* Tombol Share (Lingkaran Kecil) */
+.btn-share {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    color: #198754;
+    margin-left: 15px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.btn-share:hover {
+    background-color: #198754;
+    color: #fff;
+    transform: rotate(90deg);
+}
+
+/* Responsiveness: Agar di HP urutan tetap rapi */
+@media (max-width: 991px) {
+    .profile-img-wrapper {
+        max-width: 300px; /* Perkecil lingkaran di HP */
+        margin-bottom: 30px;
+    }
+    .profile-content {
+        text-align: center;
+    }
+    .commissioner-item {
+        margin-bottom: 60px;
+    }
+}
+
+/* ==================================================
+   SECTION FASILITAS PERUSAHAAN (FULL WIDTH STYLE)
+================================================== */
+
+.facilities-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+    overflow: hidden;
+}
+
+/* Row Wrapper: Flexbox tanpa celah (Gutters 0) */
+.facility-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 60px; /* Jarak antar fasilitas */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08); /* Shadow halus untuk dimensi */
+    border-radius: 8px; /* Sedikit lengkungan di sudut luar container */
+    overflow: hidden; /* Agar sudut gambar mengikuti border-radius */
+    background: #fff;
+}
+
+.facility-row:last-child {
+    margin-bottom: 0;
+}
+
+/* --- KOLOM GAMBAR (FIX ASPEK RASIO) --- */
+.facility-img-col {
+    position: relative;
+    min-height: 450px; /* Tinggi minimal agar terlihat gagah di desktop */
+    padding: 0 !important; /* Paksa hapus padding bawaan col bootstrap */
+    overflow: hidden;
+}
+
+.facility-img {
+    width: 100%;
+    height: 100% !important; /* Paksa tinggi mengikuti container induk */
+    object-fit: cover; /* PERBAIKAN UTAMA: Gambar di-crop rapi, TIDAK GEPENG */
+    object-position: center; /* Fokus tengah */
+    display: block;
+    transition: transform 0.7s ease;
+}
+
+/* Efek Zoom in halus saat mouse hover */
+.facility-row:hover .facility-img {
+    transform: scale(1.08);
+}
+
+/* --- KOLOM TEKS (BACKGROUND HIJAU) --- */
+.facility-text-col {
+    background-color: #1a4a2e; /* Warna Hijau Tua (Sesuai Referensi) */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Teks rata tengah secara vertikal */
+    padding: 60px 50px;
+    position: relative;
+    z-index: 1; /* Pastikan teks di atas elemen dekorasi lain */
+}
+
+/* Judul Fasilitas */
+.facility-text-col h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Garis Kuning Dekoratif di bawah Judul */
+.facility-text-col h3::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #ffc107; /* Kuning Kontras */
+    margin-top: 15px;
+    border-radius: 2px;
+}
+
+/* Deskripsi Paragraf */
+.facility-text-col p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #e0e0e0; /* Putih agak abu agar nyaman di mata */
+    margin-bottom: 30px;
+}
+
+/* List Fitur (Icon Checklist) */
+.facility-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.facility-features li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #ffc107; /* Warna teks fitur kuning */
+}
+
+.facility-features li i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.15); /* Lingkaran transparan */
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1rem;
+}
+
+/* --- YELLOW BADGE (KOTAK POJOK KUNING) --- */
+/* Elemen dekoratif "We are here to support" */
+.yellow-badge {
+    position: absolute;
+    bottom: 0;
+    background-color: #ffc107;
+    color: #1a4a2e; /* Teks hijau tua */
+    padding: 20px 25px;
+    width: 220px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    z-index: 10;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.yellow-badge i {
+    font-size: 1.8rem;
+    display: block;
+    margin-bottom: 8px;
+    color: #1a4a2e;
+}
+
+/* Posisi Badge untuk Gambar Kiri */
+.left-img .yellow-badge {
+    right: 0;
+    border-top-left-radius: 20px;
+}
+
+/* Posisi Badge untuk Gambar Kanan */
+.right-img .yellow-badge {
+    left: 0;
+    border-top-right-radius: 20px;
+}
+
+/* ==================================================
+   RESPONSIVE (TAMPILAN HP/TABLET)
+================================================== */
+@media (max-width: 991px) {
+    /* Tinggi gambar di HP tidak perlu setinggi desktop */
+    .facility-img-col {
+        min-height: 300px;
+    }
+
+    /* Padding teks dikecilkan agar muat layar */
+    .facility-text-col {
+        padding: 40px 25px;
+    }
+
+    /* Ukuran font judul disesuaikan */
+    .facility-text-col h3 {
+        font-size: 1.75rem;
+    }
+
+    /* Sembunyikan badge kuning di HP agar tidak menutupi gambar kecil */
+    .yellow-badge {
+        display: none; 
+    }
 }
