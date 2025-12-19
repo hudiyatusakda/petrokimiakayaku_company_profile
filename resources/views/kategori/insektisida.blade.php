@@ -37,23 +37,36 @@
                 </nav>
             </div>
         </div><!-- End Page Title -->
-        <!-- Product Categories -->
-        <section id="product-categories" class="product-categories section">
-            <div class="container">
-                <div class="section-title text-center">
-                    <h2>Produk Insektisida</h2>
-                </div>
-              <div class="row gy-4 text-center">
+        <!-- INSECTICIDE INTRO -->
+<section id="insektisida-intro" class="section">
+  <div class="container">
 
-  
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-9" data-aos="fade-up">
 
-        </section>
+        
+        <h2 class="insektisida-title">Insektisida</h2>
+
+        <p class="insektisida-desc mt-3">
+          <strong>Insektisida</strong> adalah bahan atau senyawa kimia yang digunakan
+          untuk mengendalikan, menolak, atau membunuh serangga hama yang dapat
+          merusak tanaman pertanian. Penggunaan insektisida yang tepat membantu
+          menjaga kualitas tanaman, meningkatkan hasil panen, dan melindungi
+          tanaman dari serangan hama secara efektif.
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- END INSECTICIDE INTRO -->
 
         <!-- Services 2 Section (Products for dashboard) -->
     <section id="services-2" class="services-2 section dark-background">
       <div class="container section-title" data-aos="fade-up">
         <h2>Products</h2>
-        <p>Featured items from our catalog</p>
+        
       </div>
 
       <div class="services-carousel-wrap">
@@ -68,7 +81,7 @@
                 <div class="product-item position-relative h-100">
                   <div class="product-img position-relative overflow-hidden">
                     <img src="{{ asset('assets/img/products/admil.png') }}" class="img-fluid" alt="admil">
-                    <div class="product-badge bg-success">Insecticide</div>
+                    <div class="product-badge bg-success"></div>
                   </div>
                   <div class="product-content p-3">
                     <div class="product-category">Insecticide</div>
@@ -83,13 +96,13 @@
                 <div class="product-item position-relative h-100">
                   <div class="product-img position-relative overflow-hidden">
                     <img src="{{ asset('assets/img/products/bassa.png') }}" class="img-fluid" alt="bassa">
-                    <div class="product-badge bg-success">Insecticide</div>
+                    <div class="product-badge bg-success"></div>
                   </div>
                   <div class="product-content p-3">
                     <div class="product-category">Insecticide</div>
                     <h3 class="product-title">Bassa 500 EC</h3>
                     <div class="product-price"></div>
-                    <a href="#" class="product-detail-btn">Detail</a>
+                    <a href="{{ route('insektisida.bassa') }}" class="product-detail-btn">Detail</a>
                   </div>
                 </div>
               </div>
@@ -98,7 +111,7 @@
                 <div class="product-item position-relative h-100">
                   <div class="product-img position-relative overflow-hidden">
                     <img src="{{ asset('assets/img/products/ceba.png') }}" class="img-fluid" alt="ceba">
-                    <div class="product-badge bg-success">Insecticide</div>
+                    <div class="product-badge bg-success"></div>
                   </div>
                   <div class="product-content p-3">
                     <div class="product-category">Insecticide</div>
@@ -113,7 +126,7 @@
                 <div class="product-item position-relative h-100">
                   <div class="product-img position-relative overflow-hidden">
                     <img src="{{ asset('assets/img/products/gempur.png') }}" class="img-fluid" alt="gempur">
-                    <div class="product-badge bg-success">Insecticide</div>
+                    <div class="product-badge bg-success"></div>
                   </div>
                   <div class="product-content p-3">
                     <div class="product-category">Insecticide</div>
@@ -128,7 +141,7 @@
                 <div class="product-item position-relative h-100">
                   <div class="product-img position-relative overflow-hidden">
                     <img src="{{ asset('assets/img/products/ratkum.png') }}" class="img-fluid" alt="ratkum">
-                    <div class="product-badge bg-success">Insecticide</div>
+                    <div class="product-badge bg-success"></div>
                   </div>
                   <div class="product-content p-3">
                     <div class="product-category">Insecticide</div>

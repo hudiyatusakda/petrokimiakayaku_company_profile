@@ -33,54 +33,62 @@ Route::get('/direksi', function () {
     return view('profile.direksi');
 })->name('direksi');
 
-Route::prefix('produk')->group(function () {
+Route::prefix('kategori')->group(function () {
 
     Route::get('/insektisida', function () {
-        return view('produk.insektisida');
-    })->name('produk.insektisida');
+        return view('kategori.insektisida');
+    })->name('kategori.insektisida');
 
     Route::get('/herbisida', function () {
-        return view('produk.herbisida');
-    })->name('produk.herbisida');
+        return view('kategori.herbisida');
+    })->name('kategori.herbisida');
 
     Route::get('/fungisida', function () {
-        return view('produk.fungisida');
-    })->name('produk.fungisida');
+        return view('kategori.fungisida');
+    })->name('kategori.fungisida');
 
     Route::get('/rodentisida', function () {
-        return view('produk.rodentisida');
-    })->name('produk.rodentisida');
+        return view('kategori.rodentisida');
+    })->name('kategori.rodentisida');
 
     Route::get('/fumigan', function () {
-        return view('produk.fumigan');
-    })->name('produk.fumigan');
+        return view('kategori.fumigan');
+    })->name('kategori.fumigan');
 
     Route::get('/moluskisida', function () {
-        return view('produk.moluskisida');
-    })->name('produk.moluskisida');
+        return view('kategori.moluskisida');
+    })->name('kategori.moluskisida');
 
     Route::get('/atraktan', function () {
-        return view('produk.atraktan');
-    })->name('produk.atraktan');
+        return view('kategori.atraktan');
+    })->name('kategori.atraktan');
 
     Route::get('/pupuk-cair', function () {
-        return view('produk.pupuk_cair');
-    })->name('produk.pupuk_cair');
+        return view('kategori.pupuk_cair');
+    })->name('kategori.pupuk_cair');
 
     Route::get('/zpt', function () {
-        return view('produk.zpt');
-    })->name('produk.zpt');
+        return view('kategori.zpt');
+    })->name('kategori.zpt');
 
     Route::get('/pupuk-hayati', function () {
-        return view('produk.pupuk_hayati');
-    })->name('produk.pupuk_hayati');
+        return view('kategori.pupuk_hayati');
+    })->name('kategori.pupuk_hayati');
 
     Route::get('/bio-fungisida', function () {
-        return view('produk.bio_fungisida');
-    })->name('produk.bio_fungisida');
+        return view('kategori.bio_fungisida');
+    })->name('kategori.bio_fungisida');
 
     Route::get('/probiotik', function () {
-        return view('produk.probiotik');
-    })->name('produk.probiotik');
+        return view('kategori.probiotik');
+    })->name('kategori.probiotik');
 
 });
+
+Route::get('/produk/insektisida/bassa-500-ec', function () {
+    return view('kategori.insektisida.bassa');
+})->name('insektisida.bassa');
+
+ Route::get('/ceba', function () {
+        return view('kategori.insektisida.ceba');
+    })->name('insektisida.ceba');
