@@ -3276,3 +3276,152 @@ section,
   25% { transform: rotate(-10deg); }
   75% { transform: rotate(10deg); }
 }
+
+/* ==================================================
+   PRODUCT DETAIL
+================================================== */
+
+#product-detail {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.product-detail-image {
+  position: relative;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+  transition: all 0.35s ease;
+}
+
+.product-detail-image:hover {
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+}
+
+.product-img-hover {
+  transition: transform 0.4s ease;
+}
+
+.product-img-hover:hover {
+  transform: scale(1.08);
+}
+
+.product-badge-detail {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  font-size: 13px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  z-index: 2;
+}
+
+/* Product text */
+#product-detail h3 {
+  letter-spacing: 0.5px;
+}
+
+#product-detail p {
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* Product list */
+.product-list li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.product-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #28a745;
+  font-weight: bold;
+}
+
+
+/* ==================================================
+   RELATED PRODUCTS (SWIPER)
+================================================== */
+
+#related-products {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.related-products-swiper {
+  padding: 10px 4px 30px;
+}
+
+.related-card {
+  display: block;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 14px 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.related-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+}
+
+.related-card img {
+  max-height: 75px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.related-card:hover img {
+  transform: scale(1.1);
+}
+
+.related-card span {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+}
+
+
+
+.related-prev,
+.related-next {
+  position: relative;
+  z-index: 50;          
+  pointer-events: auto;
+}
+
+/* FIX: swiper container */
+.related-products-swiper {
+  position: relative;
+  overflow: visible;    
+}
+
+
+#related-products .swiper {
+  overflow: visible;
+}
+
+
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media (max-width: 768px) {
+  .product-detail-image {
+    padding: 16px;
+  }
+
+  .related-card img {
+    max-height: 65px;
+  }
+}

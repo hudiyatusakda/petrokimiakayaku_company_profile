@@ -89,7 +89,7 @@
                     <div class="product-category">Insecticide</div>
                     <h3 class="product-title">Bassa 500 EC</h3>
                     <div class="product-price"></div>
-                    <a href="#" class="product-detail-btn">Detail</a>
+                    <a href="{{ route('insektisida.bassa') }}" class="product-detail-btn">Detail</a>
                   </div>
                 </div>
               </div>

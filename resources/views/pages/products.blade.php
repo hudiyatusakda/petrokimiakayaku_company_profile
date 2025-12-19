@@ -50,8 +50,8 @@
     <div class="category-item p-4 shadow-sm">
       <i class="fa-solid fa-bug fa-2x text-success mb-3"></i>
       <h3>Insektisida</h3>
-      <a href="{{ route('produk.insektisida') }}" class="btn btn-outline-success btn-sm">
-        Lihat Produk
+      <a href="{{ route('kategori.insektisida') }}" class="btn btn-outline-success btn-sm">
+        Lihat kategori
       </a>
     </div>
   </div>
@@ -61,8 +61,8 @@
     <div class="category-item p-4 shadow-sm">
       <i class="fa-solid fa-seedling fa-2x text-success mb-3"></i>
       <h3>Herbisida</h3>
-      <a href="{{ route('produk.herbisida') }}" class="btn btn-outline-success btn-sm">
-        Lihat Produk
+      <a href="{{ route('kategori.herbisida') }}" class="btn btn-outline-success btn-sm">
+        Lihat kategori
       </a>
     </div>
   </div>
@@ -72,8 +72,8 @@
     <div class="category-item p-4 shadow-sm">
       <i class="fa-solid fa-virus fa-2x text-success mb-3"></i>
       <h3>Fungisida</h3>
-      <a href="{{ route('produk.fungisida') }}" class="btn btn-outline-success btn-sm">
-        Lihat Produk
+      <a href="{{ route('kategori.fungisida') }}" class="btn btn-outline-success btn-sm">
+        Lihat kategori
       </a>
     </div>
   </div>
@@ -83,8 +83,8 @@
     <div class="category-item p-4 shadow-sm">
       <i class="fa-solid fa-skull-crossbones fa-2x text-success mb-3"></i>
       <h3>Rodentisida</h3>
-      <a href="{{ route('produk.rodentisida') }}" class="btn btn-outline-success btn-sm">
-        Lihat Produk
+      <a href="{{ route('kategori.rodentisida') }}" class="btn btn-outline-success btn-sm">
+        Lihat kategori
       </a>
     </div>
   </div>
@@ -94,8 +94,8 @@
     <div class="category-item p-4 shadow-sm">
       <i class="fa-solid fa-cloud fa-2x text-success mb-3"></i>
       <h3>Fumigan</h3>
-      <a href="{{ route('produk.fumigan') }}" class="btn btn-outline-success btn-sm">
-        Lihat Produk
+      <a href="{{ route('kategori.fumigan') }}" class="btn btn-outline-success btn-sm">
+        Lihat kategori
       </a>
     </div>
   </div>
@@ -105,8 +105,8 @@
     <div class="category-item p-4 shadow-sm">
       <i class="fa-solid fa-water fa-2x text-success mb-3"></i>
       <h3>Moluskisida</h3>
-      <a href="{{ route('produk.moluskisida') }}" class="btn btn-outline-success btn-sm">
-        Lihat Produk
+      <a href="{{ route('kategori.moluskisida') }}" class="btn btn-outline-success btn-sm">
+        Lihat kategori
       </a>
     </div>
   </div>
@@ -116,8 +116,8 @@
     <div class="category-item p-4 shadow-sm">
       <i class="fa-solid fa-magnet fa-2x text-success mb-3"></i>
       <h3>Atraktan</h3>
-      <a href="{{ route('produk.atraktan') }}" class="btn btn-outline-success btn-sm">
-        Lihat Produk
+      <a href="{{ route('kategori.atraktan') }}" class="btn btn-outline-success btn-sm">
+        Lihat kategori
       </a>
     </div>
   </div>
@@ -127,8 +127,8 @@
     <div class="category-item p-4 shadow-sm">
       <i class="fa-solid fa-flask fa-2x text-success mb-3"></i>
       <h3>Pupuk Cair</h3>
-      <a href="{{ route('produk.pupuk_cair') }}" class="btn btn-outline-success btn-sm">
-        Lihat Produk
+      <a href="{{ route('kategori.pupuk_cair') }}" class="btn btn-outline-success btn-sm">
+        Lihat kategori
       </a>
     </div>
   </div>
@@ -138,8 +138,8 @@
     <div class="category-item p-4 shadow-sm">
       <i class="fa-solid fa-vial fa-2x text-success mb-3"></i>
       <h3>ZPT</h3>
-      <a href="{{ route('produk.zpt') }}" class="btn btn-outline-success btn-sm">
-        Lihat Produk
+      <a href="{{ route('kategori.zpt') }}" class="btn btn-outline-success btn-sm">
+        Lihat kategori
       </a>
     </div>
   </div>
@@ -149,8 +149,8 @@
     <div class="category-item p-4 shadow-sm">
       <i class="fa-solid fa-leaf fa-2x text-success mb-3"></i>
       <h3>Pupuk Hayati</h3>
-      <a href="{{ route('produk.pupuk_hayati') }}" class="btn btn-outline-success btn-sm">
-        Lihat Produk
+      <a href="{{ route('kategori.pupuk_hayati') }}" class="btn btn-outline-success btn-sm">
+        Lihat kategori
       </a>
     </div>
   </div>
@@ -160,8 +160,8 @@
     <div class="category-item p-4 shadow-sm">
       <i class="fa-solid fa-dna fa-2x text-success mb-3"></i>
       <h3>Bio Fungisida</h3>
-      <a href="{{ route('produk.bio_fungisida') }}" class="btn btn-outline-success btn-sm">
-        Lihat Produk
+      <a href="{{ route('kategori.bio_fungisida') }}" class="btn btn-outline-success btn-sm">
+        Lihat kategori
       </a>
     </div>
   </div>
@@ -171,8 +171,8 @@
     <div class="category-item p-4 shadow-sm">
       <i class="fa-solid fa-bacteria fa-2x text-success mb-3"></i>
       <h3>Probiotik</h3>
-      <a href="{{ route('produk.probiotik') }}" class="btn btn-outline-success btn-sm">
-        Lihat Produk
+      <a href="{{ route('kategori.probiotik') }}" class="btn btn-outline-success btn-sm">
+        Lihat kategori
       </a>
     </div>
   </div>
