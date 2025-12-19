@@ -145,7 +145,7 @@
         <div class="swiper-wrapper">
 
           <div class="swiper-slide">
-            <a href="#" class="related-card">
+            <a href="{{ route('insektisida.ceba') }}" class="related-card">
               <img src="{{ asset('assets/img/products/ceba.png') }}" alt="Ceba">
               <span>Ceba</span>
             </a>

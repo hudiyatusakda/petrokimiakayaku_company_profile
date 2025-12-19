@@ -3425,3 +3425,60 @@ section,
     max-height: 65px;
   }
 }
+
+
+/* ==================================================
+   INSEKTISIDA INTRO
+================================================== */
+
+#insektisida-intro {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.insektisida-label {
+  display: inline-block;
+  background: rgba(40, 167, 69, 0.12);
+  color: #28a745;
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.insektisida-title {
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.insektisida-title::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  background: #28a745;
+  margin: 12px auto 0;
+  border-radius: 4px;
+}
+
+.insektisida-desc {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .insektisida-title {
+    font-size: 26px;
+  }
+
+  .insektisida-desc {
+    font-size: 15px;
+  }
+}

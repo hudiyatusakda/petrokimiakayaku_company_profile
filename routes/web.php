@@ -83,3 +83,6 @@ Route::get('/produk/insektisida/bassa-500-ec', function () {
     return view('kategori.insektisida.bassa');
 })->name('insektisida.bassa');
 
+ Route::get('/ceba', function () {
+        return view('kategori.insektisida.ceba');
+    })->name('insektisida.ceba');
