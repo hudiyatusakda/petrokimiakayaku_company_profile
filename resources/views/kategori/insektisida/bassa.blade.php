@@ -31,8 +31,8 @@
                 <h1>Our Fresh Products</h1>
                 <nav class="breadcrumbs">
                     <ol>
-                        <li><a href="{{ route('products') }}">Produk</a></li>
-                        <li class="current">Insektisida</li>
+                        <li><a href="{{ route(name: 'kategori.insektisida') }}">Insektisida</a></li>
+                        <li class="current">Bassa</li>
                     </ol>
                 </nav>
             </div>
