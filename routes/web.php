@@ -25,6 +25,22 @@ Route::get('/fasilitas-perusahaan', function () {
     return view('profile.fasilitas');
 })->name('fasilitas');
 
+Route::get('/fasilitas-perusahaan-2', function () {
+    return view('profile.fasilitas-perusahaan');
+})->name('fasilitas.perusahaan');
+
+Route::get('/detail-pabrik', function () {
+    return view('profile.detail-pabrik');
+})->name('detail.pabrik');
+
+Route::get('/pemasaran', function () {
+    return view('profile.pemasaran');
+})->name('pemasaran.perusahaan');
+
+Route::get('/riset', function () {
+    return view('profile.riset');
+})->name('riset.perusahaan');
+
 Route::get('/komisaris', function () {
     return view('profile.komisaris');
 })->name('komisaris');
