@@ -104,3 +104,7 @@ Route::get('/konsultasi', function () {
 Route::get('/forum', function () {
     return view('pages.forum');
 })->name('forum');
+
+Route::get('/karir', function () {
+    return view('pages.karir');
+})->name('karir');

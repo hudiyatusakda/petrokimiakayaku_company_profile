@@ -36,18 +36,18 @@
         <div class="col-lg-8 text-center fade-up">
 
           <!-- JUDUL DARI GAMBAR -->
-          <h2 class="fw-bold mb-3">
-             Konsultasi
+         <h2 class="fw-bold mb-3 fade-up">
+              Konsultasi
           </h2>
 
-          <!-- DESKRIPSI DARI GAMBAR -->
-          <p class="text-muted">
-            Selamat datang di Media Tanya Jawab PT Petrokimia Kayaku, 
-            sampaikan berbagai macam pertanyaan dan keluhan seputar
-            PT Petrokimia Kayaku melalui kolom berikut yang telah disediakan,
-            staf kami akan berusaha secepatnya untuk menjawab pertanyaan Anda.
-            Pastikan semua identitas Anda isi dengan lengkap.
-          </p>
+        <p class="text-muted fade-up delay-1">
+        Selamat datang di Media Tanya Jawab PT Petrokimia Kayaku, 
+        sampaikan berbagai macam pertanyaan dan keluhan seputar
+        PT Petrokimia Kayaku melalui kolom berikut yang telah disediakan,
+        staf kami akan berusaha secepatnya untuk menjawab pertanyaan Anda.
+        Pastikan semua identitas Anda isi dengan lengkap.
+        </p>
+
 
         </div>
       </div>
