@@ -92,3 +92,15 @@ Route::get('/produk/insektisida/bassa-500-ec', function () {
  Route::get('/ceba', function () {
         return view('kategori.insektisida.ceba');
     })->name('insektisida.ceba');
+
+Route::get('/solusi', function () {
+    return view('pages.solusi');
+})->name('pages.solusi');
+
+Route::get('/konsultasi', function () {
+    return view('pages.konsultasi');
+})->name('konsultasi');
+
+Route::get('/forum', function () {
+    return view('pages.forum');
+})->name('forum');
