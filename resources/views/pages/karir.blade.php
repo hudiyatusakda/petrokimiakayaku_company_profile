@@ -56,7 +56,7 @@
           <div class="card karir-card h-100">
             <div class="card-body">
               <h5 class="fw-bold">Marketing Officer</h5>
-              <p class="karir-meta">Full Time · Surabaya</p>
+              <p class="karir-meta">Full Time · Gresik</p>
               <p class="text-muted">
                 Bertanggung jawab dalam pemasaran produk dan pengembangan pasar.
               </p>
