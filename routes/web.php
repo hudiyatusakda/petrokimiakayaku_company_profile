@@ -49,6 +49,17 @@ Route::get('/direksi', function () {
     return view('profile.direksi');
 })->name('direksi');
 
+Route::get('/video', function () {
+    return view('pages.video');
+})->name('video');
+
+Route::get('/kegiatan', function () {
+    return view('pages.kegiatan');
+})->name('kegiatan');
+
+Route::get('/detail-kegiatan', function () {
+    return view('pages.detail-kegiatan');
+})->name('detail-kegiatan');
 Route::prefix('kategori')->group(function () {
 
     Route::get('/insektisida', function () {

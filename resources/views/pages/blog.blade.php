@@ -23,251 +23,157 @@
 
   <main class="main">
 
-    <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade"
-      style="background-image: url(assets/img/page-title-bg.webp);">
-      <div class="container position-relative">
-        <h1>Blog</h1>
-        <p>
-          Home
-          /
-          Blog</p>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Blog</li>
-          </ol>
-        </nav>
-      </div>
-    </div><!-- End Page Title -->
-
-    <!-- Blog Posts 2 Section -->
-    <section id="blog-posts-2" class="blog-posts-2 section">
-
-      <div class="container">
-        <div class="row gy-4">
-
-          <div class="col-lg-4">
-            <article class="position-relative h-100">
-
-              <div class="post-img position-relative overflow-hidden">
-                <img src="assets/img/blog/blog-1.jpg" class="img-fluid" alt="">
-              </div>
-
-              <div class="meta d-flex align-items-end">
-                <span class="post-date"><span>12</span>December</span>
-                <div class="d-flex align-items-center">
-                  <i class="bi bi-person"></i> <span class="ps-2">John Doe</span>
-                </div>
-                <span class="px-3 text-black-50">/</span>
-                <div class="d-flex align-items-center">
-                  <i class="bi bi-folder2"></i> <span class="ps-2">Politics</span>
-                </div>
-              </div>
-
-              <div class="post-content d-flex flex-column">
-
-                <h3 class="post-title">Dolorum optio tempore voluptas dignissimos</h3>
-                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i
-                    class="bi bi-arrow-right"></i></a>
-
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-lg-4">
-            <article class="position-relative h-100">
-
-              <div class="post-img position-relative overflow-hidden">
-                <img src="assets/img/blog/blog-2.jpg" class="img-fluid" alt="">
-              </div>
-
-              <div class="meta d-flex align-items-end">
-                <span class="post-date"><span>19</span>March</span>
-                <div class="d-flex align-items-center">
-                  <i class="bi bi-person"></i> <span class="ps-2">Julia Parker</span>
-                </div>
-                <span class="px-3 text-black-50">/</span>
-                <div class="d-flex align-items-center">
-                  <i class="bi bi-folder2"></i> <span class="ps-2">Economics</span>
-                </div>
-              </div>
-
-              <div class="post-content d-flex flex-column">
-                <h3 class="post-title">Nisi magni odit consequatur autem nulla dolorem</h3>
-                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i
-                    class="bi bi-arrow-right"></i></a>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-lg-4">
-            <article class="position-relative h-100">
-
-              <div class="post-img position-relative overflow-hidden">
-                <img src="assets/img/blog/blog-3.jpg" class="img-fluid" alt="">
-              </div>
-              <div class="meta d-flex align-items-end">
-                <span class="post-date"><span>24</span>June</span>
-                <div class="d-flex align-items-center">
-                  <i class="bi bi-person"></i> <span class="ps-2">Maria Doe</span>
-                </div>
-                <span class="px-3 text-black-50">/</span>
-                <div class="d-flex align-items-center">
-                  <i class="bi bi-folder2"></i> <span class="ps-2">Sports</span>
-                </div>
-              </div>
-
-              <div class="post-content d-flex flex-column">
-                <h3 class="post-title">Possimus soluta ut id suscipit ea ut. In quo quia et soluta libero sit sint.</h3>
-                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i
-                    class="bi bi-arrow-right"></i></a>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-lg-4">
-            <article class="position-relative h-100">
-
-              <div class="post-img position-relative overflow-hidden">
-                <img src="assets/img/blog/blog-4.jpg" class="img-fluid" alt="">
-              </div>
-              <div class="meta d-flex align-items-end">
-                <span class="post-date"><span>05</span>August</span>
-                <div class="d-flex align-items-center">
-                  <i class="bi bi-person"></i> <span class="ps-2">Maria Doe</span>
-                </div>
-                <span class="px-3 text-black-50">/</span>
-                <div class="d-flex align-items-center">
-                  <i class="bi bi-folder2"></i> <span class="ps-2">Sports</span>
-                </div>
-              </div>
-
-              <div class="post-content d-flex flex-column">
-                <h3 class="post-title">Non rem rerum nam cum quo minus explicabo eius exercitationem.</h3>
-                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i
-                    class="bi bi-arrow-right"></i></a>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-lg-4">
-            <article class="position-relative h-100">
-
-              <div class="post-img position-relative overflow-hidden">
-                <img src="assets/img/blog/blog-5.jpg" class="img-fluid" alt="">
-              </div>
-
-              <div class="meta d-flex align-items-end">
-                <span class="post-date"><span>17</span>September</span>
-                <div class="d-flex align-items-center">
-                  <i class="bi bi-person"></i> <span class="ps-2">John Parker</span>
-                </div>
-                <span class="px-3 text-black-50">/</span>
-                <div class="d-flex align-items-center">
-                  <i class="bi bi-folder2"></i> <span class="ps-2">Politics</span>
-                </div>
-              </div>
-
-              <div class="post-content d-flex flex-column">
-
-                <h3 class="post-title">Accusamus quaerat aliquam qui debitis facilis consequatur</h3>
-                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i
-                    class="bi bi-arrow-right"></i></a>
-
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-lg-4">
-            <article class="position-relative h-100">
-
-              <div class="post-img position-relative overflow-hidden">
-                <img src="assets/img/blog/blog-6.jpg" class="img-fluid" alt="">
-              </div>
-
-              <div class="meta d-flex align-items-end">
-                <span class="post-date"><span>07</span>December</span>
-                <div class="d-flex align-items-center">
-                  <i class="bi bi-person"></i> <span class="ps-2">Julia White</span>
-                </div>
-                <span class="px-3 text-black-50">/</span>
-                <div class="d-flex align-items-center">
-                  <i class="bi bi-folder2"></i> <span class="ps-2">Economics</span>
-                </div>
-              </div>
-
-              <div class="post-content d-flex flex-column">
-
-                <h3 class="post-title">Distinctio provident quibusdam numquam aperiam aut</h3>
-                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i
-                    class="bi bi-arrow-right"></i></a>
-
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-        </div>
-      </div>
-
-    </section><!-- /Blog Posts 2 Section -->
-
-    <!-- Blog Pagination Section -->
-    <section id="blog-pagination" class="blog-pagination section">
-
-      <div class="container">
-        <div class="d-flex justify-content-center">
-          <ul>
-            <li><a href="#"><i class="bi bi-chevron-left"></i></a></li>
-            <li><a href="#">1</a></li>
-            <li><a href="#" class="active">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li>...</li>
-            <li><a href="#">10</a></li>
-            <li><a href="#"><i class="bi bi-chevron-right"></i></a></li>
-          </ul>
-        </div>
-      </div>
-
-    </section><!-- /Blog Pagination Section -->
-
-    <!-- Call To Action Section -->
-    <section id="call-to-action" class="call-to-action section light-background">
-
-      <div class="content">
+    <section class="news-detail-section" id="berita-detail">
         <div class="container">
-          <div class="row align-items-center">
-            <div class="col-lg-6">
-              <h3>Subscribe To Our Newsletter</h3>
-              <p class="opacity-50">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Nesciunt, reprehenderit!
-              </p>
+            <div class="row">
+                
+                <div class="col-lg-8 pe-lg-5">
+                    
+                    <div class="news-hero-img-wrap" data-aos="zoom-out" data-aos-duration="1000">
+                        <img src="assets/img/news-hero.jpg" alt="Transformasi Digital" class="news-hero-img">
+                    </div>
+
+                    <div class="news-header-wrap" data-aos="fade-up">
+                        <span class="news-category-badge">Teknologi & Inovasi</span>
+                        <h1 class="news-title">Transformasi Digital: Membangun Ekosistem Pertanian 4.0 di Indonesia</h1>
+                        
+                        <div class="news-meta-bar">
+                            <div class="d-flex align-items-center">
+                                <img src="assets/img/avatar.jpg" alt="Author" class="author-avatar">
+                                <span>Oleh <strong>Dr. Ir. Budi Santoso</strong></span>
+                            </div>
+                            <span>|</span>
+                            <span><i class="bi bi-calendar3"></i> 20 Desember 2025</span>
+                            <span>|</span>
+                            <span><i class="bi bi-clock"></i> 5 Menit Baca</span>
+                        </div>
+                    </div>
+
+                    <div class="article-content" data-aos="fade-up">
+                        <p>
+                            <strong>Gresik, Petrokimia Kayaku</strong> – Di era revolusi industri 4.0, sektor pertanian tidak boleh tertinggal. Digitalisasi bukan lagi sekadar pilihan, melainkan keharusan untuk mencapai efisiensi dan produktivitas maksimal. Melalui penerapan teknologi *drone spraying* dan *smart farming*, kami berkomitmen untuk menjadi pelopor perubahan ini.
+                        </p>
+                        
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
+                        </p>
+
+                        <div class="highlight-text-block">
+                            "Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos."
+                        </div>
+
+                        <p>
+                            Laculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos. Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                        </p>
+
+                        <img src="assets/img/news-embedded.jpg" alt="Ilustrasi Smart Farming" class="article-embedded-img" data-aos="fade-up">
+
+                        <p>
+                            Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
+                        </p>
+                        
+                        <div class="highlight-text-block" style="color: #d63384;">
+                            Penyambutan Prestasi & Penutupan Penganugerahan
+                        </div>
+
+                        <p>
+                            Sebagai penutup tahun yang gemilang, manajemen memberikan apresiasi setinggi-tingginya kepada seluruh tim yang telah bekerja keras. Semangat kolaborasi inilah yang akan terus kita bawa menyongsong tantangan di tahun depan.
+                        </p>
+                    </div>
+
+                    <div class="news-comment-box" data-aos="fade-up" data-aos-offset="100">
+                        <h3 class="mb-4 fw-bold text-dark">Komentar</h3>
+                        
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control comment-input-gray" placeholder="Nama Lengkap">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control comment-input-gray" placeholder="Alamat Email">
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control comment-input-gray comment-input-large" placeholder="Masukkan komentar Anda disini..."></textarea>
+                                </div>
+                                <div class="col-12 text-end">
+                                    <button type="button" class="btn btn-warning fw-bold px-4 py-2 rounded-pill">Kirim</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="filter-btn-group" data-aos="fade-up">
+                        <button class="filter-pill active">Terbaru</button>
+                        <button class="filter-pill">Terlama</button>
+                        <button class="filter-pill">Terpopuler</button>
+                    </div>
+
+                    <div class="comment-list-container" data-aos="fade-up">
+                        <div class="comment-row">
+                            <div class="comment-author-name">Muhammad Abdi</div>
+                            <div class="comment-body">
+                                Gas keunn Loremm :)) Artikel yang sangat inspiratif untuk petani muda!
+                            </div>
+                        </div>
+                        <div class="comment-row">
+                            <div class="comment-author-name">Berlinda Nasution</div>
+                            <div class="comment-body">
+                                Ga kebayang bakalan jadi apa nanti teknologi ini 5 tahun lagi. Semoga sukses terus Petrokimia!
+                            </div>
+                        </div>
+                        <div class="comment-row">
+                            <div class="comment-author-name">Muhammad Dilan</div>
+                            <div class="comment-body">
+                                Aku sih Setuju ya, Soalnya materinya daging semua.
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <div class="col-lg-4 mt-5 mt-lg-0">
+                    <div class="sticky-top" style="top: 100px; z-index: 1;">
+                        
+                        <div class="sidebar-box" data-aos="fade-left" data-aos-delay="100">
+                            <a href="#" class="video-widget-card d-block text-decoration-none">
+                                <img src="assets/img/sidebar-video-thumb.jpg" alt="Video" class="video-thumb">
+                                <div class="play-btn-center">
+                                    <i class="bi bi-play-fill"></i>
+                                </div>
+                            </a>
+                            <div class="p-3 bg-light rounded-bottom text-center fw-bold">
+                                Video Profil Perusahaan 2025
+                            </div>
+                        </div>
+
+                        <div class="mt-5">
+                            <h5 class="mb-4 fw-bold border-bottom pb-2 border-warning d-inline-block">Berita Terkait</h5>
+
+                            <a href="#" class="sidebar-news-item" data-aos="fade-left" data-aos-delay="200">
+                                <img src="assets/img/sidebar-news-1.jpg" alt="News 1" class="sidebar-news-img">
+                                <div class="sidebar-news-desc">
+                                    Inovasi Pupuk NPK Cair untuk Hidroponik
+                                </div>
+                            </a>
+
+                            <a href="#" class="sidebar-news-item" data-aos="fade-left" data-aos-delay="300">
+                                <img src="assets/img/sidebar-news-2.jpg" alt="News 2" class="sidebar-news-img">
+                                <div class="sidebar-news-desc">
+                                    Kunjungan Kerja Direksi ke Lahan Mitra
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="sidebar-news-item" data-aos="fade-left" data-aos-delay="400">
+                                <img src="assets/img/sidebar-news-3.jpg" alt="News 3" class="sidebar-news-img">
+                                <div class="sidebar-news-desc">
+                                    Webinar Nasional: Pertanian Berkelanjutan
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+                </div> 
             </div>
-            <div class="col-lg-6">
-              <form action="forms/newsletter.php" class="form-subscribe php-email-form">
-                <div class="form-group d-flex align-items-stretch">
-                  <input type="email" name="email" class="form-control h-100" placeholder="Enter your e-mail">
-                  <input type="submit" class="btn btn-secondary px-4" value="Subcribe">
-                </div>
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">
-                  Your subscription request has been sent. Thank you!
-                </div>
-              </form>
-            </div>
-          </div>
         </div>
-      </div>
-    </section><!-- /Call To Action Section -->
+    </section>
 
   </main>
 
