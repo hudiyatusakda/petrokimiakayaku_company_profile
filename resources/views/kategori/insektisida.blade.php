@@ -37,17 +37,26 @@
                 </nav>
             </div>
         </div><!-- End Page Title -->
-        <!-- INSECTICIDE INTRO -->
+      <!-- INSECTICIDE INTRO -->
 <section id="insektisida-intro" class="section">
   <div class="container">
 
     <div class="row justify-content-center text-center">
-      <div class="col-lg-9" data-aos="fade-up">
+      <div class="col-lg-9">
 
-        
-        <h2 class="insektisida-title">Insektisida</h2>
+        <h2 class="insektisida-title"
+            data-aos="fade-up"
+            data-aos-delay="100">
+          Insektisida
+        </h2>
 
-        <p class="insektisida-desc mt-3">
+        <span class="insektisida-line"
+              data-aos="zoom-in"
+              data-aos-delay="250"></span>
+
+        <p class="insektisida-desc mt-4"
+           data-aos="fade-up"
+           data-aos-delay="400">
           <strong>Insektisida</strong> adalah bahan atau senyawa kimia yang digunakan
           untuk mengendalikan, menolak, atau membunuh serangga hama yang dapat
           merusak tanaman pertanian. Penggunaan insektisida yang tepat membantu
@@ -62,8 +71,9 @@
 </section>
 <!-- END INSECTICIDE INTRO -->
 
+
         <!-- Services 2 Section (Products for dashboard) -->
-    <section id="services-2" class="services-2 section dark-background">
+    <section id="services-2" class="services-2 section products-section">
       <div class="container section-title" data-aos="fade-up">
         <h2>Products</h2>
         
@@ -92,7 +102,8 @@
                 </div>
               </div>
 
-              <div class="swiper-slide">
+              <div class="swiper-slide" data-aos="fade-up" data-aos-delay="100">
+
                 <div class="product-item position-relative h-100">
                   <div class="product-img position-relative overflow-hidden">
                     <img src="{{ asset('assets/img/products/bassa.png') }}" class="img-fluid" alt="bassa">
@@ -107,7 +118,7 @@
                 </div>
               </div>
 
-              <div class="swiper-slide">
+              <div class="swiper-slide" data-aos="fade-up" data-aos-delay="200">
                 <div class="product-item position-relative h-100">
                   <div class="product-img position-relative overflow-hidden">
                     <img src="{{ asset('assets/img/products/ceba.png') }}" class="img-fluid" alt="ceba">
@@ -122,7 +133,7 @@
                 </div>
               </div>
 
-              <div class="swiper-slide">
+              <div class="swiper-slide" data-aos="fade-up" data-aos-delay="100">
                 <div class="product-item position-relative h-100">
                   <div class="product-img position-relative overflow-hidden">
                     <img src="{{ asset('assets/img/products/gempur.png') }}" class="img-fluid" alt="gempur">
@@ -137,7 +148,7 @@
                 </div>
               </div>
 
-              <div class="swiper-slide">
+              <div class="swiper-slide" data-aos="fade-up" data-aos-delay="100">
                 <div class="product-item position-relative h-100">
                   <div class="product-img position-relative overflow-hidden">
                     <img src="{{ asset('assets/img/products/ratkum.png') }}" class="img-fluid" alt="ratkum">

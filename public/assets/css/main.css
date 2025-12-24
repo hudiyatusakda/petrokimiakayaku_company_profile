@@ -278,51 +278,52 @@ h6 {
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
-/* Navmenu - Desktop */
+
+/* =====================================
+   NAVMENU - DESKTOP
+===================================== */
 @media (min-width: 1200px) {
+
+  /* === NAV CONTAINER === */
   .navmenu {
     padding: 0;
-    /* center the navmenu horizontally within the header */
     position: absolute;
-    left: 50%;
+    right: 140px;                 /* posisi agak ke tengah kanan */
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
     z-index: 9998;
+
+    /* animasi muncul */
+    animation: navFadeSlide 0.6s ease-out forwards;
   }
 
+  @keyframes navFadeSlide {
+    from {
+      opacity: 0;
+      transform: translateY(-65%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(-50%);
+    }
+  }
+
+  /* === NAV LIST === */
   .navmenu ul {
     margin: 0;
     padding: 0;
     display: flex;
     list-style: none;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     gap: 28px;
-    width: 100%;
   }
 
   .navmenu li {
     position: relative;
   }
 
-  /* push search icon to the far right */
-  .navmenu li.nav-search {
-    margin-left: auto;
-    padding-right: 20px;
-  }
-
-  .navmenu .nav-search-link img {
-    height: 26px;
-    width: auto;
-    display: block;
-    transition: filter 0.22s ease;
-  }
-
-  .navmenu .nav-search-link:hover img,
-  .navmenu .nav-search-link:focus img {
-    filter: invert(36%) sepia(66%) saturate(490%) hue-rotate(75deg) brightness(95%) contrast(90%);
-  }
-
+  /* === NAV LINK === */
   .navmenu a,
   .navmenu a:focus {
     color: var(--nav-color);
@@ -334,41 +335,66 @@ h6 {
     align-items: center;
     justify-content: center;
     white-space: nowrap;
-    transition: 0.3s;
+    transition: color 0.3s ease;
+    position: relative;
   }
 
-  .navmenu a i,
-  .navmenu a:focus i {
-    font-size: 12px;
-    line-height: 0;
-    margin-left: 5px;
-    transition: 0.3s;
+  /* underline animation */
+  .navmenu a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 8px;
+    width: 0;
+    height: 2px;
+    background-color: var(--nav-hover-color);
+    transition: all 0.35s ease;
+    transform: translateX(-50%);
   }
 
-  .navmenu li:last-child a {
-    padding-right: 0;
+  .navmenu a:hover::after,
+  .navmenu .active::after {
+    width: 70%;
   }
 
-  .navmenu li:hover>a,
+  .navmenu a:hover,
   .navmenu .active,
   .navmenu .active:focus {
     color: var(--nav-hover-color);
   }
 
+  .navmenu a i,
+  .navmenu a:focus i {
+    font-size: 12px;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+  }
+
+  
+
+  .navmenu li:last-child a {
+    padding-right: 0;
+  }
+
+  /* =====================================
+     DROPDOWN MENU
+  ===================================== */
   .navmenu .dropdown ul {
     margin: 0;
     padding: 10px 0;
     background: var(--nav-dropdown-background-color);
     display: block;
     position: absolute;
-    visibility: hidden;
     left: 14px;
-    top: 130%;
+    top: 100%;
+    visibility: hidden;
     opacity: 0;
-    transition: 0.3s;
+    transform: translateY(10px) scale(0.98);
+    transition: all 0.3s ease;
     border-radius: 4px;
     z-index: 99;
-    box-shadow: 0px 0px 30px color-mix(in srgb, var(--default-color), transparent 85%);
+    box-shadow: 0px 0px 30px
+      color-mix(in srgb, var(--default-color), transparent 85%);
   }
 
   .navmenu .dropdown ul li {
@@ -382,21 +408,31 @@ h6 {
     color: var(--nav-dropdown-color);
   }
 
-  .navmenu .dropdown ul a i {
-    font-size: 12px;
-  }
-
   .navmenu .dropdown ul a:hover,
-  .navmenu .dropdown ul .active:hover,
-  .navmenu .dropdown ul li:hover>a {
+  .navmenu .dropdown ul li:hover > a {
     color: var(--nav-dropdown-hover-color);
   }
 
-  .navmenu .dropdown:hover>ul {
-    opacity: 1;
-    top: 100%;
+  .navmenu .dropdown:hover > ul {
     visibility: visible;
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
+
+  /* =====================================
+     SEARCH ICON ANIMATION
+  ===================================== */
+  .navmenu .nav-search-link img {
+    height: 26px;
+    width: auto;
+    display: block;
+    transition: transform 0.3s ease, filter 0.22s ease;
+  }
+  .navmenu .nav-search-link::after {
+  display: none;
+}
+
+ 
 
   /* ----- Services-2 custom styles moved from index.blade.php ----- */
   #services-2 {
@@ -6988,4 +7024,264 @@ textarea.contact-input-field {
     top: 0;
     left: 0;
     z-index: 999; /* Agar selalu di atas konten lain */
+}
+/*--------------------------------------------------------------
+# PRODUCT CATEGORY SECTION
+--------------------------------------------------------------*/
+
+.product-category {
+  padding: 60px 0;
+  background-color: #f8f9fa;
+}
+
+/* ===============================
+   CATEGORY CARD
+================================= */
+
+.category-item {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 28px 22px;
+  text-align: center;
+  height: 100%;
+  transition: all 0.35s ease;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Icon */
+.category-item i {
+  font-size: 46px;
+  color: #2e7d32;
+  margin-bottom: 18px;
+  display: inline-block;
+  transition: transform 0.35s ease, color 0.35s ease;
+}
+
+/* Title */
+.category-item h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 14px;
+}
+
+/* Description */
+.category-item p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Button */
+.category-item .btn {
+  font-size: 14px;
+  padding: 7px 22px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+/* Hover animation */
+.category-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.15);
+}
+
+.category-item:hover i {
+  transform: scale(1.2);
+  color: #1b5e20;
+}
+
+.category-item:hover .btn {
+  background-color: #2e7d32;
+  color: #fff;
+}
+
+/* ===============================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 991px) {
+  .category-item {
+    padding: 24px 18px;
+  }
+
+  .category-item i {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 575px) {
+  .category-item {
+    padding: 20px 16px;
+  }
+
+  .category-item h3 {
+    font-size: 16px;
+  }
+}
+
+/* ===============================
+   INSEKTISIDA INTRO
+================================= */
+
+#insektisida-intro {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.insektisida-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1b5e20;
+  margin-bottom: 10px;
+}
+
+
+
+.insektisida-desc {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .insektisida-title {
+    font-size: 28px;
+  }
+}
+
+/*--------------------------------------------------------------
+# PRODUCTS SECTION (IMPROVED STYLE)
+--------------------------------------------------------------*/
+
+.products-section {
+  background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
+  padding: 80px 0;
+}
+
+/* Section title */
+.products-section .section-title h2 {
+  color: #1b5e20;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.products-section .section-title p {
+  color: #666;
+}
+
+/* ===============================
+   PRODUCT CARD
+================================= */
+
+.product-item {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.35s ease;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Image wrapper */
+.product-img {
+  background: #f3f6f4;
+  padding: 20px;
+}
+
+.product-img img {
+  transition: transform 0.45s ease;
+}
+
+/* Zoom image on hover */
+.product-item:hover .product-img img {
+  transform: scale(1.12);
+}
+
+/* Content */
+.product-content {
+  text-align: center;
+  padding: 22px;
+}
+
+.product-category {
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  color: #2e7d32;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.product-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 14px;
+}
+
+/* Button */
+.product-detail-btn {
+  display: inline-block;
+  padding: 8px 26px;
+  border-radius: 30px;
+  border: 1px solid #2e7d32;
+  color: #2e7d32;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.product-detail-btn:hover {
+  background: #2e7d32;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Card hover lift */
+.product-item:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* ===============================
+   SWIPER NAVIGATION
+================================= */
+
+.services-products-nav {
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.services-products-nav:hover {
+  background: #2e7d32;
+  color: #fff;
+  border-color: #2e7d32;
+}
+
+/* Pagination dots */
+.services-products-pagination .swiper-pagination-bullet {
+  background: #c8e6c9;
+  opacity: 1;
+}
+
+.services-products-pagination .swiper-pagination-bullet-active {
+  background: #2e7d32;
+}
+
+/* ===============================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 768px) {
+  .product-title {
+    font-size: 16px;
+  }
 }
