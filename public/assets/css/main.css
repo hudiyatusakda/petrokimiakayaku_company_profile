@@ -6796,3 +6796,196 @@ section,
     background: #ddd;
     margin-right: 15px;
 }
+
+/* ==================================================
+   SECTION KONTAK (GET IN TOUCH)
+   Layout: Split Form & Info with Signal Animation
+================================================== */
+.contact-section {
+    padding: 100px 0;
+    margin-top: 60px;
+    background-color: #f8fafa; /* Latar belakang abu-hijau sangat terang */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Dekorasi Background (Optional - Pola halus) */
+.contact-section::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 40%;
+    height: 100%;
+    background-image: radial-gradient(#1a4a2e 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.05;
+    mask-image: linear-gradient(to left, black, transparent);
+    z-index: 0;
+}
+
+.contact-container {
+    position: relative;
+    z-index: 2;
+}
+
+/* --- 1. KOLOM FORMULIR (KIRI) --- */
+.contact-form-wrapper {
+    background: #fff;
+    padding: 50px;
+    border-radius: 25px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+}
+
+.contact-form-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #1a4a2e;
+    margin-bottom: 30px;
+}
+
+/* Input Styles */
+.contact-input-group {
+    margin-bottom: 25px;
+}
+
+.contact-input-field {
+    width: 100%;
+    padding: 18px 25px;
+    background-color: #f4f6f5; /* Abu sangat muda */
+    border: 2px solid transparent;
+    border-radius: 12px;
+    font-size: 1rem;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.contact-input-field:focus {
+    outline: none;
+    background-color: #fff;
+    border-color: #ffc107; /* Border kuning saat fokus */
+    box-shadow: 0 5px 20px rgba(255, 193, 7, 0.2);
+}
+
+textarea.contact-input-field {
+    resize: none;
+    height: 150px;
+}
+
+/* Tombol Kirim */
+.btn-contact-submit {
+    background-color: #1a4a2e;
+    color: #ffc107;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border: 2px solid #1a4a2e;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-contact-submit:hover {
+    background-color: transparent;
+    color: #1a4a2e;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(26, 74, 46, 0.2);
+}
+
+.btn-contact-submit i {
+    transition: transform 0.3s;
+}
+.btn-contact-submit:hover i {
+    transform: translateX(5px);
+}
+
+
+/* --- 2. KOLOM INFO KONTAK (KANAN) --- */
+.contact-info-wrapper {
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    margin-bottom: 50px;
+    padding: 25px;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-decoration: none; /* Jika dijadikan link */
+}
+
+.contact-info-item:last-child { margin-bottom: 0; }
+
+/* Hover Effect pada Item Info */
+.contact-info-item:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(26, 74, 46, 0.1);
+}
+
+/* --- ANIMASI LOOPING "SIGNAL RIPPLE" (Out of the Box) --- */
+@keyframes signal-ripple {
+    0% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.6); }
+    70% { box-shadow: 0 0 0 25px rgba(255, 193, 7, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0); }
+}
+
+.contact-icon-box {
+    width: 70px;
+    height: 70px;
+    background: #1a4a2e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #ffc107;
+    font-size: 1.8rem;
+    position: relative;
+    /* Menerapkan animasi looping */
+    animation: signal-ripple 3s infinite cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Delay animasi agar tidak bersamaan */
+.contact-info-item:nth-child(2) .contact-icon-box { animation-delay: 1s; }
+.contact-info-item:nth-child(3) .contact-icon-box { animation-delay: 2s; }
+
+/* Konten Teks Info */
+.contact-info-text h5 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1a4a2e;
+    margin-bottom: 10px;
+}
+
+.contact-info-text p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+/* Responsif HP */
+@media (max-width: 991px) {
+    .contact-form-wrapper { padding: 30px; margin-bottom: 50px; }
+    .contact-info-wrapper { padding-left: 0; }
+    .contact-info-item { padding: 20px; gap: 15px; }
+    .contact-icon-box { width: 50px; height: 50px; font-size: 1.4rem; }
+}
+
+/* --- Wrapper Utama --- */
+.header-wave-wrapper {
+    position: relative; /* Penting agar child absolute mengacu kesini */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999; /* Agar selalu di atas konten lain */
+}
