@@ -1,5 +1,6 @@
 <nav id="navmenu" class="navmenu">
   <ul>
+    <li><a href="{{ route('home') }}">Beranda</a></li>
     <li><a href="{{ route('about') }}">Profil Perusahaan</a></li>
     <li><a href="{{ route('products') }}">Produk</a></li>
     <li><a href="{{ route('services') }}">Media</a></li>
