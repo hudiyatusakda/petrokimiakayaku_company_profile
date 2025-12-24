@@ -56,8 +56,6 @@
 
     </a></li> -->
 
-
-
     <li class="nav-search"><a href="#" class="nav-search-link open-search-popup"><i class="bi bi-search"></i></a></li>
 
   </ul>
