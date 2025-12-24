@@ -19,69 +19,83 @@
   <!-- main content -->
   <main class="main">
 
-    <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
 
-      <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
+      <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
 
-        <div class="carousel-item active">
-          <img src="assets/img/kayaku-1.jpeg" alt="">
-          <div class="carousel-container">
-            <h2>Pestisida menjadi hak angket tanaman seluruh Indonesia</h2>
-            <p>Kami memastikan distribusi dan produksi pestisida indonesia terjaga dan
-              mampu menumbuhkan semnagat petani dan kesehatan tanaman Indonesia.</p>
-          </div>
-        </div><!-- End Carousel Item -->
+        <div class="carousel-inner">
+          
+          <div class="carousel-item active">
+            <img src="{{ asset('assets/img/kayaku-1.jpeg') }}" alt="Kayaku 1">
+            <div class="carousel-container">
+              <h2>Pestisida menjadi hak angket tanaman seluruh Indonesia</h2>
+              <p>Kami memastikan distribusi dan produksi pestisida indonesia terjaga dan
+                mampu menumbuhkan semangat petani dan kesehatan tanaman Indonesia.</p>
+            </div>
+          </div><div class="carousel-item">
+            <img src="{{ asset('assets/img/maxresdefault.jpg') }}" alt="Organic">
+            <div class="carousel-container">
+              <h2>Organic vegetables is good for health</h2>
+              <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime
+                placeat facere possimus.</p>
+            </div>
+          </div><div class="carousel-item">
+            <img src="{{ asset('assets/img/sdm.jpg') }}" alt="Fresh Produce">
+            <div class="carousel-container">
+              <h2>Providing Fresh Produce Every Single Day</h2>
+              <p>Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+                fugit.</p>
+            </div>
+          </div><div class="carousel-item">
+            <img src="{{ asset('assets/img/gambar_pabrik3.jpg') }}" alt="Factory">
+            <div class="carousel-container">
+              <h2>Farming as a Passion</h2>
+              <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia
+                non numquam eius.</p>
+            </div>
+          </div><div class="carousel-item">
+            <img src="{{ asset('assets/img/gambar_kebijakan3.jpg') }}" alt="Policy">
+            <div class="carousel-container">
+              <h2>Good Food For All</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.</p>
+            </div>
+          </div></div>
 
-        <div class="carousel-item">
-          <img src="assets/img/maxresdefault.jpg" alt="">
-          <div class="carousel-container">
-            <h2>Organic vegetables is good for health</h2>
-            <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime
-              placeat facere possimus.</p>
-          </div>
-        </div><!-- End Carousel Item -->
-
-        <div class="carousel-item">
-          <img src="assets/img/sdm.jpg" alt="">
-          <div class="carousel-container">
-            <h2>Providing Fresh Produce Every Single Day</h2>
-            <p>Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-              fugit.</p>
-          </div>
-        </div><!-- End Carousel Item -->
-
-        <div class="carousel-item">
-          <img src="assets/img/gambar_pabrik3.jpg" alt="">
-          <div class="carousel-container">
-            <h2>Farming as a Passione</h2>
-            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia
-              non numquam eius.</p>
-          </div>
-        </div><!-- End Carousel Item -->
-
-        <div class="carousel-item">
-          <img src="assets/img/gambar_kebijakan3.jpg" alt="">
-          <div class="carousel-container">
-            <h2>Good Food For All</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua.</p>
-          </div>
-        </div><!-- End Carousel Item -->
-
-        <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
           <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
-        </a>
+          <span class="visually-hidden">Previous</span>
+        </button>
 
-        <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
           <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
-        </a>
+          <span class="visually-hidden">Next</span>
+        </button>
 
-        <ol class="carousel-indicators"></ol>
+        <ol class="carousel-indicators">
+          <li data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active"></li>
+          <li data-bs-target="#hero-carousel" data-bs-slide-to="1"></li>
+          <li data-bs-target="#hero-carousel" data-bs-slide-to="2"></li>
+          <li data-bs-target="#hero-carousel" data-bs-slide-to="3"></li>
+          <li data-bs-target="#hero-carousel" data-bs-slide-to="4"></li>
+        </ol>
 
       </div>
 
-    </section><!-- /Hero Section -->
+    </section>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var heroCarousel = document.getElementById('hero-carousel');
+        if (heroCarousel && typeof bootstrap !== 'undefined') {
+          var carousel = new bootstrap.Carousel(heroCarousel, {
+            interval: 2500,   // Ganti slide setiap 3 detik
+            ride: 'carousel', // Mulai otomatis
+            pause: 'hover',   // Pause saat kursor di atas slider (opsional, ganti 'false' jika tidak ingin pause)
+            wrap: true        // Loop kembali ke awal
+          });
+        }
+      });
+    </script>
 
     <!-- Services Section -->
     <section id="services" class="services section">
