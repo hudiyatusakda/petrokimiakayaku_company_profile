@@ -84,6 +84,8 @@
       });
     </script>
 
+
+
     <!-- Services Section -->
     <section id="services" class="services section">
 
@@ -148,12 +150,28 @@
           </div>
         </div>
       </div>
+ 
+
     </section><!-- /Services Section -->
 
-    <section id="services-2" class="services-2 section dark-background">
+    <!-- Divider to next section -->
+<div class="section-divider">
+  <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+    <path 
+      d="M0,80 
+         C180,120 360,40 540,60 
+         720,80 900,120 1080,90 
+         1260,60 1380,40 1440,50 
+         L1440,120 L0,120 Z"
+      fill="#f5f5f5"/>
+  </svg>
+</div>
+
+
+     <!-- Services 2 Section (Products for dashboard) -->
+    <section id="services-2" class="services-2 section products-section">
       <div class="container section-title" data-aos="fade-up">
         <h2>Products</h2>
-        <p>Featured items from our catalog</p>
       </div>
 
       <div class="services-carousel-wrap">
@@ -213,12 +231,24 @@
           } catch (e) { console.error('Swiper init error', e); }
         });
       </script>
-    </section>
+    </section><!-- /Services 2 Section -->
+<!-- Divider to next section -->
+<div class="section-divider">
+  <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+    <path 
+      d="M0,80 
+         C180,120 360,40 540,60 
+         720,80 900,120 1080,90 
+         1260,60 1380,40 1440,50 
+         L1440,120 L0,120 Z"
+      fill="#f5f5f5"/>
+  </svg>
+</div>
 
+    <!-- News Section -->
     <section id="news" class="news section green-background">
       <div class="container section-title text-start" data-aos="fade-up">
-        <h2 style="color: #ffffff;">BERITA PETROKAYAKU</h2>
-        <p>Berita Terbaru & Pengumuman</p>
+        <h2>MEDIA</h2>
       </div>
 
       <div class="news-carousel-wrap">
@@ -277,6 +307,21 @@
       </script>
     </section>
 
+    <!-- Divider from previous section -->
+<div class="section-divider reverse">
+  <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+    <path
+      d="M0,40 
+         C180,0 360,80 540,60 
+         720,40 900,0 1080,30 
+         1260,60 1380,80 1440,70
+         L1440,0 L0,0 Z"
+      fill="#f5f5f5"/>
+  </svg>
+</div>
+
+
+    <!-- Recent Posts Section -->
     <section id="recent-posts" class="recent-posts section">
 
       <div class="container section-title" data-aos="fade-up">
