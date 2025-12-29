@@ -97,6 +97,8 @@
       });
     </script>
 
+
+
     <!-- Services Section -->
     <section id="services" class="services section">
 
@@ -161,13 +163,28 @@
           </div>
         </div>
       </div>
+ 
+
     </section><!-- /Services Section -->
 
-    <!-- Services 2 Section (Products for dashboard) -->
-    <section id="services-2" class="services-2 section dark-background">
+    <!-- Divider to next section -->
+<div class="section-divider">
+  <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+    <path 
+      d="M0,80 
+         C180,120 360,40 540,60 
+         720,80 900,120 1080,90 
+         1260,60 1380,40 1440,50 
+         L1440,120 L0,120 Z"
+      fill="#f5f5f5"/>
+  </svg>
+</div>
+
+
+     <!-- Services 2 Section (Products for dashboard) -->
+    <section id="services-2" class="services-2 section products-section">
       <div class="container section-title" data-aos="fade-up">
         <h2>Products</h2>
-        <p>Featured items from our catalog</p>
       </div>
 
       <div class="services-carousel-wrap">
@@ -182,7 +199,7 @@
                 <div class="product-item position-relative h-100">
                   <div class="product-img position-relative overflow-hidden">
                     <img src="{{ asset('assets/img/products/admil.png') }}" class="img-fluid" alt="admil">
-                    <div class="product-badge bg-success">Insecticide</div>
+                    <div class="product-badge bg-success"></div>
                   </div>
                   <div class="product-content p-3">
                     <div class="product-category">Insecticide</div>
@@ -193,26 +210,27 @@
                 </div>
               </div>
 
-              <div class="swiper-slide">
+              <div class="swiper-slide" data-aos="fade-up" data-aos-delay="100">
+
                 <div class="product-item position-relative h-100">
                   <div class="product-img position-relative overflow-hidden">
                     <img src="{{ asset('assets/img/products/bassa.png') }}" class="img-fluid" alt="bassa">
-                    <div class="product-badge bg-success">Insecticide</div>
+                    <div class="product-badge bg-success"></div>
                   </div>
                   <div class="product-content p-3">
                     <div class="product-category">Insecticide</div>
                     <h3 class="product-title">Bassa 500 EC</h3>
                     <div class="product-price"></div>
-                    <a href="#" class="product-detail-btn">Detail</a>
+                    <a href="{{ route('insektisida.bassa') }}" class="product-detail-btn">Detail</a>
                   </div>
                 </div>
               </div>
 
-              <div class="swiper-slide">
+              <div class="swiper-slide" data-aos="fade-up" data-aos-delay="200">
                 <div class="product-item position-relative h-100">
                   <div class="product-img position-relative overflow-hidden">
                     <img src="{{ asset('assets/img/products/ceba.png') }}" class="img-fluid" alt="ceba">
-                    <div class="product-badge bg-success">Insecticide</div>
+                    <div class="product-badge bg-success"></div>
                   </div>
                   <div class="product-content p-3">
                     <div class="product-category">Insecticide</div>
@@ -223,11 +241,11 @@
                 </div>
               </div>
 
-              <div class="swiper-slide">
+              <div class="swiper-slide" data-aos="fade-up" data-aos-delay="100">
                 <div class="product-item position-relative h-100">
                   <div class="product-img position-relative overflow-hidden">
                     <img src="{{ asset('assets/img/products/gempur.png') }}" class="img-fluid" alt="gempur">
-                    <div class="product-badge bg-success">Insecticide</div>
+                    <div class="product-badge bg-success"></div>
                   </div>
                   <div class="product-content p-3">
                     <div class="product-category">Insecticide</div>
@@ -238,11 +256,11 @@
                 </div>
               </div>
 
-              <div class="swiper-slide">
+              <div class="swiper-slide" data-aos="fade-up" data-aos-delay="100">
                 <div class="product-item position-relative h-100">
                   <div class="product-img position-relative overflow-hidden">
                     <img src="{{ asset('assets/img/products/ratkum.png') }}" class="img-fluid" alt="ratkum">
-                    <div class="product-badge bg-success">Insecticide</div>
+                    <div class="product-badge bg-success"></div>
                   </div>
                   <div class="product-content p-3">
                     <div class="product-category">Insecticide</div>
@@ -283,14 +301,24 @@
           } catch (e) { console.error('Swiper init error', e); }
         });
       </script>
-
     </section><!-- /Services 2 Section -->
+<!-- Divider to next section -->
+<div class="section-divider">
+  <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+    <path 
+      d="M0,80 
+         C180,120 360,40 540,60 
+         720,80 900,120 1080,90 
+         1260,60 1380,40 1440,50 
+         L1440,120 L0,120 Z"
+      fill="#f5f5f5"/>
+  </svg>
+</div>
 
     <!-- News Section -->
     <section id="news" class="news section green-background">
       <div class="container section-title text-start" data-aos="fade-up">
-        <h2 style="color: #ffffff;">BERITA PETROKAYAKU</h2>
-        <p>Berita Terbaru & Pengumuman</p>
+        <h2>MEDIA</h2>
       </div>
 
       <div class="news-carousel-wrap">
@@ -368,7 +396,7 @@
                   </div>
                   <div class="news-content p-3">
                     <h3 class="news-title">Selamat Menunaikan Ibadah Puasa Ramadhan 1446 H</h3>
-                    <a href="#" class="news-detail-btn">Detail</a>
+                    <a href="#" class="news-detail-btn">Baca selengkapnya</a>
                   </div>
                 </div>
               </div>
@@ -403,6 +431,19 @@
       </script>
     </section><!-- /News Section -->
 
+    <!-- Divider from previous section -->
+<div class="section-divider reverse">
+  <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+    <path
+      d="M0,40 
+         C180,0 360,80 540,60 
+         720,40 900,0 1080,30 
+         1260,60 1380,80 1440,70
+         L1440,0 L0,0 Z"
+      fill="#f5f5f5"/>
+  </svg>
+</div>
+
 
     <!-- Recent Posts Section -->
     <section id="recent-posts" class="recent-posts section">
@@ -410,7 +451,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Video</h2>
-        <p>Petrokimia Kayaku</p>
+        
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -685,7 +726,7 @@
         </div>
       </div>
     </section><!-- /Contact Now Section -->
-
+    {{--  
     <!-- Peka SMART App Section -->
     <section id="peka-smart-app" class="peka-smart-app section py-5" style="background-color: #ffffff;">
       <div class="container">
@@ -770,6 +811,7 @@
         </div>
       </div>
     </section><!-- /Peka SMART App Section -->
+  --}}
   </main>
   <!-- main content -->
 
