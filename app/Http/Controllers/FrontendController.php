@@ -3,15 +3,45 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\HeroSlide; // <--- 1. WAJIB: Tambahkan Import Model ini di paling atas
+use App\Models\CompanyMenu;
+use App\Models\Product;
+use App\Models\Article;
+use App\Models\Video;
 
 class FrontendController extends Controller
 {
     public function index(){
-        return view ('index');
+        // Hero Slide (Sudah ada)
+        $slides = HeroSlide::where('is_active', 1)->where('type', 'home')->get();
+
+        // 2. Ambil Produk
+        $products = Product::where('is_active', 1)->get();
+
+        // 3. Ambil Berita (Terbaru)
+        $articles = Article::where('is_active', 1)->latest()->get();
+
+        // 4. Ambil Video (Terbaru)
+        $videos = Video::where('is_active', 1)->latest()->get();
+
+        // Kirim semua ke view
+        return view ('index', compact('slides', 'products', 'articles', 'videos'));
     }
 
+    // ... function lainnya (about, products, dll) biarkan tetap sama ...
+    
     public function about(){
-        return view ('pages.about');
+        // 1. Ambil Slide (kode yang sebelumnya)
+        $slides = HeroSlide::where('is_active', 1)
+                        ->where('type', 'about')
+                        ->get();
+        // Kita urutkan berdasarkan sort_order agar admin bisa atur mana yg dikiri/kanan
+        $menus = CompanyMenu::where('is_active', 1)
+                            ->orderBy('sort_order', 'asc') 
+                            ->get();
+
+        // 3. Kirim kedua variabel ke view
+        return view ('pages.about', compact('slides', 'menus'));
     }
 
     public function products(){
@@ -41,53 +71,11 @@ class FrontendController extends Controller
 
     public function search(Request $request)
     {
+        // ... kode search Anda biarkan tetap sama ...
         $query = trim((string) $request->input('q', ''));
-
-        // Basic in-memory product dataset (matches products page)
-        $products = [
-            [
-                'title' => 'Organic Tomatoes',
-                'image' => 'assets/img/products/tomatoes.jpg',
-                'price' => '$3.99/lb',
-                'description' => 'Freshly picked vine-ripened tomatoes, grown without pesticides.',
-                'url' => route('products') . '#tomatoes'
-            ],
-            [
-                'title' => 'Fresh Carrots',
-                'image' => 'assets/img/products/carrots.jpg',
-                'price' => '$2.49/lb',
-                'description' => 'Sweet and crunchy, perfect for snacks or cooking.',
-                'url' => route('products') . '#carrots'
-            ],
-            [
-                'title' => 'Organic Apples',
-                'image' => 'assets/img/products/apples.jpg',
-                'price' => '$1.99/lb',
-                'description' => 'Crisp and juicy, available in several varieties.',
-                'url' => route('products') . '#apples'
-            ],
-            [
-                'title' => 'Farm Eggs',
-                'image' => 'assets/img/products/eggs.jpg',
-                'price' => '$4.99/dozen',
-                'description' => 'Free-range eggs from happy, pasture-raised chickens.',
-                'url' => route('products') . '#eggs'
-            ],
-            [
-                'title' => 'Raw Honey',
-                'image' => 'assets/img/products/honey.jpg',
-                'price' => '$8.99/jar',
-                'description' => 'Pure, unfiltered honey from our local beehives.',
-                'url' => route('products') . '#honey'
-            ],
-            [
-                'title' => 'Artisan Bread',
-                'image' => 'assets/img/products/bread.jpg',
-                'price' => '$5.99/loaf',
-                'description' => 'Freshly baked sourdough using traditional methods.',
-                'url' => route('products') . '#bread'
-            ],
-        ];
+        
+        // (Kode array products Anda disembunyikan agar tidak terlalu panjang, biarkan saja)
+        $products = [ /* ... data produk ... */ ];
 
         $results = [];
         if ($query !== '') {
@@ -101,8 +89,4 @@ class FrontendController extends Controller
 
         return view('pages.search', ['query' => $query, 'results' => $results]);
     }
-
-
-
-
 }

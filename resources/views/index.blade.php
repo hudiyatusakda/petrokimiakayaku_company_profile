@@ -23,44 +23,38 @@
 
       <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
 
+        <ol class="carousel-indicators">
+          @foreach($slides as $key => $slide)
+            <li 
+                data-bs-target="#hero-carousel" 
+                data-bs-slide-to="{{ $key }}" 
+                class="{{ $key == 0 ? 'active' : '' }}"> </li>
+          @endforeach
+        </ol>
+
         <div class="carousel-inner">
           
-          <div class="carousel-item active">
-            <img src="{{ asset('assets/img/kayaku-1.jpeg') }}" alt="Kayaku 1">
-            <div class="carousel-container">
-              <h2>Pestisida menjadi hak angket tanaman seluruh Indonesia</h2>
-              <p>Kami memastikan distribusi dan produksi pestisida indonesia terjaga dan
-                mampu menumbuhkan semangat petani dan kesehatan tanaman Indonesia.</p>
+          @forelse($slides as $key => $slide)
+            <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
+              
+              <img src="{{ asset('storage/' . $slide->image_path) }}" alt="{{ $slide->title }}">
+              
+              <div class="carousel-container">
+                <h2>{{ $slide->title }}</h2>
+                <p>{{ $slide->description }}</p>
+              </div>
             </div>
-          </div><div class="carousel-item">
-            <img src="{{ asset('assets/img/maxresdefault.jpg') }}" alt="Organic">
-            <div class="carousel-container">
-              <h2>Organic vegetables is good for health</h2>
-              <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime
-                placeat facere possimus.</p>
+          @empty
+            <div class="carousel-item active">
+                <img src="{{ asset('assets/img/default-placeholder.jpg') }}" alt="Default">
+                <div class="carousel-container">
+                  <h2>Welcome</h2>
+                  <p>Belum ada slide yang aktif.</p>
+                </div>
             </div>
-          </div><div class="carousel-item">
-            <img src="{{ asset('assets/img/sdm.jpg') }}" alt="Fresh Produce">
-            <div class="carousel-container">
-              <h2>Providing Fresh Produce Every Single Day</h2>
-              <p>Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-                fugit.</p>
-            </div>
-          </div><div class="carousel-item">
-            <img src="{{ asset('assets/img/gambar_pabrik3.jpg') }}" alt="Factory">
-            <div class="carousel-container">
-              <h2>Farming as a Passion</h2>
-              <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia
-                non numquam eius.</p>
-            </div>
-          </div><div class="carousel-item">
-            <img src="{{ asset('assets/img/gambar_kebijakan3.jpg') }}" alt="Policy">
-            <div class="carousel-container">
-              <h2>Good Food For All</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.</p>
-            </div>
-          </div></div>
+          @endforelse
+
+        </div>
 
         <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
           <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
@@ -72,26 +66,19 @@
           <span class="visually-hidden">Next</span>
         </button>
 
-        <ol class="carousel-indicators">
-          <li data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active"></li>
-          <li data-bs-target="#hero-carousel" data-bs-slide-to="1"></li>
-          <li data-bs-target="#hero-carousel" data-bs-slide-to="2"></li>
-          <li data-bs-target="#hero-carousel" data-bs-slide-to="3"></li>
-          <li data-bs-target="#hero-carousel" data-bs-slide-to="4"></li>
-        </ol>
-
       </div>
 
     </section>
+
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         var heroCarousel = document.getElementById('hero-carousel');
         if (heroCarousel && typeof bootstrap !== 'undefined') {
           var carousel = new bootstrap.Carousel(heroCarousel, {
-            interval: 2500,   // Ganti slide setiap 3 detik
-            ride: 'carousel', // Mulai otomatis
-            pause: 'hover',   // Pause saat kursor di atas slider (opsional, ganti 'false' jika tidak ingin pause)
-            wrap: true        // Loop kembali ke awal
+            interval: 3000, 
+            ride: 'carousel', 
+            pause: 'hover', 
+            wrap: true 
           });
         }
       });
@@ -163,7 +150,6 @@
       </div>
     </section><!-- /Services Section -->
 
-    <!-- Services 2 Section (Products for dashboard) -->
     <section id="services-2" class="services-2 section dark-background">
       <div class="container section-title" data-aos="fade-up">
         <h2>Products</h2>
@@ -173,100 +159,44 @@
       <div class="services-carousel-wrap">
         <div class="container">
           <div class="swiper services-products-swiper">
+            
             <script type="application/json" class="services-products-config">
               {"loop":true,"speed":600,"slidesPerView":1,"spaceBetween":20,"breakpoints":{"768":{"slidesPerView":2},"992":{"slidesPerView":3}},"navigation":{"nextEl":".services-products-next","prevEl":".services-products-prev"},"pagination":{"el":".services-products-pagination","clickable":true}}
             </script>
 
             <div class="swiper-wrapper">
+              
+              @foreach($products as $product)
               <div class="swiper-slide">
                 <div class="product-item position-relative h-100">
                   <div class="product-img position-relative overflow-hidden">
-                    <img src="{{ asset('assets/img/products/admil.png') }}" class="img-fluid" alt="admil">
-                    <div class="product-badge bg-success">Insecticide</div>
+                    <img src="{{ asset('storage/' . $product->image_path) }}" class="img-fluid" alt="{{ $product->name }}">
+                    <div class="product-badge bg-success">{{ $product->category }}</div>
                   </div>
                   <div class="product-content p-3">
-                    <div class="product-category">Insecticide</div>
-                    <h3 class="product-title">Admil</h3>
-                    <div class="product-price"></div>
-                    <a href="#" class="product-detail-btn">Detail</a>
+                    <div class="product-category">{{ $product->category }}</div>
+                    <h3 class="product-title">{{ $product->name }}</h3>
+                    <div class="product-price">
+                        {{ $product->price ? 'Rp ' . number_format($product->price, 0, ',', '.') : '' }}
+                    </div>
+                    <a href="{{ $product->link }}" class="product-detail-btn">Detail</a>
                   </div>
                 </div>
               </div>
-
-              <div class="swiper-slide">
-                <div class="product-item position-relative h-100">
-                  <div class="product-img position-relative overflow-hidden">
-                    <img src="{{ asset('assets/img/products/bassa.png') }}" class="img-fluid" alt="bassa">
-                    <div class="product-badge bg-success">Insecticide</div>
-                  </div>
-                  <div class="product-content p-3">
-                    <div class="product-category">Insecticide</div>
-                    <h3 class="product-title">Bassa 500 EC</h3>
-                    <div class="product-price"></div>
-                    <a href="#" class="product-detail-btn">Detail</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="product-item position-relative h-100">
-                  <div class="product-img position-relative overflow-hidden">
-                    <img src="{{ asset('assets/img/products/ceba.png') }}" class="img-fluid" alt="ceba">
-                    <div class="product-badge bg-success">Insecticide</div>
-                  </div>
-                  <div class="product-content p-3">
-                    <div class="product-category">Insecticide</div>
-                    <h3 class="product-title">Ceba 125 EC</h3>
-                    <div class="product-price"></div>
-                    <a href="#" class="product-detail-btn">Detail</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="product-item position-relative h-100">
-                  <div class="product-img position-relative overflow-hidden">
-                    <img src="{{ asset('assets/img/products/gempur.png') }}" class="img-fluid" alt="gempur">
-                    <div class="product-badge bg-success">Insecticide</div>
-                  </div>
-                  <div class="product-content p-3">
-                    <div class="product-category">Insecticide</div>
-                    <h3 class="product-title">Gempur</h3>
-                    <div class="product-price"></div>
-                    <a href="#" class="product-detail-btn">Detail</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="product-item position-relative h-100">
-                  <div class="product-img position-relative overflow-hidden">
-                    <img src="{{ asset('assets/img/products/ratkum.png') }}" class="img-fluid" alt="ratkum">
-                    <div class="product-badge bg-success">Insecticide</div>
-                  </div>
-                  <div class="product-content p-3">
-                    <div class="product-category">Insecticide</div>
-                    <h3 class="product-title">Ratkum</h3>
-                    <div class="product-price"></div>
-                    <a href="#" class="product-detail-btn">Detail</a>
-                  </div>
-                </div>
-              </div>
+              @endforeach
 
             </div>
 
             <div class="d-flex justify-content-between align-items-center mt-3">
-              <div class="services-products-prev btn btn-outline-secondary services-products-nav"><i
-                  class="bi bi-chevron-left"></i></div>
+              <div class="services-products-prev btn btn-outline-secondary services-products-nav"><i class="bi bi-chevron-left"></i></div>
               <div class="services-products-pagination"></div>
-              <div class="services-products-next btn btn-outline-secondary services-products-nav"><i
-                  class="bi bi-chevron-right"></i></div>
+              <div class="services-products-next btn btn-outline-secondary services-products-nav"><i class="bi bi-chevron-right"></i></div>
             </div>
 
           </div>
         </div>
       </div>
-
+      
       <script>
         document.addEventListener('DOMContentLoaded', function () {
           if (typeof Swiper === 'undefined') return;
@@ -283,10 +213,8 @@
           } catch (e) { console.error('Swiper init error', e); }
         });
       </script>
+    </section>
 
-    </section><!-- /Services 2 Section -->
-
-    <!-- News Section -->
     <section id="news" class="news section green-background">
       <div class="container section-title text-start" data-aos="fade-up">
         <h2 style="color: #ffffff;">BERITA PETROKAYAKU</h2>
@@ -296,84 +224,29 @@
       <div class="news-carousel-wrap">
         <div class="container">
           <div class="swiper news-swiper">
+            
             <script type="application/json" class="news-config">
               {"loop":true,"speed":600,"slidesPerView":1,"spaceBetween":20,"breakpoints":{"768":{"slidesPerView":2},"992":{"slidesPerView":3}},"navigation":{"nextEl":".news-next","prevEl":".news-prev"},"pagination":{"el":".news-pagination","clickable":true}}
             </script>
 
             <div class="swiper-wrapper">
+              
+              @foreach($articles as $news)
               <div class="swiper-slide">
                 <div class="news-item position-relative h-100">
                   <div class="news-img position-relative overflow-hidden">
-                    <img src="{{ asset('assets/img/blog/news1.png') }}" class="img-fluid" alt="news1">
+                    <img src="{{ asset('storage/' . $news->image_path) }}" class="img-fluid" alt="{{ $news->title }}">
                   </div>
                   <div class="news-content p-3">
-                    <h3 class="news-title">Gelar Teknologi Pertanian Petrokimia Gresik Group</h3>
-                    <a href="#" class="news-detail-btn">Baca selengkapnya</a>
+                    <h3 class="news-title">{{ $news->title }}</h3>
+                    <a href="{{ $news->link }}" class="news-detail-btn">Baca selengkapnya</a>
                   </div>
                 </div>
               </div>
-
-              <div class="swiper-slide">
-                <div class="news-item position-relative h-100">
-                  <div class="news-img position-relative overflow-hidden">
-                    <img src="{{ asset('assets/img/blog/news2.jpg') }}" class="img-fluid" alt="news2">
-                  </div>
-                  <div class="news-content p-3">
-                    <h3 class="news-title">Prestasi Nominasi Inovasi Tertinggi</h3>
-                    <a href="#" class="news-detail-btn">Baca selengkapnya</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="news-item position-relative h-100">
-                  <div class="news-img position-relative overflow-hidden">
-                    <img src="{{ asset('assets/img/blog/award.jpg') }}" class="img-fluid" alt="award">
-                  </div>
-                  <div class="news-content p-3">
-                    <h3 class="news-title">PT PETROKIMIA KAYAKU Meraih Penghargaan DIGITECH AWARD 2023</h3>
-                    <a href="#" class="news-detail-btn">Baca selengkapnya</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="news-item position-relative h-100">
-                  <div class="news-img position-relative overflow-hidden">
-                    <img src="{{ asset('assets/img/blog/gelar.jpg') }}" class="img-fluid" alt="gelar">
-                  </div>
-                  <div class="news-content p-3">
-                    <h3 class="news-title">Penganugerahan Gelar DOKTOR HONORIS CAUSA Menteri Perindustrian </h3>
-                    <a href="#" class="news-detail-btn">Baca selengkapnya</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="news-item position-relative h-100">
-                  <div class="news-img position-relative overflow-hidden">
-                    <img src="{{ asset('assets/img/blog/hari_raya.jpg') }}" class="img-fluid" alt="hari_raya">
-                  </div>
-                  <div class="news-content p-3">
-                    <h3 class="news-title">Selamat Hari Raya Idul Fitri 1446 H</h3>
-                    <a href="#" class="news-detail-btn">Baca selengkapnya</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="news-item position-relative h-100">
-                  <div class="news-img position-relative overflow-hidden">
-                    <img src="{{ asset('assets/img/blog/puasa.jpg') }}" class="img-fluid" alt="puasa">
-                  </div>
-                  <div class="news-content p-3">
-                    <h3 class="news-title">Selamat Menunaikan Ibadah Puasa Ramadhan 1446 H</h3>
-                    <a href="#" class="news-detail-btn">Detail</a>
-                  </div>
-                </div>
-              </div>
+              @endforeach
 
             </div>
+            
             <center>
               <div class="d-flex justify-content-between align-items-center mt-3">
                 <div class="news-prev btn btn-outline-secondary news-nav"><i class="bi bi-chevron-left"></i></div>
@@ -381,6 +254,7 @@
                 <div class="news-next btn btn-outline-secondary news-nav"><i class="bi bi-chevron-right"></i></div>
               </div>
             </center>
+
           </div>
         </div>
       </div>
@@ -401,69 +275,55 @@
           } catch (e) { console.error('Swiper init error', e); }
         });
       </script>
-    </section><!-- /News Section -->
+    </section>
 
-
-    <!-- Recent Posts Section -->
     <section id="recent-posts" class="recent-posts section">
 
-      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Video</h2>
         <p>Petrokimia Kayaku</p>
-      </div><!-- End Section Title -->
+      </div>
 
       <div class="container">
-
         <div class="swiper recent-posts-swiper">
+          
           <script type="application/json" class="recent-posts-config">
             {
               "loop": true,
               "speed": 600,
-              "autoplay": {
-                "delay": 3000
-              },
+              "autoplay": { "delay": 3000 },
               "slidesPerView": 1,
               "spaceBetween": 20,
-              "pagination": {
-                "el": ".recent-posts-pagination",
-                "clickable": true
-              },
-              "navigation": {
-                "nextEl": ".recent-posts-next",
-                "prevEl": ".recent-posts-prev"
-              },
+              "pagination": { "el": ".recent-posts-pagination", "clickable": true },
+              "navigation": { "nextEl": ".recent-posts-next", "prevEl": ".recent-posts-prev" },
               "breakpoints": {
-                "768": {
-                  "slidesPerView": 2,
-                  "spaceBetween": 20
-                },
-                "1200": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 30
-                }
+                "768": { "slidesPerView": 2, "spaceBetween": 20 },
+                "1200": { "slidesPerView": 3, "spaceBetween": 30 }
               }
             }
           </script>
+
           <button class="recent-posts-prev navigation-prev">
             <span class="carousel-control-prev-icon"></span>
           </button>
           <button class="recent-posts-next navigation-next">
             <span class="carousel-control-next-icon"></span>
           </button>
+
           <div class="swiper-wrapper">
 
+            @foreach($videos as $video)
             <div class="swiper-slide">
               <div class="post-item position-relative h-100" data-aos="fade-up" data-aos-delay="100">
 
                 <div class="post-img position-relative overflow-hidden">
-                  <img src="https://img.youtube.com/vi/MJ18PSJNPRo/maxresdefault.jpg" class="img-fluid" alt="">
-                  <span class="post-date">December 12</span>
+                  <img src="https://img.youtube.com/vi/{{ $video->youtube_id }}/maxresdefault.jpg" class="img-fluid" alt="{{ $video->title }}">
+                  
+                  <span class="post-date">{{ $video->upload_date ? \Carbon\Carbon::parse($video->upload_date)->format('F d, Y') : $video->created_at->format('F d') }}</span>
                 </div>
 
                 <div class="post-content d-flex flex-column">
-
-                  <h3 class="post-title">YouTube Video</h3>
+                  <h3 class="post-title">{{ $video->title }}</h3>
 
                   <div class="meta d-flex align-items-center">
                     <div class="d-flex align-items-center">
@@ -473,130 +333,19 @@
 
                   <hr>
 
-                  <a href="https://youtu.be/MJ18PSJNPRo" class="readmore stretched-link"><span>Watch on YouTube</span><i
-                      class="bi bi-arrow-right"></i></a>
+                  <a href="https://youtu.be/{{ $video->youtube_id }}" class="readmore stretched-link" target="_blank">
+                    <span>Watch on YouTube</span><i class="bi bi-arrow-right"></i>
+                  </a>
 
                 </div>
 
               </div>
-            </div><!-- End swiper-slide -->
-
-            <div class="swiper-slide">
-              <div class="post-item position-relative h-100" data-aos="fade-up" data-aos-delay="200">
-
-                <div class="post-img position-relative overflow-hidden">
-                  <img src="https://img.youtube.com/vi/NRDHjAwiM0A/maxresdefault.jpg" class="img-fluid" alt="">
-                  <span class="post-date">July 17</span>
-                </div>
-
-                <div class="post-content d-flex flex-column">
-
-                  <h3 class="post-title">YouTube Video</h3>
-
-                  <div class="meta d-flex align-items-center">
-                    <div class="d-flex align-items-center">
-                      <i class="bi bi-calendar"></i> <span class="ps-2">Uploaded on YouTube</span>
-                    </div>
-                  </div>
-
-                  <hr>
-
-                  <a href="https://youtu.be/NRDHjAwiM0A" class="readmore stretched-link"><span>Watch on YouTube</span><i
-                      class="bi bi-arrow-right"></i></a>
-
-                </div>
-
-              </div>
-            </div><!-- End swiper-slide -->
-
-            <div class="swiper-slide">
-              <div class="post-item position-relative h-100" data-aos="fade-up" data-aos-delay="300">
-
-                <div class="post-img position-relative overflow-hidden">
-                  <img src="https://img.youtube.com/vi/6MCmY_KyL6w/maxresdefault.jpg" class="img-fluid" alt="">
-                  <span class="post-date">September 05</span>
-                </div>
-
-                <div class="post-content d-flex flex-column">
-
-                  <h3 class="post-title">YouTube Video</h3>
-
-                  <div class="meta d-flex align-items-center">
-                    <div class="d-flex align-items-center">
-                      <i class="bi bi-calendar"></i> <span class="ps-2">Uploaded on YouTube</span>
-                    </div>
-                  </div>
-
-                  <hr>
-
-                  <a href="https://youtu.be/6MCmY_KyL6w" class="readmore stretched-link"><span>Watch on YouTube</span><i
-                      class="bi bi-arrow-right"></i></a>
-
-                </div>
-
-              </div>
-            </div><!-- End swiper-slide -->
-
-            <div class="swiper-slide">
-              <div class="post-item position-relative h-100">
-
-                <div class="post-img position-relative overflow-hidden">
-                  <img src="https://img.youtube.com/vi/XTS7P8lKY6g/maxresdefault.jpg" class="img-fluid" alt="">
-                  <span class="post-date">October 15</span>
-                </div>
-
-                <div class="post-content d-flex flex-column">
-
-                  <h3 class="post-title">YouTube Video</h3>
-
-                  <div class="meta d-flex align-items-center">
-                    <div class="d-flex align-items-center">
-                      <i class="bi bi-calendar"></i> <span class="ps-2">Uploaded on YouTube</span>
-                    </div>
-                  </div>
-
-                  <hr>
-
-                  <a href="https://youtu.be/XTS7P8lKY6g" class="readmore stretched-link"><span>Watch on YouTube</span><i
-                      class="bi bi-arrow-right"></i></a>
-
-                </div>
-
-              </div>
-            </div><!-- End swiper-slide -->
-
-            <div class="swiper-slide">
-              <div class="post-item position-relative h-100">
-
-                <div class="post-img position-relative overflow-hidden">
-                  <img src="https://img.youtube.com/vi/-dvkU_P_WxY/maxresdefault.jpg" class="img-fluid" alt="">
-                  <span class="post-date">November 20</span>
-                </div>
-
-                <div class="post-content d-flex flex-column">
-
-                  <h3 class="post-title">YouTube Video</h3>
-
-                  <div class="meta d-flex align-items-center">
-                    <div class="d-flex align-items-center">
-                      <i class="bi bi-calendar"></i> <span class="ps-2">Uploaded on YouTube</span>
-                    </div>
-                  </div>
-
-                  <hr>
-
-                  <a href="https://youtu.be/-dvkU_P_WxY" class="readmore stretched-link"><span>Watch on YouTube</span><i
-                      class="bi bi-arrow-right"></i></a>
-
-                </div>
-
-              </div>
-            </div><!-- End swiper-slide -->
+            </div>
+            @endforeach
 
           </div>
           <div class="recent-posts-pagination swiper-pagination"></div>
         </div>
-
       </div>
 
       <script>
@@ -616,7 +365,7 @@
         });
       </script>
 
-    </section><!-- /Recent Posts Section -->
+    </section>
 
     <!-- Contact Now Section -->
     <section id="contact-now" class="contact-now section light-background py-5">
@@ -685,91 +434,6 @@
         </div>
       </div>
     </section><!-- /Contact Now Section -->
-
-    <!-- Peka SMART App Section -->
-    <section id="peka-smart-app" class="peka-smart-app section py-5" style="background-color: #ffffff;">
-      <div class="container">
-        <div class="row align-items-center">
-          <!-- Logo App dan Nama -->
-          <div class="col-lg-3 text-center mb-4 mb-lg-0">
-            <div class="app-logo-container mb-3">
-              <!-- Logo Aplikasi - Ganti dengan path gambar yang sesuai -->
-              <img src="assets/img/unnamed.png" alt="PEKA SMART Logo" class="img-fluid" style="max-width: 150px;">
-            </div>
-            <div class="app-name">
-              <h1 class="mb-0" style="font-weight: bold; font-size: 1.8rem;">
-                <span style="color: #333;">PETANI</span><br>
-                <span style="color: #059652;">KAYAKU</span>
-              </h1>
-            </div>
-          </div>
-          
-          <!-- Deskripsi Aplikasi -->
-          <div class="col-lg-6 mb-4 mb-lg-0">
-            <h2 class="mb-3" style="color: #333;">Peka SMART</h2>
-            <p class="mb-4" style="color: #666; line-height: 1.6;">
-              Peka SMART, adalah aplikasi mobile berbasiskan Android persembahan dari PT Petrokimia Kayaku untuk kalangan masyarakat petani dan umum. Fitur yang terdapat di PEKA SMART diantaranya Katalog Produk, Solusi Pestisida, Konsultasi, Berita dan Profil Perusahaan.
-            </p>
-            
-            <!-- Tombol Download -->
-            <div class="download-section mb-4">
-              <a href="https://play.google.com/store/apps/details?id=com.petrokimiakayaku.pekasmart" 
-                target="_blank" 
-                class="btn btn-lg px-4 py-3 d-inline-flex align-items-center" 
-                style="background-color: #059652; color: white; border-radius: 0px; border: none; text-decoration: none;">
-                <i class="fas fa-download me-2"></i>
-                Download Aplikasi ( v2.0 )
-              </a>
-            </div>
-            
-            <!-- Total Download -->
-            <div class="total-download">
-              <p class="mb-0" style="color: #666; font-size: 0.9rem;">
-                <strong>Total Download :</strong> 19,623
-              </p>
-            </div>
-          </div>
-          
-          <!-- Cara Instalasi -->
-          <div class="col-lg-3">
-            <div class="installation-guide">
-              <h4 class="mb-3" style="color: #333; font-size: 1.2rem;">Cara Instalasi Aplikasi Peka Smart</h4>
-              <div class="installation-steps">
-                <div class="step d-flex mb-3">
-                  <div class="step-number d-flex align-items-center justify-content-center me-3" 
-                      style="background-color: #059652; color: white; width: 30px; height: 30px; border-radius: 0px; font-weight: bold;">
-                    1
-                  </div>
-                  <div class="step-text">
-                    <p class="mb-0" style="color: #666; font-size: 0.9rem;">Buka Google Play Store di perangkat Android</p>
-                  </div>
-                </div>
-                
-                <div class="step d-flex mb-3">
-                  <div class="step-number d-flex align-items-center justify-content-center me-3" 
-                      style="background-color: #059652; color: white; width: 30px; height: 30px; border-radius: 0px; font-weight: bold;">
-                    2
-                  </div>
-                  <div class="step-text">
-                    <p class="mb-0" style="color: #666; font-size: 0.9rem;">Cari "Peka SMART" atau "Petani Kayaku"</p>
-                  </div>
-                </div>
-                
-                <div class="step d-flex">
-                  <div class="step-number d-flex align-items-center justify-content-center me-3" 
-                      style="background-color: #059652; color: white; width: 30px; height: 30px; border-radius: 0px; font-weight: bold;">
-                    3
-                  </div>
-                  <div class="step-text">
-                    <p class="mb-0" style="color: #666; font-size: 0.9rem;">Klik Install dan tunggu proses selesai</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- /Peka SMART App Section -->
   </main>
   <!-- main content -->
 
