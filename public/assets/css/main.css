@@ -436,72 +436,102 @@ h6 {
   position: relative;
 }
 
-/* parent */
+/* --- MEGA DROPDOWN PARENT --- */
 .mega-dropdown {
   position: relative;
 }
 
-/* panel dropdown */
+
 .mega-menu {
   position: absolute;
   left: 0;
   top: 100%;
-  width: 100vw;
+  
+  /* --- PERBAIKAN LEBAR --- */
+  /* Hapus width: 70vw; */
+  /* Opsi 1: Lebar menyesuaikan konten (PALING DISARANKAN) */
+  width: max-content; 
+  min-width: 300px; /* Lebar minimal agar tidak terlalu gepeng */
+  max-width: 90vw;  /* Lebar maksimal agar tidak melebihi layar HP */
+
+  /* Opsi 2: Lebar tetap (jika Opsi 1 kurang pas) */
+  /* width: 600px; */ 
+  
   background: #fff;
-  padding: 40px 0;
+  
+  /* --- PERBAIKAN PADDING --- */
+  /* Hapus padding: 100px 0; */
+  padding: 30px; /* Gunakan padding yang lebih wajar ke semua sisi */
+  
   box-shadow: 0 10px 40px rgba(0,0,0,.15);
   opacity: 0;
   visibility: hidden;
   transform: translateY(20px);
   transition: all .3s ease;
   z-index: 999;
+  border-top: 3px solid #0b6b3a; /* Pemanis (opsional) */
+  border-radius: 0 0 8px 8px; /* Pemanis sudut bawah (opsional) */
 }
 
-
-
-/* hover trigger */
+/* Hover Effect: Munculkan Menu */
 .mega-dropdown:hover .mega-menu {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
 
-/* inner container */
+/* --- CONTAINER GRID --- */
 .mega-container {
   max-width: 1200px;
   margin: auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  gap: 50px;
 }
 
-/* column */
+/* --- COLUMN STYLING --- */
 .mega-col h4 {
   color: #0b6b3a;
   font-size: 18px;
-  margin-bottom: 15px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
 }
+
 
 .mega-col ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  /* KUNCI PERBAIKAN: Paksa jadi kolom vertikal */
+  display: flex; 
+  flex-direction: column; 
 }
 
 .mega-col ul li {
+  
+  display: block; 
+  width: 100%;
   margin-bottom: 10px;
+  margin-bottom: 5px; 
+  line-height: 1.4;
 }
 
 .mega-col ul li a {
-  color: #333;
+  color: #555;
   font-size: 15px;
   text-decoration: none;
   transition: .2s;
+  display: block; /* Agar area klik luas */
+  position: relative;
 }
 
+/* Hover pada Link */
 .mega-col ul li a:hover {
   color: #0b6b3a;
-  padding-left: 5px;
+  padding-left: 8px; /* Efek geser sedikit saat hover */
+  font-weight: 500;
 }
 
   /* ----- Services-2 custom styles moved from index.blade.php ----- */
