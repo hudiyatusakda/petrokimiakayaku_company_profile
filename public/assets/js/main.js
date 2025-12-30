@@ -140,9 +140,8 @@
     });
   });
 
-  /* ===============================
-   * SEARCH POPUP
-   * =============================== */
+document.addEventListener('DOMContentLoaded', function () {
+
   const popup = document.getElementById('search-popup');
 
   function openSearchPopup() {
@@ -180,6 +179,9 @@
       window.location.href = `/search?q=${encodeURIComponent(q)}`;
     });
   }
+
+});
+
 
   
 

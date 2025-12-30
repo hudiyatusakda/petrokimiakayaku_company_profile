@@ -432,7 +432,77 @@ h6 {
   display: none;
 }
 
- 
+ .navmenu ul {
+  position: relative;
+}
+
+/* parent */
+.mega-dropdown {
+  position: relative;
+}
+
+/* panel dropdown */
+.mega-menu {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100vw;
+  background: #fff;
+  padding: 40px 0;
+  box-shadow: 0 10px 40px rgba(0,0,0,.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all .3s ease;
+  z-index: 999;
+}
+
+
+
+/* hover trigger */
+.mega-dropdown:hover .mega-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* inner container */
+.mega-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* column */
+.mega-col h4 {
+  color: #0b6b3a;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.mega-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mega-col ul li {
+  margin-bottom: 10px;
+}
+
+.mega-col ul li a {
+  color: #333;
+  font-size: 15px;
+  text-decoration: none;
+  transition: .2s;
+}
+
+.mega-col ul li a:hover {
+  color: #0b6b3a;
+  padding-left: 5px;
+}
 
   /* ----- Services-2 custom styles moved from index.blade.php ----- */
   #services-2 {
@@ -576,69 +646,78 @@ h6 {
     transform: translateY(-1px);
   }
 
-  /* Search popup styles */
-  .search-popup {
-    position: fixed;
-    inset: 0;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 20000;
-  }
+ /* === SEARCH POPUP CLEAN === */
+.search-popup {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.25s ease;
+}
 
-  .search-popup[aria-hidden="false"] {
-    display: flex;
-  }
+.search-popup[aria-hidden="false"] {
+  opacity: 1;
+  pointer-events: auto;
+}
 
-  .search-popup-backdrop {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.55);
-  }
+.search-popup-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+}
 
-  .search-popup-panel {
-    position: relative;
-    width: min(760px, 94%);
-    background: var(--surface-color);
-    padding: 28px;
-    border-radius: 12px;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
-    z-index: 2;
-  }
+/* panel */
+.search-popup-panel {
+  position: relative;
+  z-index: 2;
+  width: min(620px, 92%);
+}
 
-  .search-popup-close {
-    position: absolute;
-    right: 12px;
-    top: 10px;
-    background: transparent;
-    border: none;
-    font-size: 28px;
-    line-height: 1;
-    color: var(--default-color);
-  }
+/* form */
+.search-popup-form {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #fff;
+  padding: 18px 22px;
+  border-radius: 14px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
 
-  .search-popup-form {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-  }
+/* icon */
+.search-popup-form .search-icon {
+  font-size: 20px;
+  color: #888;
+}
 
-  .search-popup-form input[type="search"] {
-    flex: 1 1 auto;
-    padding: 14px 16px;
-    font-size: 18px;
-    border-radius: 8px;
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 86%);
-  }
+/* input */
+.search-popup-form input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  background: transparent;
+}
 
-  .search-popup-submit {
-    padding: 12px 18px;
-    border-radius: 8px;
-    background: var(--accent-color);
-    color: var(--contrast-color);
-    border: none;
-    font-weight: 600;
-  }
+/* close */
+.search-popup-close {
+  border: none;
+  background: transparent;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  color: #999;
+}
+
+.search-popup-close:hover {
+  color: #000;
+}
+
 
   .navmenu .dropdown .dropdown ul {
     top: 0;
@@ -7450,4 +7529,8 @@ textarea.contact-input-field {
   display: block;
   width: 100%;
   height: 120px;
+}
+
+.section-divider.divider-reverse svg {
+  transform: rotate(180deg);
 }

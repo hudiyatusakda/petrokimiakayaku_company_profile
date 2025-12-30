@@ -92,18 +92,7 @@
 <!-- Main JS File -->
 <script src="{{ asset('assets/js/main.js') }}"></script>
 
-<!-- Search Popup Markup -->
-<div id="search-popup" class="search-popup" aria-hidden="true">
-  <div class="search-popup-backdrop" data-close="true"></div>
-    <div class="search-popup-panel">
-      <button type="button" class="search-popup-close" aria-label="Tutup">&times;</button>
-        <form id="search-popup-form" class="search-popup-form" action="#" method="get">
-          <input id="search-popup-input" name="q" type="search" placeholder="Cari produk atau artikel..."
-        autocomplete="off" />
-      <button type="submit" class="search-popup-submit">Cari <i class="bi bi-search"></i></button>
-    </form>
-  </div>
-</div> 
+@include('layouts.search-popup')
 
 </body>
 

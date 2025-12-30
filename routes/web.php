@@ -135,3 +135,4 @@ Route::get('/forum', function () {
 Route::get('/karir', function () {
     return view('pages.karir');
 })->name('karir');
+
