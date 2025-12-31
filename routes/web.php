@@ -53,72 +53,68 @@ Route::get('/video', function () {
     return view('pages.video');
 })->name('video');
 
-Route::get('/kegiatan', function () {
-    return view('pages.kegiatan');
-})->name('kegiatan');
+Route::get('/kegiatan', [FrontendController::class, 'kegiatan'])->name('kegiatan');
 
-Route::get('/detail-kegiatan', function () {
-    return view('pages.detail-kegiatan');
-})->name('detail-kegiatan');
-Route::prefix('kategori')->group(function () {
+// Route Detail Berita/Kegiatan Dinamis
+Route::get('/kegiatan/{slug}', [App\Http\Controllers\FrontendController::class, 'articleDetail'])->name('article.detail');
 
-    Route::get('/insektisida', function () {
-        return view('kategori.insektisida');
-    })->name('kategori.insektisida');
+// Route::prefix('kategori')->group(function () {
 
-    Route::get('/herbisida', function () {
-        return view('kategori.herbisida');
-    })->name('kategori.herbisida');
+//     Route::get('/insektisida', function () {
+//         return view('kategori.insektisida');
+//     })->name('kategori.insektisida');
 
-    Route::get('/fungisida', function () {
-        return view('kategori.fungisida');
-    })->name('kategori.fungisida');
+//     Route::get('/herbisida', function () {
+//         return view('kategori.herbisida');
+//     })->name('kategori.herbisida');
 
-    Route::get('/rodentisida', function () {
-        return view('kategori.rodentisida');
-    })->name('kategori.rodentisida');
+//     Route::get('/fungisida', function () {
+//         return view('kategori.fungisida');
+//     })->name('kategori.fungisida');
 
-    Route::get('/fumigan', function () {
-        return view('kategori.fumigan');
-    })->name('kategori.fumigan');
+//     Route::get('/rodentisida', function () {
+//         return view('kategori.rodentisida');
+//     })->name('kategori.rodentisida');
 
-    Route::get('/moluskisida', function () {
-        return view('kategori.moluskisida');
-    })->name('kategori.moluskisida');
+//     Route::get('/fumigan', function () {
+//         return view('kategori.fumigan');
+//     })->name('kategori.fumigan');
 
-    Route::get('/atraktan', function () {
-        return view('kategori.atraktan');
-    })->name('kategori.atraktan');
+//     Route::get('/moluskisida', function () {
+//         return view('kategori.moluskisida');
+//     })->name('kategori.moluskisida');
 
-    Route::get('/pupuk-cair', function () {
-        return view('kategori.pupuk_cair');
-    })->name('kategori.pupuk_cair');
+//     Route::get('/atraktan', function () {
+//         return view('kategori.atraktan');
+//     })->name('kategori.atraktan');
 
-    Route::get('/zpt', function () {
-        return view('kategori.zpt');
-    })->name('kategori.zpt');
+//     Route::get('/pupuk-cair', function () {
+//         return view('kategori.pupuk_cair');
+//     })->name('kategori.pupuk_cair');
 
-    Route::get('/pupuk-hayati', function () {
-        return view('kategori.pupuk_hayati');
-    })->name('kategori.pupuk_hayati');
+//     Route::get('/zpt', function () {
+//         return view('kategori.zpt');
+//     })->name('kategori.zpt');
 
-    Route::get('/bio-fungisida', function () {
-        return view('kategori.bio_fungisida');
-    })->name('kategori.bio_fungisida');
+//     Route::get('/pupuk-hayati', function () {
+//         return view('kategori.pupuk_hayati');
+//     })->name('kategori.pupuk_hayati');
 
-    Route::get('/probiotik', function () {
-        return view('kategori.probiotik');
-    })->name('kategori.probiotik');
+//     Route::get('/bio-fungisida', function () {
+//         return view('kategori.bio_fungisida');
+//     })->name('kategori.bio_fungisida');
 
-});
+//     Route::get('/probiotik', function () {
+//         return view('kategori.probiotik');
+//     })->name('kategori.probiotik');
 
-Route::get('/produk/insektisida/bassa-500-ec', function () {
-    return view('kategori.insektisida.bassa');
-})->name('insektisida.bassa');
+// });
 
- Route::get('/ceba', function () {
-        return view('kategori.insektisida.ceba');
-    })->name('insektisida.ceba');
+// Route untuk halaman kategori dinamis
+Route::get('/kategori/{slug}', [App\Http\Controllers\FrontendController::class, 'category'])->name('category.detail');
+
+// Ganti route detail lama dengan ini:
+Route::get('/produk/{slug}', [App\Http\Controllers\FrontendController::class, 'productDetail'])->name('product.detail');
 
 Route::get('/solusi', function () {
     return view('pages.solusi');

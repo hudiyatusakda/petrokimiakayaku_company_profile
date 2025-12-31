@@ -8,6 +8,7 @@ use App\Models\CompanyMenu;
 use App\Models\Product;
 use App\Models\Article;
 use App\Models\Video;
+use App\Models\ProductCategory;
 
 class FrontendController extends Controller
 {
@@ -16,10 +17,18 @@ class FrontendController extends Controller
         $slides = HeroSlide::where('is_active', 1)->where('type', 'home')->get();
 
         // 2. Ambil Produk
-        $products = Product::where('is_active', 1)->get();
+        // Ini hanya mengambil 8 produk TERBARU untuk Home Page
+        $products = Product::where('is_active', 1)
+                   ->latest() // Urutkan dari yang terbaru
+                   ->take(8)  // Ambil cuma 8 biji
+                   ->get();
 
         // 3. Ambil Berita (Terbaru)
-        $articles = Article::where('is_active', 1)->latest()->get();
+        $articles = Article::select('title', 'slug', 'image_path', 'created_at')
+                       ->where('is_active', 1)
+                       ->latest()
+                       ->take(3)
+                       ->get();
 
         // 4. Ambil Video (Terbaru)
         $videos = Video::where('is_active', 1)->latest()->get();
@@ -42,6 +51,79 @@ class FrontendController extends Controller
 
         // 3. Kirim kedua variabel ke view
         return view ('pages.about', compact('slides', 'menus'));
+    }
+
+    public function category($slug)
+    {
+        // 1. Ambil data Kategori berdasarkan slug (misal: 'insektisida')
+        $category = ProductCategory::where('slug', $slug)->firstOrFail();
+
+        // 2. Ambil Produk yang kategorinya SAMA dengan nama kategori ini
+        // Pastikan di tabel 'products', kolom 'category' isinya 'Insecticide' atau 'Insektisida' (sesuaikan datanya)
+        $products = Product::where('category', $category->name)
+                        ->where('is_active', 1)
+                        ->get();
+
+        // 3. Kirim ke view
+        return view('pages.category', compact('category', 'products'));
+    }
+
+    public function productDetail($slug)
+    {
+        // 1. Ambil produk berdasarkan SLUG yang dikirim di URL
+        $product = \App\Models\Product::where('slug', $slug)
+                                    ->where('is_active', 1)
+                                    ->firstOrFail(); // Error 404 jika tidak ketemu
+
+        // 2. Ambil Produk Serupa (Kategori sama, tapi bukan produk yang sedang dibuka)
+        $relatedProducts = \App\Models\Product::where('category', $product->category)
+                                            ->where('id', '!=', $product->id) // Jangan tampilkan diri sendiri
+                                            ->where('is_active', 1)
+                                            ->take(8) // Ambil 8 saja
+                                            ->get();
+
+        return view('pages.product-detail', compact('product', 'relatedProducts'));
+    }
+
+    public function articleDetail($slug)
+    {
+        // 1. Ambil artikel berdasarkan slug
+        // Ambil SEMUA kolom berdasarkan slug
+        $article = Article::where('slug', $slug)->firstOrFail();
+        
+        // Fitur tambah view (opsional)
+        $article->increment('views'); 
+
+        // Ambil berita lain untuk sidebar (exclude berita yang sedang dibaca)
+        $otherArticles = Article::where('id', '!=', $article->id)
+                                ->latest()
+                                ->take(4)
+                                ->get();
+
+        // 3. Kirim ke view
+        return view('pages.detail-kegiatan', compact('article', 'otherArticles'));
+    }
+
+    // FrontendController.php
+
+    public function kegiatan()
+    {
+        // 1. Ambil 1 Berita TERBARU untuk menjadi Hero (Banner Besar)
+        $heroArticle = Article::where('is_active', 1)
+                            ->latest()
+                            ->first();
+
+        // 2. Ambil berita sisanya (Grid) dengan pagination, KECUALI berita yang sudah jadi Hero
+        // Jika tidak ada heroArticle (database kosong), ambil semua kosong
+        $query = Article::where('is_active', 1)->latest();
+        
+        if($heroArticle) {
+            $query->where('id', '!=', $heroArticle->id);
+        }
+        
+        $articles = $query->paginate(8); // Menampilkan 8 berita per halaman
+
+        return view('pages.kegiatan', compact('heroArticle', 'articles'));
     }
 
     public function products(){

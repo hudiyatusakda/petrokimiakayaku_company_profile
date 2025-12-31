@@ -195,28 +195,6 @@
       </script>
 
     </section><!-- /Services 2 Section -->
-       
-        <!-- Newsletter Section -->
-        <section id="newsletter" class="newsletter section green-background">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <h3>Join Our Farm Community</h3>
-                        <p class="opacity-50">
-                            Subscribe to get updates on seasonal products, farm events, and special offers.
-                        </p>
-                    </div>
-                    <div class="col-lg-6">
-                        <form action="#" class="form-subscribe">
-                            <div class="input-group">
-                                <input type="email" class="form-control" placeholder="Your email address">
-                                <button class="btn btn-success" type="submit">Subscribe</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
     {{-- main --}}
 

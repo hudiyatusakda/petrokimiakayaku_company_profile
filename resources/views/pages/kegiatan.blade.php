@@ -47,16 +47,31 @@
             <div class="row">
                 
                 <div class="col-lg-8 mb-4 mb-lg-0" data-aos="fade-right">
-                    <a href="{{ route('detail-kegiatan') }}" class="activity-hero-card">
-                        <img src="assets/img/kegiatan-hero.jpg" alt="Kegiatan Utama" class="activity-hero-img">
-                        <div class="activity-hero-overlay">
-                            <span class="hero-date-badge">12 Januari 2025</span>
-                            <h2 class="activity-hero-title">Peresmian Laboratorium Riset Bioteknologi Terpadu</h2>
-                            <p class="activity-hero-desc">
-                                Petrokimia Kayaku terus berinovasi dengan fasilitas terbaru untuk mendukung pengembangan produk hayati yang ramah lingkungan.
-                            </p>
-                        </div>
-                    </a>
+                    @if($heroArticle)
+                        {{-- PERHATIKAN: Disini kita panggil route yang benar dengan slug --}}
+                        <a href="{{ route('article.detail', $heroArticle->slug) }}" class="activity-hero-card">
+                            
+                            {{-- Gambar Dinamis --}}
+                            <img src="{{ asset($heroArticle->image_path) }}" alt="{{ $heroArticle->title }}" class="activity-hero-img">
+                            
+                            <div class="activity-hero-overlay">
+                                {{-- Tanggal Dinamis --}}
+                                <span class="hero-date-badge">
+                                    {{ \Carbon\Carbon::parse($heroArticle->created_at)->translatedFormat('d F Y') }}
+                                </span>
+                                
+                                {{-- Judul Dinamis --}}
+                                <h2 class="activity-hero-title">{{ $heroArticle->title }}</h2>
+                                
+                                {{-- Deskripsi Singkat (bersihkan tag HTML karena description isinya HTML) --}}
+                                <p class="activity-hero-desc">
+                                    {{ Str::limit(strip_tags($heroArticle->description), 100) }}
+                                </p>
+                            </div>
+                        </a>
+                    @else
+                        <div class="alert alert-warning">Belum ada berita utama.</div>
+                    @endif
                 </div>
 
                 <div class="col-lg-4" data-aos="fade-left">
@@ -81,47 +96,30 @@
             </div>
 
             <div class="row ghost-grid-wrapper g-3">
-                
+    
+                @foreach($articles as $item)
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <a href="detail-kegiatan.html" class="activity-ghost-card">
+                    {{-- Link Dinamis ke Detail --}}
+                    <a href="{{ route('article.detail', $item->slug) }}" class="activity-ghost-card">
+                        
                         <div class="ghost-img-container">
-                            <img src="assets/img/kegiatan-grid-1.jpg" alt="Grid 1" class="ghost-img">
+                            <img src="{{ asset($item->image_path) }}" alt="{{ $item->title }}" class="ghost-img">
                         </div>
-                        <span class="ghost-date">Des 2024</span>
-                        <h5 class="ghost-title">Panen Raya Jagung Hibrida di Lamongan</h5>
+                        
+                        <span class="ghost-date">
+                            {{ \Carbon\Carbon::parse($item->created_at)->translatedFormat('M Y') }}
+                        </span>
+                        
+                        <h5 class="ghost-title">{{ Str::limit($item->title, 40) }}</h5>
                     </a>
                 </div>
+                @endforeach
 
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <a href="detail-kegiatan.html" class="activity-ghost-card">
-                        <div class="ghost-img-container">
-                            <img src="assets/img/kegiatan-grid-2.jpg" alt="Grid 2" class="ghost-img">
-                        </div>
-                        <span class="ghost-date">Nov 2024</span>
-                        <h5 class="ghost-title">CSR: Bantuan Air Bersih Desa Sekitar</h5>
-                    </a>
-                </div>
+            </div>
 
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                    <a href="detail-kegiatan.html" class="activity-ghost-card">
-                        <div class="ghost-img-container">
-                            <img src="assets/img/kegiatan-grid-3.jpg" alt="Grid 3" class="ghost-img">
-                        </div>
-                        <span class="ghost-date">Okt 2024</span>
-                        <h5 class="ghost-title">Internal Gathering & Team Building</h5>
-                    </a>
-                </div>
-
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                    <a href="detail-kegiatan.html" class="activity-ghost-card">
-                        <div class="ghost-img-container">
-                            <img src="assets/img/kegiatan-grid-4.jpg" alt="Grid 4" class="ghost-img">
-                        </div>
-                        <span class="ghost-date">Sep 2024</span>
-                        <h5 class="ghost-title">Peluncuran Produk Insektisida Baru</h5>
-                    </a>
-                </div>
-
+            {{-- Tampilkan Pagination jika perlu --}}
+            <div class="mt-4 d-flex justify-content-center">
+                {{ $articles->links() }}
             </div>
         </div>
     </section>

@@ -16,9 +16,8 @@
 
 <main class="main">
 
-  <!-- PAGE TITLE -->
   <div class="page-title dark-background"
-       style="background-image: url(assets/img/page-title-bg.webp); margin-top:120px;"
+       style="background-image: url({{ asset('assets/img/page-title-bg.webp') }}); margin-top:120px;"
        data-aos="fade-down">
     <div class="container position-relative">
       <h1>Our Fresh Products</h1>
@@ -31,7 +30,6 @@
     </div>
   </div>
 
-  <!-- PRODUCT CATEGORIES -->
   <section id="product-categories" class="product-categories section">
     <div class="container">
 
@@ -41,145 +39,134 @@
 
       <div class="row gy-4 text-center">
 
-  <!-- INSEKTISIDA -->
-  <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-    <div class="category-item p-4 shadow-sm">
-      <i class="fa-solid fa-bug fa-2x text-success mb-3"></i>
-      <h3>Insektisida</h3>
-      <a href="{{ route('kategori.insektisida') }}" class="btn btn-outline-success btn-sm">
-        Lihat kategori
-      </a>
-    </div>
-  </div>
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="category-item p-4 shadow-sm">
+            <i class="fa-solid fa-bug fa-2x text-success mb-3"></i>
+            <h3>Insektisida</h3>
+            {{-- PERHATIKAN: Parameter kedua adalah 'slug' --}}
+            <a href="{{ route('category.detail', 'insektisida') }}" class="btn btn-outline-success btn-sm">
+              Lihat kategori
+            </a>
+          </div>
+        </div>
 
-  <!-- HERBISIDA -->
-  <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="150">
-    <div class="category-item p-4 shadow-sm">
-      <i class="fa-solid fa-seedling fa-2x text-success mb-3"></i>
-      <h3>Herbisida</h3>
-      <a href="{{ route('kategori.insektisida') }}" class="btn btn-outline-success btn-sm">
-        Lihat kategori
-      </a>
-    </div>
-  </div>
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="150">
+          <div class="category-item p-4 shadow-sm">
+            <i class="fa-solid fa-seedling fa-2x text-success mb-3"></i>
+            <h3>Herbisida</h3>
+            <a href="{{ route('category.detail', 'herbisida') }}" class="btn btn-outline-success btn-sm">
+              Lihat kategori
+            </a>
+          </div>
+        </div>
 
-  <!-- FUNGISIDA -->
-  <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-    <div class="category-item p-4 shadow-sm">
-      <i class="fa-solid fa-virus fa-2x text-success mb-3"></i>
-      <h3>Fungisida</h3>
-      <a href="{{ route('kategori.insektisida') }}" class="btn btn-outline-success btn-sm">
-        Lihat kategori
-      </a>
-    </div>
-  </div>
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="category-item p-4 shadow-sm">
+            <i class="fa-solid fa-virus fa-2x text-success mb-3"></i>
+            <h3>Fungisida</h3>
+            <a href="{{ route('category.detail', 'fungisida') }}" class="btn btn-outline-success btn-sm">
+              Lihat kategori
+            </a>
+          </div>
+        </div>
 
-  <!-- RODENTISIDA -->
-  <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="250">
-    <div class="category-item p-4 shadow-sm">
-      <i class="fa-solid fa-skull-crossbones fa-2x text-success mb-3"></i>
-      <h3>Rodentisida</h3>
-      <a href="{{ route('kategori.insektisida') }}" class="btn btn-outline-success btn-sm">
-        Lihat kategori
-      </a>
-    </div>
-  </div>
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="250">
+          <div class="category-item p-4 shadow-sm">
+            <i class="fa-solid fa-skull-crossbones fa-2x text-success mb-3"></i>
+            <h3>Rodentisida</h3>
+            <a href="{{ route('category.detail', 'rodentisida') }}" class="btn btn-outline-success btn-sm">
+              Lihat kategori
+            </a>
+          </div>
+        </div>
 
-  <!-- FUMIGAN -->
-  <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-    <div class="category-item p-4 shadow-sm">
-      <i class="fa-solid fa-cloud fa-2x text-success mb-3"></i>
-      <h3>Fumigan</h3>
-      <a href="{{ route('kategori.insektisida') }}" class="btn btn-outline-success btn-sm">
-        Lihat kategori
-      </a>
-    </div>
-  </div>
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="category-item p-4 shadow-sm">
+            <i class="fa-solid fa-cloud fa-2x text-success mb-3"></i>
+            <h3>Fumigan</h3>
+            <a href="{{ route('category.detail', 'fumigan') }}" class="btn btn-outline-success btn-sm">
+              Lihat kategori
+            </a>
+          </div>
+        </div>
 
-  <!-- MOLUSKISIDA -->
-  <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="350">
-    <div class="category-item p-4 shadow-sm">
-      <i class="fa-solid fa-water fa-2x text-success mb-3"></i>
-      <h3>Moluskisida</h3>
-      <a href="{{ route('kategori.insektisida') }}" class="btn btn-outline-success btn-sm">
-        Lihat kategori
-      </a>
-    </div>
-  </div>
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="350">
+          <div class="category-item p-4 shadow-sm">
+            <i class="fa-solid fa-water fa-2x text-success mb-3"></i>
+            <h3>Moluskisida</h3>
+            <a href="{{ route('category.detail', 'moluskisida') }}" class="btn btn-outline-success btn-sm">
+              Lihat kategori
+            </a>
+          </div>
+        </div>
 
-  <!-- ATRAKTAN -->
-  <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
-    <div class="category-item p-4 shadow-sm">
-      <i class="fa-solid fa-magnet fa-2x text-success mb-3"></i>
-      <h3>Atraktan</h3>
-      <a href="{{ route('kategori.insektisida') }}" class="btn btn-outline-success btn-sm">
-        Lihat kategori
-      </a>
-    </div>
-  </div>
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="category-item p-4 shadow-sm">
+            <i class="fa-solid fa-magnet fa-2x text-success mb-3"></i>
+            <h3>Atraktan</h3>
+            <a href="{{ route('category.detail', 'atraktan') }}" class="btn btn-outline-success btn-sm">
+              Lihat kategori
+            </a>
+          </div>
+        </div>
 
-  <!-- PUPUK CAIR -->
-  <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="450">
-    <div class="category-item p-4 shadow-sm">
-      <i class="fa-solid fa-flask fa-2x text-success mb-3"></i>
-      <h3>Pupuk Cair</h3>
-      <a href="{{ route('kategori.insektisida') }}" class="btn btn-outline-success btn-sm">
-        Lihat kategori
-      </a>
-    </div>
-  </div>
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="450">
+          <div class="category-item p-4 shadow-sm">
+            <i class="fa-solid fa-flask fa-2x text-success mb-3"></i>
+            <h3>Pupuk Cair</h3>
+            {{-- Slug biasanya menggunakan strip (-) untuk spasi --}}
+            <a href="{{ route('category.detail', 'pupuk-cair') }}" class="btn btn-outline-success btn-sm">
+              Lihat kategori
+            </a>
+          </div>
+        </div>
 
-  <!-- ZPT -->
-  <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
-    <div class="category-item p-4 shadow-sm">
-      <i class="fa-solid fa-vial fa-2x text-success mb-3"></i>
-      <h3>ZPT</h3>
-      <a href="{{ route('kategori.insektisida') }}" class="btn btn-outline-success btn-sm">
-        Lihat kategori
-      </a>
-    </div>
-  </div>
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
+          <div class="category-item p-4 shadow-sm">
+            <i class="fa-solid fa-vial fa-2x text-success mb-3"></i>
+            <h3>ZPT</h3>
+            <a href="{{ route('category.detail', 'zpt') }}" class="btn btn-outline-success btn-sm">
+              Lihat kategori
+            </a>
+          </div>
+        </div>
 
-  <!-- PUPUK HAYATI -->
-  <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="550">
-    <div class="category-item p-4 shadow-sm">
-      <i class="fa-solid fa-leaf fa-2x text-success mb-3"></i>
-      <h3>Pupuk Hayati</h3>
-      <a href="{{ route('kategori.insektisida') }}" class="btn btn-outline-success btn-sm">
-        Lihat kategori
-      </a>
-    </div>
-  </div>
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="550">
+          <div class="category-item p-4 shadow-sm">
+            <i class="fa-solid fa-leaf fa-2x text-success mb-3"></i>
+            <h3>Pupuk Hayati</h3>
+            <a href="{{ route('category.detail', 'pupuk-hayati') }}" class="btn btn-outline-success btn-sm">
+              Lihat kategori
+            </a>
+          </div>
+        </div>
 
-  <!-- BIO FUNGISIDA -->
-  <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="600">
-    <div class="category-item p-4 shadow-sm">
-      <i class="fa-solid fa-dna fa-2x text-success mb-3"></i>
-      <h3>Bio Fungisida</h3>
-      <a href="{{ route('kategori.insektisida') }}" class="btn btn-outline-success btn-sm">
-        Lihat kategori
-      </a>
-    </div>
-  </div>
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="600">
+          <div class="category-item p-4 shadow-sm">
+            <i class="fa-solid fa-dna fa-2x text-success mb-3"></i>
+            <h3>Bio Fungisida</h3>
+            <a href="{{ route('category.detail', 'bio-fungisida') }}" class="btn btn-outline-success btn-sm">
+              Lihat kategori
+            </a>
+          </div>
+        </div>
 
-  <!-- PROBIOTIK -->
-  <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="650">
-    <div class="category-item p-4 shadow-sm">
-      <i class="fa-solid fa-bacteria fa-2x text-success mb-3"></i>
-      <h3>Probiotik</h3>
-      <a href="{{ route('kategori.insektisida') }}" class="btn btn-outline-success btn-sm">
-        Lihat kategori
-      </a>
-    </div>
-  </div>
-
-</div>
-
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="650">
+          <div class="category-item p-4 shadow-sm">
+            <i class="fa-solid fa-bacteria fa-2x text-success mb-3"></i>
+            <h3>Probiotik</h3>
+            <a href="{{ route('category.detail', 'probiotik') }}" class="btn btn-outline-success btn-sm">
+              Lihat kategori
+            </a>
+          </div>
+        </div>
 
       </div>
+
     </div>
   </section>
 
 </main>
 
 @include('layouts.footer')
+</body>

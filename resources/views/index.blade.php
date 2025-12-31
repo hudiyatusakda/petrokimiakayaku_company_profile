@@ -188,7 +188,7 @@
               <div class="swiper-slide">
                 <div class="product-item position-relative h-100">
                   <div class="product-img position-relative overflow-hidden">
-                    <img src="{{ asset('storage/' . $product->image_path) }}" class="img-fluid" alt="{{ $product->name }}">
+                    <img src="{{ asset($product->image_path) }}" class="img-fluid" alt="{{ $product->name }}">
                     <div class="product-badge bg-success">{{ $product->category }}</div>
                   </div>
                   <div class="product-content p-3">
@@ -265,7 +265,7 @@
               <div class="swiper-slide">
                 <div class="news-item position-relative h-100">
                   <div class="news-img position-relative overflow-hidden">
-                    <img src="{{ asset('storage/' . $news->image_path) }}" class="img-fluid" alt="{{ $news->title }}">
+                    <img src="{{ asset($news->image_path) }}" class="img-fluid" alt="{{ $news->title }}">
                   </div>
                   <div class="news-content p-3">
                     <h3 class="news-title">{{ $news->title }}</h3>
