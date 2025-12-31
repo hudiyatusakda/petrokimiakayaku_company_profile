@@ -23,15 +23,6 @@
             <div class="container position-relative">
                 <h1>Hasil Pencarian</h1>
                 <p>Anda mencari: <strong>{{ $query ?? '' }}</strong></p>
-
-                <div class="search-page-box">
-                    <form method="GET" action="{{ route('search') }}" class="d-flex w-100">
-                        <input name="q" type="text" class="search-page-input" placeholder="Pencarian"
-                            value="{{ $query ?? '' }}">
-                        <button type="submit" class="search-page-btn">Pencarian <i class="bi bi-search"></i></button>
-                    </form>
-                </div>
-
             </div>
         </div>
 

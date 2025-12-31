@@ -432,7 +432,118 @@ h6 {
   display: none;
 }
 
- 
+ .navmenu ul {
+  position: relative;
+}
+
+/* --- MEGA DROPDOWN PARENT --- */
+.mega-dropdown {
+  position: relative;
+}
+
+/* --- PANEL DROPDOWN (Wadah Putih) --- */
+.mega-menu {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  
+  /* Lebar & Layout */
+  width: max-content; 
+  min-width: 350px; 
+  max-width: 90vw;
+  background: #fff;
+  padding: 25px 30px; 
+  
+  /* Kosmetik */
+  box-shadow: 0 10px 40px rgba(0,0,0,.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all .3s ease;
+  z-index: 999;
+  border-top: 3px solid #0b6b3a; 
+  border-radius: 0 0 8px 8px; 
+}
+
+/* Hover Effect: Munculkan Menu */
+.mega-dropdown:hover .mega-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* --- CONTAINER KOLOM --- */
+.mega-container {
+  display: flex; 
+  gap: 60px;     
+}
+
+/* --- JUDUL KOLOM --- */
+.mega-col h4 {
+  color: #0b6b3a; 
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 12px; 
+  padding-bottom: 0;
+  border: none !important; /* Paksa hilang border */
+  text-decoration: none !important; /* Paksa hilang garis */
+}
+
+/* --- WRAPPER LIST --- */
+.mega-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; 
+  flex-direction: column; 
+}
+
+/* --- ITEM LIST --- */
+.mega-col ul li {
+  display: block;
+  width: 100%;
+  margin-bottom: 4px;
+  line-height: 1.3;
+  border: none !important; 
+}
+
+/* --- LINK TEXT (SOLUSI ANTI GARIS) --- */
+.mega-col ul li a {
+  color: #333; 
+  font-size: 15px;
+  display: block;
+  padding: 2px 0;
+  transition: .2s;
+  
+  /* --- HAPUS PAKSA SEMUA GARIS --- */
+  text-decoration: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  background-image: none !important; /* Mencegah garis dari gradient background */
+  position: relative; /* Reset posisi */
+}
+
+/* Mencegah garis yang muncul dari elemen ::after / ::before (biasanya di tema modern) */
+.mega-col ul li a::after, 
+.mega-col ul li a::before {
+  content: none !important;
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  border: none !important;
+}
+
+/* Hover pada Link */
+.mega-col ul li a:hover {
+  color: #0b6b3a !important; /* Pastikan warna berubah */
+  text-decoration: none !important; /* Pastikan tetap tidak ada garis */
+  border: none !important;
+  background: transparent !important;
+}
+
+
+
 
   /* ----- Services-2 custom styles moved from index.blade.php ----- */
   #services-2 {
@@ -576,69 +687,78 @@ h6 {
     transform: translateY(-1px);
   }
 
-  /* Search popup styles */
-  .search-popup {
-    position: fixed;
-    inset: 0;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 20000;
-  }
+ /* === SEARCH POPUP CLEAN === */
+.search-popup {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.25s ease;
+}
 
-  .search-popup[aria-hidden="false"] {
-    display: flex;
-  }
+.search-popup[aria-hidden="false"] {
+  opacity: 1;
+  pointer-events: auto;
+}
 
-  .search-popup-backdrop {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.55);
-  }
+.search-popup-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+}
 
-  .search-popup-panel {
-    position: relative;
-    width: min(760px, 94%);
-    background: var(--surface-color);
-    padding: 28px;
-    border-radius: 12px;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
-    z-index: 2;
-  }
+/* panel */
+.search-popup-panel {
+  position: relative;
+  z-index: 2;
+  width: min(620px, 92%);
+}
 
-  .search-popup-close {
-    position: absolute;
-    right: 12px;
-    top: 10px;
-    background: transparent;
-    border: none;
-    font-size: 28px;
-    line-height: 1;
-    color: var(--default-color);
-  }
+/* form */
+.search-popup-form {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #fff;
+  padding: 18px 22px;
+  border-radius: 14px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
 
-  .search-popup-form {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-  }
+/* icon */
+.search-popup-form .search-icon {
+  font-size: 20px;
+  color: #888;
+}
 
-  .search-popup-form input[type="search"] {
-    flex: 1 1 auto;
-    padding: 14px 16px;
-    font-size: 18px;
-    border-radius: 8px;
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 86%);
-  }
+/* input */
+.search-popup-form input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  background: transparent;
+}
 
-  .search-popup-submit {
-    padding: 12px 18px;
-    border-radius: 8px;
-    background: var(--accent-color);
-    color: var(--contrast-color);
-    border: none;
-    font-weight: 600;
-  }
+/* close */
+.search-popup-close {
+  border: none;
+  background: transparent;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  color: #999;
+}
+
+.search-popup-close:hover {
+  color: #000;
+}
+
 
   .navmenu .dropdown .dropdown ul {
     top: 0;
@@ -7450,4 +7570,8 @@ textarea.contact-input-field {
   display: block;
   width: 100%;
   height: 120px;
+}
+
+.section-divider.divider-reverse svg {
+  transform: rotate(180deg);
 }

@@ -163,7 +163,7 @@
          720,80 900,120 1080,90 
          1260,60 1380,40 1440,50 
          L1440,120 L0,120 Z"
-      fill="#f5f5f5"/>
+      fill="#f8f9fa"/>
   </svg>
 </div>
 
@@ -411,6 +411,22 @@
       </script>
 
     </section>
+
+    </section><!-- /Services Section -->
+
+    <!-- Divider to next section -->
+<div class="section-divider">
+  <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+    <path 
+      d="M0,80 
+         C180,120 360,40 540,60 
+         720,80 900,120 1080,90 
+         1260,60 1380,40 1440,50 
+         L1440,120 L0,120 Z"
+      fill="#f8f9fa"/>
+  </svg>
+</div>
+
 
     <!-- Contact Now Section -->
     <section id="contact-now" class="contact-now section light-background py-5">
