@@ -11,8 +11,12 @@ class Video extends Model
     
     protected $fillable = [
         'title',
+        'slug',
         'youtube_id',
+        'description',
         'upload_date',
-        'is_active'
+        'duration',
+        'is_active',
+        'views'
     ];
 }

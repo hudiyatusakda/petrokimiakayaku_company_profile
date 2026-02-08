@@ -31,7 +31,7 @@ class FrontendController extends Controller
                        ->get();
 
         // 4. Ambil Video (Terbaru)
-        $videos = Video::where('is_active', 1)->latest()->get();
+        $videos = Video::where('is_active', 1)->latest()->take(8)->get();
 
         // Kirim semua ke view
         return view ('index', compact('slides', 'products', 'articles', 'videos'));
@@ -132,7 +132,23 @@ class FrontendController extends Controller
 
     public function services()
     {
-        return view('pages.services');
+        // Ambil berita/kegiatan terbaru untuk ditampilkan di halaman services
+        $heroArticle = Article::where('is_active', 1)
+                             ->latest()
+                             ->first();
+
+        $articles = Article::where('is_active', 1)
+                          ->latest()
+                          ->skip(1) // Skip berita yang jadi hero
+                          ->take(6)
+                          ->get();
+
+        $videos = Video::where('is_active', 1)
+                      ->latest()
+                      ->take(6)
+                      ->get();
+
+        return view('pages.services', compact('heroArticle', 'articles', 'videos'));
     }
 
     public function testimonials(){
@@ -140,7 +156,38 @@ class FrontendController extends Controller
     }
 
     public function blog(){
-        return view ('pages.blog');
+        // 1. Ambil 1 Berita TERBARU untuk menjadi Hero (Banner Besar)
+        $heroBlog = Article::where('is_active', 1)
+                            ->latest()
+                            ->first();
+
+        // 2. Ambil berita sisanya (Grid) dengan pagination, KECUALI berita yang sudah jadi Hero
+        $query = Article::where('is_active', 1)->latest();
+        
+        if($heroBlog) {
+            $query->where('id', '!=', $heroBlog->id);
+        }
+        
+        $blogs = $query->paginate(8);
+
+        return view('pages.blog', compact('heroBlog', 'blogs'));
+    }
+
+    public function blogDetail($slug)
+    {
+        // 1. Ambil artikel berdasarkan slug
+        $blog = Article::where('slug', $slug)->firstOrFail();
+        
+        // Fitur tambah view (opsional)
+        $blog->increment('views'); 
+
+        // Ambil berita lain untuk sidebar (exclude berita yang sedang dibaca)
+        $otherBlogs = Article::where('id', '!=', $blog->id)
+                                ->latest()
+                                ->take(4)
+                                ->get();
+
+        return view('pages.blog-detail', compact('blog', 'otherBlogs'));
     }
 
     public function contact(){
@@ -170,5 +217,30 @@ class FrontendController extends Controller
         }
 
         return view('pages.search', ['query' => $query, 'results' => $results]);
+    }
+
+    public function videoDetail($slug)
+    {
+        // 1. Ambil video berdasarkan slug
+        $video = Video::where('slug', $slug)->firstOrFail();
+        
+        // Fitur tambah view (opsional)
+        $video->increment('views');
+
+        // Ambil video lain untuk sidebar (exclude video yang sedang ditonton)
+        $video_lainnya = Video::where('id', '!=', $video->id)
+                              ->where('is_active', 1)
+                              ->latest()
+                              ->take(8)
+                              ->get();
+
+        return view('pages.video-detail', compact('video', 'video_lainnya'));
+    }
+
+    public function video()
+    {
+        // Ambil semua video aktif dengan pagination
+        $videos = Video::where('is_active', 1)->latest()->paginate(12);
+        return view('pages.video', compact('videos'));
     }
 }

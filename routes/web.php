@@ -10,6 +10,7 @@ Route::get('/products', [FrontendController::class,'products'])->name('products'
 Route::get('/services', [FrontendController::class,'services'])->name('services');
 Route::get('/testimonials', [FrontendController::class,'testimonials'])->name('testimonials');
 Route::get('/blog', [FrontendController::class,'blog'])->name('blog');
+Route::get('/blog/{slug}', [FrontendController::class, 'blogDetail'])->name('blog.detail');
 Route::get('/contact', [FrontendController::class,'contact'])->name('contact');
 Route::get('/login', [FrontendController::class,'login'])->name('login');
 Route::get('/search', [FrontendController::class,'search'])->name('search');
@@ -49,9 +50,9 @@ Route::get('/direksi', function () {
     return view('profile.direksi');
 })->name('direksi');
 
-Route::get('/video', function () {
-    return view('pages.video');
-})->name('video');
+Route::get('/video', [FrontendController::class, 'video'])->name('video');
+
+Route::get('/video/{slug}', [FrontendController::class, 'videoDetail'])->name('video.detail');
 
 Route::get('/kegiatan', [FrontendController::class, 'kegiatan'])->name('kegiatan');
 
@@ -131,4 +132,3 @@ Route::get('/forum', function () {
 Route::get('/karir', function () {
     return view('pages.karir');
 })->name('karir');
-

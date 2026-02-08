@@ -269,7 +269,7 @@
                   </div>
                   <div class="news-content p-3">
                     <h3 class="news-title">{{ $news->title }}</h3>
-                    <a href="{{ $news->link }}" class="news-detail-btn">Baca selengkapnya</a>
+                    <a href="{{ route('article.detail', $news->slug) }}" class="news-detail-btn">Baca selengkapnya</a>
                   </div>
                 </div>
               </div>

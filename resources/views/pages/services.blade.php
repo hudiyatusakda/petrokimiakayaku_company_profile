@@ -91,16 +91,26 @@
             <div class="col-lg-8">
                 
                 <div class="media-hero-video" data-aos="zoom-in">
-                    <img src="assets/img/news-hero.jpg" alt="Highlight Video" class="media-hero-thumb">
-                    <div class="media-play-overlay">
-                        <a href="https://www.youtube.com/watch?v=XXXXXXXX" class="hero-play-btn glightbox">
-                            <i class="bi bi-play-fill"></i>
-                        </a>
-                        <div class="media-hero-caption text-start">
-                            <span class="badge bg-warning text-dark mb-2">FEATURED</span>
-                            <h3 class="fw-bold m-0">Inovasi Teknologi Drone untuk Pemupukan Efisien</h3>
+                    @if($heroArticle)
+                        <img src="{{ asset($heroArticle->image_path) }}" alt="{{ $heroArticle->title }}" class="media-hero-thumb">
+                        <div class="media-play-overlay">
+                            <a href="{{ route('blog.detail', $heroArticle->slug) }}" class="hero-play-btn">
+                                <i class="bi bi-link"></i>
+                            </a>
+                            <div class="media-hero-caption text-start">
+                                <span class="badge bg-warning text-dark mb-2">FEATURED</span>
+                                <h3 class="fw-bold m-0">{{ Str::limit($heroArticle->title, 60) }}</h3>
+                            </div>
                         </div>
-                    </div>
+                    @else
+                        <img src="assets/img/news-hero.jpg" alt="Highlight Video" class="media-hero-thumb">
+                        <div class="media-play-overlay">
+                            <div class="media-hero-caption text-start">
+                                <span class="badge bg-warning text-dark mb-2">FEATURED</span>
+                                <h3 class="fw-bold m-0">Belum ada berita featured</h3>
+                            </div>
+                        </div>
+                    @endif
                 </div>
 
                 <div class="d-flex justify-content-between align-items-center mb-3 mt-5" data-aos="fade-right">
@@ -114,30 +124,16 @@
                 </div>
 
                 <div class="horizontal-scroll-wrapper" id="kegiatanScroll" data-aos="fade-up">
-                    <div class="kegiatan-card">
-                        <img src="assets/img/kegiatan-1.jpg" alt="Kegiatan 1" class="kegiatan-img">
+                    @forelse($articles as $article)
+                    <a href="{{ route('blog.detail', $article->slug) }}" class="kegiatan-card">
+                        <img src="{{ asset($article->image_path) }}" alt="{{ $article->title }}" class="kegiatan-img">
                         <div class="kegiatan-overlay">
-                            <h5 class="kegiatan-title">Panen Raya Bersama Mitra Petani di Jawa Timur</h5>
+                            <h5 class="kegiatan-title">{{ Str::limit($article->title, 50) }}</h5>
                         </div>
-                    </div>
-                    <div class="kegiatan-card">
-                        <img src="assets/img/kegiatan-2.jpg" alt="Kegiatan 2" class="kegiatan-img">
-                        <div class="kegiatan-overlay">
-                            <h5 class="kegiatan-title">Pelatihan Safety Riding untuk Field Assistant</h5>
-                        </div>
-                    </div>
-                    <div class="kegiatan-card">
-                        <img src="assets/img/kegiatan-3.jpg" alt="Kegiatan 3" class="kegiatan-img">
-                        <div class="kegiatan-overlay">
-                            <h5 class="kegiatan-title">Kunjungan Direksi ke Pabrik Baru</h5>
-                        </div>
-                    </div>
-                    <div class="kegiatan-card">
-                        <img src="assets/img/kegiatan-4.jpg" alt="Kegiatan 4" class="kegiatan-img">
-                        <div class="kegiatan-overlay">
-                            <h5 class="kegiatan-title">Edukasi Hama Wareng di Desa Binaan</h5>
-                        </div>
-                    </div>
+                    </a>
+                    @empty
+                    <div class="alert alert-light">Belum ada berita.</div>
+                    @endforelse
                 </div>
 
                 <div class="section-header-simple mt-5" data-aos="fade-right">
@@ -145,42 +141,19 @@
                 </div>
 
                 <div class="populer-grid">
-                    <div class="ghost-card" data-aos="fade-up" data-aos-delay="100">
+                    @forelse($articles->take(4) as $item)
+                    <a href="{{ route('blog.detail', $item->slug) }}" class="ghost-card" data-aos="fade-up" data-aos-delay="100">
                         <div class="ghost-img-wrap">
-                            <img src="assets/img/news-1.jpg" alt="News">
+                            <img src="{{ asset($item->image_path) }}" alt="{{ $item->title }}">
                         </div>
                         <div class="ghost-content">
-                            <span class="ghost-meta">Berita Korporat</span>
-                            <h5 class="ghost-title">Petrokimia Kayaku Raih Penghargaan Lingkungan 2024</h5>
+                            <span class="ghost-meta">Berita</span>
+                            <h5 class="ghost-title">{{ Str::limit($item->title, 50) }}</h5>
                         </div>
-                    </div>
-                    <div class="ghost-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="ghost-img-wrap">
-                            <img src="assets/img/news-2.jpg" alt="News">
-                        </div>
-                        <div class="ghost-content">
-                            <span class="ghost-meta">Teknologi</span>
-                            <h5 class="ghost-title">Peluncuran Produk Hayati Terbaru: Bio-X</h5>
-                        </div>
-                    </div>
-                    <div class="ghost-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="ghost-img-wrap">
-                            <img src="assets/img/news-3.jpg" alt="News">
-                        </div>
-                        <div class="ghost-content">
-                            <span class="ghost-meta">Tips Petani</span>
-                            <h5 class="ghost-title">Cara Mengatasi Hama Padi di Musim Hujan</h5>
-                        </div>
-                    </div>
-                     <div class="ghost-card" data-aos="fade-up" data-aos-delay="400">
-                        <div class="ghost-img-wrap">
-                            <img src="assets/img/news-4.jpg" alt="News">
-                        </div>
-                        <div class="ghost-content">
-                            <span class="ghost-meta">CSR</span>
-                            <h5 class="ghost-title">Bantuan Bibit Gratis untuk Kampung Pangan</h5>
-                        </div>
-                    </div>
+                    </a>
+                    @empty
+                    <div class="alert alert-light">Belum ada berita populer.</div>
+                    @endforelse
                 </div>
 
             </div>
@@ -189,40 +162,20 @@
             <div class="col-lg-4">
                 <div class="sidebar-list-wrapper sticky-top" style="top: 20px;" data-aos="fade-left">
                     <div class="section-header-simple border-0 p-0 mb-4">
-                        <h4>Paling Ramai Ditonton</h4>
+                        <h4>Video Terbaru</h4>
                     </div>
 
-                    <div class="sidebar-item">
-                        <img src="assets/img/news-side-1.jpg" alt="Side 1" class="sidebar-thumb">
+                    @forelse($videos as $video)
+                    <a href="{{ route('video.detail', $video->slug) }}" class="sidebar-item">
+                        <img src="https://img.youtube.com/vi/{{ $video->youtube_id }}/default.jpg" alt="{{ $video->title }}" class="sidebar-thumb">
                         <div class="sidebar-info">
-                            <h5>Profil Perusahaan: Mengabdi untuk Negeri</h5>
-                            <span><i class="bi bi-eye"></i> 12.5k Views</span>
+                            <h5>{{ Str::limit($video->title, 40) }}</h5>
+                            <span><i class="bi bi-eye"></i> {{ $video->views ?? 0 }} Views</span>
                         </div>
-                    </div>
-
-                    <div class="sidebar-item">
-                        <img src="assets/img/news-side-2.jpg" alt="Side 2" class="sidebar-thumb">
-                        <div class="sidebar-info">
-                            <h5>Testimoni Petani Cabai Merah</h5>
-                            <span><i class="bi bi-eye"></i> 8.2k Views</span>
-                        </div>
-                    </div>
-
-                    <div class="sidebar-item">
-                        <img src="assets/img/news-side-3.jpg" alt="Side 3" class="sidebar-thumb">
-                        <div class="sidebar-info">
-                            <h5>Tutorial Penggunaan Pestisida Cair</h5>
-                            <span><i class="bi bi-eye"></i> 5.1k Views</span>
-                        </div>
-                    </div>
-
-                    <div class="sidebar-item">
-                        <img src="assets/img/news-side-4.jpg" alt="Side 4" class="sidebar-thumb">
-                        <div class="sidebar-info">
-                            <h5>Gathering Distributor Nasional 2024</h5>
-                            <span><i class="bi bi-eye"></i> 3.4k Views</span>
-                        </div>
-                    </div>
+                    </a>
+                    @empty
+                    <div class="alert alert-light">Belum ada video.</div>
+                    @endforelse
 
                 </div>
             </div>

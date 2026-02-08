@@ -11,62 +11,48 @@
   </header>
 
   <main class="main">
-    <section class="video-detail-section" id="video-watch">
+    <section class="activity-archive-section" id="video-archive">
         <div class="container">
-            <div class="row">
-                
-                <div class="col-lg-8">
-                    <div class="video-stage-wrapper" data-aos="zoom-in">
-                        <div class="video-frame-container ratio ratio-16x9">
-                            {{-- Embed Youtube ID Dinamis --}}
-                            <iframe src="https://www.youtube.com/embed/{{ $video->youtube_id }}?rel=0" title="{{ $video->title }}" allowfullscreen></iframe>
-                        </div>
-                    </div>
+            <div class="section-header text-center mb-5">
+                <h2>Galeri Video</h2>
+                <p>Tonton video terbaru Petrokimia Kayaku</p>
+            </div>
 
-                    <div class="video-primary-info" data-aos="fade-up">
-                        <h1 class="video-main-title">{{ $video->title }}</h1>
+            <div class="row ghost-grid-wrapper g-3">
+                @forelse($videos as $vid)
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <a href="{{ route('video.detail', $vid->slug) }}" class="activity-ghost-card video-card">
                         
-                        <div class="video-actions-bar">
-                            <div class="text-muted small">
-                                <span class="fw-bold text-dark">{{ $video->views ?? 0 }} x ditonton</span> • {{ \Carbon\Carbon::parse($video->created_at)->format('d M Y') }}
-                            </div>
+                        <div class="ghost-img-container position-relative">
+                            {{-- Thumbnail Video YouTube Otomatis --}}
+                            <img src="https://img.youtube.com/vi/{{ $vid->youtube_id }}/mqdefault.jpg" alt="{{ $vid->title }}" class="ghost-img">
                             
-                            {{-- Tombol Share Statis (Fungsionalitas JS nanti) --}}
-                            <div class="d-flex gap-2">
-                                <button class="action-btn-pill">
-                                    <i class="bi bi-share-fill"></i> Bagikan
-                                </button>
+                            {{-- Icon Play Overlay --}}
+                            <div class="position-absolute top-50 start-50 translate-middle">
+                                <i class="bi bi-play-circle-fill text-white" style="font-size: 3rem; opacity: 0.8;"></i>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="video-desc-box" data-aos="fade-up" data-aos-delay="100">
-                        <h5 class="fw-bold mb-3">Deskripsi</h5>
-                        <p>{!! nl2br(e($video->description)) !!}</p>
-                    </div>
+                        
+                        <div class="p-3">
+                            <span class="ghost-date text-muted small">
+                                <i class="bi bi-clock"></i> {{ $vid->duration ?? '--:--' }}
+                            </span>
+                            <h5 class="ghost-title mt-2">{{ Str::limit($vid->title, 50) }}</h5>
+                        </div>
+                    </a>
                 </div>
-
-                <div class="col-lg-4 mt-5 mt-lg-0">
-                    <div class="playlist-header" data-aos="fade-left">
-                        <h5 class="fw-bold m-0">Video Lainnya</h5>
-                    </div>
-
-                    <div class="playlist-container">
-                        @foreach($video_lainnya as $v)
-                        <a href="{{ route('video.show', $v->slug) }}" class="video-ghost-item" data-aos="fade-left">
-                            <div class="ghost-thumb-wrap">
-                                {{-- Thumbnail Youtube Otomatis --}}
-                                <img src="https://img.youtube.com/vi/{{ $v->youtube_id }}/default.jpg" alt="Thumb" class="ghost-thumb-img">
-                                <span class="duration-badge">{{ $v->duration ?? 'Play' }}</span>
-                            </div>
-                            <div class="ghost-info">
-                                <h6 class="ghost-video-title">{{ Str::limit($v->title, 40) }}</h6>
-                                <span class="ghost-meta">{{ \Carbon\Carbon::parse($v->created_at)->diffForHumans() }}</span>
-                            </div>
-                        </a>
-                        @endforeach
-                    </div>
+                @empty
+                <div class="col-12">
+                    <div class="alert alert-info text-center">Belum ada video. Silakan kembali nanti.</div>
                 </div>
+                @endforelse
+            </div>
+            
+            <div class="mt-4 d-flex justify-content-center">
+                {{-- Pagination jika ada --}}
+                @if(method_exists($videos, 'links'))
+                    {{ $videos->links() }}
+                @endif
             </div>
         </div>
     </section>
