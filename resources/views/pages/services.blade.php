@@ -158,7 +158,6 @@
 
             </div>
 
-
             <div class="col-lg-4">
                 <div class="sidebar-list-wrapper sticky-top" style="top: 20px;" data-aos="fade-left">
                     <div class="section-header-simple border-0 p-0 mb-4">

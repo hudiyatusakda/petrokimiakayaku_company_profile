@@ -5994,12 +5994,17 @@ section,
     gap: 15px;
     padding: 15px 0;
     border-bottom: 1px solid #eee;
-    transition: transform 0.2s;
+  transition: transform 0.18s ease-out;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: transform;
     cursor: pointer;
 }
 
 .sidebar-item:last-child { border-bottom: none; }
-.sidebar-item:hover { transform: translateX(5px); }
+.sidebar-item:hover { transform: translate3d(5px,0,0); }
 
 .sidebar-thumb {
     width: 100px;
