@@ -128,104 +128,72 @@
         <div class="content">
             <div class="container">
 
-                <div class="row mb-5" data-aos="fade-up">
-                    <div class="col-12 text-center section-header">
-                        <h3>
-                            <a href="{{ route('komisaris') }}" class="section-link">Dewan Komisaris <i class="bi bi-arrow-right-short" style="font-size: 0.8em;"></i></a>
-                        </h3>
-                    </div>
+                <div class="row mb-5 d-flex justify-content-center" data-aos="fade-up">
+                  <div class="col-12 text-center section-header">
+                    <h3>
+                      <a href="{{ route('komisaris') }}" class="section-link">Dewan Komisaris <i class="bi bi-arrow-right-short" style="font-size: 0.8em;"></i></a>
+                    </h3>
+                  </div>
 
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="person">
-                            <figure>
-                                <img src="assets/img/Shujiro.jpg" alt="Komisaris Utama" class="img-fluid">
-                                <div class="social">
-                                    <a href="#"><span class="bi bi-facebook" style="color: green"></span></a>
-                                    <a href="#"><span class="bi bi-twitter-x" style="color: green"></span></a>
-                                    <a href="#"><span class="bi bi-linkedin" style="color: green"></span></a>
-                                </div>
-                            </figure>
-                            <div class="person-contents">
-                                <h3>Shujiro Nishida</h3>
-                                <span class="position">KOMISARIS</span>
-                            </div>
+                  @foreach($komisaris as $member)
+                  <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="person">
+                      <figure>
+                        @if($member->image_path)
+                          @php $publicPath = public_path('assets/img/'.$member->image_path); @endphp
+                          @if(file_exists($publicPath))
+                            <img src="{{ asset('assets/img/' . $member->image_path) }}" alt="{{ $member->name }}">
+                          @else
+                            <img src="{{ asset('storage/' . $member->image_path) }}" alt="{{ $member->name }}">
+                          @endif
+                        @else
+                          <img src="{{ asset('assets/img/default-person.jpg') }}" alt="{{ $member->name }}">
+                        @endif
+                        <div class="social">
+                          {{-- Optional social links can be added as fields later --}}
                         </div>
+                      </figure>
+                      <div class="person-contents">
+                        <h3>{{ $member->name }}</h3>
+                        <span class="position">{{ $member->position ?? 'Komisaris' }}</span>
+                      </div>
                     </div>
-
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="person">
-                            <figure>
-                                <img src="assets/img/Bayu-Aprianto.png" alt="Komisaris" class="img-fluid">
-                                <div class="social">
-                                    <a href="#"><span class="bi bi-facebook" style="color: green"></span></a>
-                                    <a href="#"><span class="bi bi-twitter-x" style="color: green"></span></a>
-                                    <a href="#"><span class="bi bi-linkedin" style="color: green"></span></a>
-                                </div>
-                            </figure>
-                            <div class="person-contents">
-                                <h3>Bayu Aprianto</h3>
-                                <span class="position">KOMISARIS</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="person">
-                            <figure>
-                                <img src="assets/img/Faizal-Reza.png" alt="Komisaris" class="img-fluid">
-                                <div class="social">
-                                    <a href="#"><span class="bi bi-facebook" style="color: green"></span></a>
-                                    <a href="#"><span class="bi bi-twitter-x" style="color: green"></span></a>
-                                    <a href="#"><span class="bi bi-linkedin" style="color: green"></span></a>
-                                </div>
-                            </figure>
-                            <div class="person-contents">
-                                <h3>Muhammad Faizal Reza</h3>
-                                <span class="position">KOMISARIS</span>
-                            </div>
-                        </div>
-                    </div>
+                  </div>
+                  @endforeach
                 </div>
-                <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
-                    <div class="col-12 text-center section-header mt-4">
-                        <h3>
-                            <a href="{{ route('direksi') }}" class="section-link">Direksi <i class="bi bi-arrow-right-short" style="font-size: 0.8em;"></i></a>
-                        </h3>
-                    </div>
 
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="person">
-                            <figure>
-                                <img src="assets/img/muammar-maarif.jpg" alt="Direktur Utama" class="img-fluid">
-                                <div class="social">
-                                    <a href="#"><span class="bi bi-facebook" style="color: green"></span></a>
-                                    <a href="#"><span class="bi bi-twitter-x" style="color: green"></span></a>
-                                    <a href="#"><span class="bi bi-linkedin" style="color: green"></span></a>
-                                </div>
-                            </figure>
-                            <div class="person-contents">
-                                <h3>Muammar Ma`arif</h3>
-                                <span class="position">Direktur Komersil</span>
-                            </div>
-                        </div>
-                    </div>
+                <div class="row justify-content-center d-flex" data-aos="fade-up" data-aos-delay="100">
+                  <div class="col-12 text-center section-header mt-4">
+                    <h3>
+                      <a href="{{ route('direksi') }}" class="section-link">Direksi <i class="bi bi-arrow-right-short" style="font-size: 0.8em;"></i></a>
+                    </h3>
+                  </div>
 
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="person">
-                            <figure>
-                                <img src="assets/img/iqbal-wahyudi.jpg" alt="Direktur Keuangan" class="img-fluid">
-                                <div class="social">
-                                    <a href="#"><span class="bi bi-facebook" style="color: green"></span></a>
-                                    <a href="#"><span class="bi bi-twitter-x" style="color: green"></span></a>
-                                    <a href="#"><span class="bi bi-linkedin" style="color: green"></span></a>
-                                </div>
-                            </figure>
-                            <div class="person-contents">
-                                <h3>Iqbal Wahyudi</h3>
-                                <span class="position">Direktur Produksi</span>
-                            </div>
+                  @foreach($direksi as $member)
+                  <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="person">
+                      <figure>
+                        @if($member->image_path)
+                          @php $publicPath = public_path('assets/img/'.$member->image_path); @endphp
+                          @if(file_exists($publicPath))
+                            <img src="{{ asset('assets/img/' . $member->image_path) }}" alt="{{ $member->name }}" class="img-fluid">
+                          @else
+                            <img src="{{ asset('storage/' . $member->image_path) }}" alt="{{ $member->name }}" class="img-fluid">
+                          @endif
+                        @else
+                          <img src="{{ asset('assets/img/default-person.jpg') }}" alt="{{ $member->name }}" class="img-fluid">
+                        @endif
+                        <div class="social">
+                          {{-- Optional social links --}}
                         </div>
+                      </figure>
+                      <div class="person-contents">
+                        <h3>{{ $member->name }}</h3>
+                        <span class="position">{{ $member->position ?? 'Direksi' }}</span>
+                      </div>
                     </div>
+                  </div>
+                  @endforeach
 
                 </div>
                 </div>

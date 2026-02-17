@@ -18,9 +18,7 @@ Route::get('/tentang-perusahaan', function () {
     return view('profile.tentang');
 })->name('tentang');
 
-Route::get('/manajemen-perusahaan', function () {
-    return view('profile.manajemen');
-})->name('manajemen');
+Route::get('/manajemen-perusahaan', [FrontendController::class, 'manajemen'])->name('manajemen');
 
 Route::get('/fasilitas-perusahaan', function () {
     return view('profile.fasilitas');
@@ -42,13 +40,9 @@ Route::get('/riset', function () {
     return view('profile.riset');
 })->name('riset.perusahaan');
 
-Route::get('/komisaris', function () {
-    return view('profile.komisaris');
-})->name('komisaris');
+Route::get('/komisaris', [FrontendController::class, 'komisaris'])->name('komisaris');
 
-Route::get('/direksi', function () {
-    return view('profile.direksi');
-})->name('direksi');
+Route::get('/direksi', [FrontendController::class, 'direksi'])->name('direksi');
 
 Route::get('/video', [FrontendController::class, 'video'])->name('video');
 

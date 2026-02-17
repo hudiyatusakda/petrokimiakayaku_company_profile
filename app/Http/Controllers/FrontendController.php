@@ -9,6 +9,7 @@ use App\Models\Product;
 use App\Models\Article;
 use App\Models\Video;
 use App\Models\ProductCategory;
+use App\Models\ManagementMember;
 
 class FrontendController extends Controller
 {
@@ -242,5 +243,39 @@ class FrontendController extends Controller
         // Ambil semua video aktif dengan pagination
         $videos = Video::where('is_active', 1)->latest()->paginate(12);
         return view('pages.video', compact('videos'));
+    }
+
+    public function manajemen()
+    {
+        // Ambil anggota manajemen aktif yang dipisah berdasarkan role
+        $komisaris = ManagementMember::where('is_active', 1)
+                        ->where('role', 'komisaris')
+                        ->orderBy('sort_order', 'asc')
+                        ->get();
+
+        $direksi = ManagementMember::where('is_active', 1)
+                        ->where('role', 'direksi')
+                        ->orderBy('sort_order', 'asc')
+                        ->get();
+
+        return view('profile.manajemen', compact('komisaris', 'direksi'));
+    }
+
+    public function direksi()
+    {
+        $direksiMembers = ManagementMember::orderBy('sort_order', 'asc')
+                            ->where('role', 'direksi')
+                            ->get();
+
+        return view('profile.direksi', compact('direksiMembers'));
+    }
+
+    public function komisaris()
+    {
+        $komisarisMembers = ManagementMember::orderBy('sort_order', 'asc')
+                               ->where('role', 'komisaris')
+                               ->get();
+
+        return view('profile.komisaris', compact('komisarisMembers'));
     }
 }

@@ -91,24 +91,37 @@
                 <p>Mengenal lebih dekat para pemimpin strategis perusahaan.</p>
             </div>
 
+            @foreach($komisarisMembers as $member)
             <div class="row align-items-center commissioner-item" data-aos="fade-up">
-                
                 <div class="col-lg-6 mb-4 mb-lg-0">
                     <div class="profile-img-wrapper">
-                        <img src="assets/img/Shujiro.jpg" alt="Foto Komisaris Utama">
+                        @if($member->image_path)
+                            @php $publicPath = public_path('assets/img/'.$member->image_path); @endphp
+                            @if(file_exists($publicPath))
+                                <img src="{{ asset('assets/img/' . $member->image_path) }}" alt="{{ $member->name }}">
+                            @else
+                                <img src="{{ asset('storage/' . $member->image_path) }}" alt="{{ $member->name }}">
+                            @endif
+                        @else
+                            <img src="{{ asset('assets/img/default-person.jpg') }}" alt="{{ $member->name }}">
+                        @endif
                     </div>
                 </div>
 
                 <div class="col-lg-6">
                     <div class="profile-content">
-                        <h2>Shujiro Nishida</h2>
-                        <span class="position">KOMISARIS</span>
+                        <h2>{{ $member->name }}</h2>
+                        <span class="position">{{ strtoupper($member->position ?? 'Komisaris') }}</span>
                         
+                        @if($member->description)
                         <p class="description">
-                            Beliau memiliki pengalaman lebih dari 20 tahun di industri agrokimia. Fokus utama beliau adalah memastikan strategi perusahaan berjalan selaras dengan visi jangka panjang serta membangun sinergi global untuk kemajuan pertanian Indonesia.
+                            {!! nl2br(e($member->description)) !!}
                         </p>
+                        @endif
 
                         <div class="profile-divider"></div>
+
+                        <!-- <p><strong>Status:</strong> {{ $member->is_active ? 'Aktif' : 'Tidak aktif' }}</p> -->
 
                         <div class="social-links">
                             <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
@@ -116,81 +129,10 @@
                             <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
                         </div>
 
-                        <!-- <div class="mt-4">
-                            <a href="#" class="btn-contact">Hubungi Saya <i class="bi bi-envelope"></i></a>
-                            <a href="#" class="btn-share"><i class="bi bi-share-fill"></i></a>
-                        </div> -->
                     </div>
                 </div>
             </div>
-
-
-            <div class="row align-items-center commissioner-item" data-aos="fade-up">
-                
-                <div class="col-lg-6 order-2 order-lg-1">
-                    <div class="profile-content text-lg-end text-center"> <h2>Bayu Aprianto</h2>
-                        <span class="position">Komisaris</span>
-                        
-                        <p class="description">
-                            Seorang profesional berdedikasi tinggi dengan latar belakang ekonomi dan manajemen bisnis. Beliau berperan aktif dalam pengawasan tata kelola perusahaan yang baik (GCG) dan memastikan efisiensi operasional.
-                        </p>
-
-                        <div class="profile-divider"></div>
-
-                        <div class="social-links">
-                            <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
-                            <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
-                            <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
-                        </div>
-
-                        <!-- <div class="mt-4 d-flex justify-content-center justify-content-lg-end">
-                            <a href="#" class="btn-contact">Hubungi Saya <i class="bi bi-envelope"></i></a>
-                            <a href="#" class="btn-share"><i class="bi bi-share-fill"></i></a>
-                        </div> -->
-                    </div>
-                </div>
-
-                <div class="col-lg-6 order-1 order-lg-2 mb-4 mb-lg-0">
-                    <div class="profile-img-wrapper">
-                        <img src="assets/img/Bayu-Aprianto.png" alt="Foto Komisaris">
-                    </div>
-                </div>
-
-            </div>
-
-
-            <div class="row align-items-center commissioner-item" data-aos="fade-up">
-                
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <div class="profile-img-wrapper">
-                        <img src="assets/img/Faizal-Reza.png" alt="Foto Komisaris Independen">
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="profile-content">
-                        <h2>Faizal Reza</h2>
-                        <span class="position">Komisaris</span>
-                        
-                        <p class="description">
-                            Sebagai pihak independen, beliau membawa perspektif objektif dalam pengambilan keputusan strategis. Memiliki rekam jejak yang kuat dalam hukum korporasi dan manajemen risiko.
-                        </p>
-
-                        <div class="profile-divider"></div>
-
-                        <div class="social-links">
-                            <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
-                            <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
-                            <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
-                        </div>
-
-                        <!-- <div class="mt-4">
-                            <a href="#" class="btn-contact">Hubungi Saya <i class="bi bi-envelope"></i></a>
-                            <a href="#" class="btn-share"><i class="bi bi-share-fill"></i></a>
-                        </div> -->
-                    </div>
-                </div>
-            </div>
+            @endforeach
 
         </div>
     </section>
